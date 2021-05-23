@@ -1,0 +1,107 @@
+.news {
+  &__wrapper {
+    background: linear-gradient(to top, $provincialPink 0%, $provincialPink 170px, transparent 170px, transparent 100%);
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    text-align: initial;
+    margin-bottom: 32px;
+  }
+
+  &__all {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    padding-right: 30px;
+    @extend %DMS-700;
+  }
+
+  &__arrow {
+    position: relative;
+    width: 6px;
+    height: 11px;
+    right: -14px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__item {
+    flex-basis: 370px;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0px 6px 47px 3px rgba(#252525, 0.05);
+  }
+
+  &__wrap {
+    position: relative;
+    height: 250px;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    height: inherit;
+    object-fit: cover;
+  }
+
+  &__sub {
+    display: inline-block;
+    position: absolute;
+    left: 28px;
+    bottom: -13px;
+    padding: 2px 31px;
+    border-radius: 15px;
+    @extend %Poppins-700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $casper;
+  }
+
+  &__box {
+    padding: 0 29px;
+  }
+
+  &__box p {
+    position: relative;
+    max-width: 340px;
+    height: 79px;
+    @extend %DMS-500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $mineShaft;
+  }
+
+  &__box p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 315px;
+    height: 1px;
+    background-color: #e0e0e0;
+  }
+
+  &__date,
+  &__author {
+    display: inline-block;
+    max-width: 49%;
+    width: 100%;
+    padding: 12px 0 18px;
+    font-size: 12px;
+    line-height: 2.5;
+    text-transform: uppercase;
+    color: $ebonyClay;
+  }
+
+  &__date::before,
+  &__author::before {
+    content: '\26DD\0020';
+  }
+}

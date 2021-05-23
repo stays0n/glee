@@ -1,0 +1,134 @@
+.header {
+  padding: 45px 0 49px;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+    // такие моменты уточняют у дизайнера же? тут и без врапера хорошо)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    width: 100%;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    color: $blueBayoux;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 33px;
+  }
+
+  &__link {
+    border-bottom: 2px solid transparent;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      border-color: inherit;
+      color: $сodGray;
+    }
+  }
+
+  &__tools {
+    display: flex;
+    justify-content: space-between;
+
+    &>:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__tool {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transition:
+      background-color 0.2s ease-in-out,
+      transform 0.1s ease;
+
+    &--search {
+      background-color: $mystic;
+    }
+
+    &--more {
+      background-color: $casper;
+    }
+
+    &:hover,
+    &:hover .header__icon {
+      background-color: transparent;
+      fill: $portGore;
+    }
+
+    &:active {
+      transform: scale(0.85);
+    }
+
+    &--heart:hover .header__icon--heart,
+    &--cart:hover .header__icon--cart {
+      fill: $white;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 100%;
+    fill: $blueDianne;
+    transition: fill 0.2s ease-out;
+
+    &--more {
+      fill: $white;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 178px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $lightApricot;
+
+    & .header__tool {
+      flex-grow: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 50%;
+      width: 1px;
+      height: 32px;
+      background-color: $white;
+    }
+  }
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    height: 16px;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 10px;
+    line-height: 0.8;
+    text-align: center;
+    background-color: $white;
+  }
+}
