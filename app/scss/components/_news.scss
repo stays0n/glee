@@ -8,7 +8,8 @@
   }
 
   &__title {
-    text-align: initial;
+    text-align: left;
+    padding-right: 120px;
     margin-bottom: 32px;
   }
 
@@ -20,17 +21,21 @@
     @extend %DMS-700;
   }
 
-  &__arrow {
-    position: relative;
+  & svg {
     width: 6px;
     height: 11px;
-    right: -14px;
+    transform: translateX(15px);
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @include width-823 {
+      gap: 5px;
+    }
   }
 
   &__item {
@@ -47,7 +52,7 @@
   }
 
   &__img {
-    height: inherit;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -65,11 +70,11 @@
     background-color: $casper;
   }
 
-  &__box {
+  &__text {
     padding: 0 29px;
   }
 
-  &__box p {
+  &__heading {
     position: relative;
     max-width: 340px;
     height: 79px;
@@ -77,31 +82,37 @@
     font-size: 18px;
     line-height: 1.2;
     color: $mineShaft;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
   }
 
-  &__box p::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 315px;
-    height: 1px;
-    background-color: #e0e0e0;
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__base {
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px 0 18px;
   }
 
   &__date,
   &__author {
-    display: inline-block;
-    max-width: 49%;
-    width: 100%;
-    padding: 12px 0 18px;
+    width: 50%;
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
     color: $ebonyClay;
-  }
 
-  &__date::before,
-  &__author::before {
-    content: '\26DD\0020';
+    &::before {
+      content: '\26DD\0020';
+    }
   }
 }

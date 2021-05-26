@@ -1,0 +1,41 @@
+.new-card {
+  display: block;
+  position: relative;
+  min-width: 370px;
+  width: 100%;
+  min-height: 246px;
+  padding: 36px 0 30px 35px;
+  border-radius: 5px;
+  background-color: $alabaster;
+
+  @include width-823 {
+    min-width: 300px;
+    padding: 10px 0 20px 10px;
+  }
+
+  &__name {
+    max-width: 180px;
+    margin-bottom: 5px;
+    @extend %DMS-700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: $сodGray;
+  }
+
+  &__wrap {
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+    width: 270px;
+    max-height: 178px;
+    overflow: hidden;
+
+    @include width-823 {
+      width: 200px;
+    }
+  }
+
+  &__image {
+    margin: 0 20px 0 auto;
+  }
+}

@@ -1,12 +1,1 @@
-// миксины для fancybox
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}
-
-// не получилось подключить через галп *(
-// оказалось это баг scss, что он не компилирует min() max() из css.
-// вот нашел миксины, без них галп не компилит.
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';

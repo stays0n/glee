@@ -1,0 +1,52 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 74px;
+  flex-wrap: wrap;
+
+  @include width-1200 {
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+  }
+
+  .mixitup-control-active {
+    color: $сodGray;
+  }
+
+  &__elem {
+
+    @include width-1200 {
+      width: 33.333%;
+    }
+
+    @include width-823 {
+      width: 50%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include width-1200 {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__btn {
+    @extend %DMS-700;
+    color: $gray;
+    border-bottom: 2px solid transparent;
+    transition:
+      color 0.2s ease-out,
+      border 0.2s ease-out;
+
+    @include width-1200 {
+      width: 100%;
+    }
+
+    &:hover:not(.mixitup-control-active) {
+      color: $сodGray;
+      border-color: $сodGray;
+    }
+  }
+}

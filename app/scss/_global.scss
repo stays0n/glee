@@ -1,10 +1,26 @@
+// двигаем футер в низ страницы
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+//--------------------
+
 body {
   @extend %Rubik-400;
   font-size: 16px;
   line-height: 1.9;
   color: $blueDianne;
   background-color: $white;
-  scroll-behavior: smooth;
 }
 
 button {
@@ -36,35 +52,26 @@ button {
   overflow: hidden;
 }
 
-.line-clamp--1str,
-.products__name {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.features__title,
+.product-card__link,
+.news__author,
+.news__date, 
+.news__author {
+  @include line-clamp(1);
 }
 
-.line-clamp--2str,
 .banner__title,
 .banner__text p,
-.features__title,
 .features__box p,
-.contacts__item,
-.footer__item,
 .bestseller__title,
-.bestseller__text p {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.bestseller__text p,
+.new-card__link,
+.contacts__item {
+  @include line-clamp();
 }
 
-.line-clamp--4str,
-.news__box p {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.news__link {
+  @include line-clamp(3);
 }
 
 .title {
@@ -72,6 +79,10 @@ button {
   font-size: 36px;
   text-align: center;
   color: $сodGray;
+
+  @include width-1200 {
+    font-size: 25px;
+  }
 }
 
 .logo {
@@ -88,4 +99,24 @@ button {
 .logo--footer {
   display: block;
   margin-bottom: 13px;
+}
+
+.btn {
+  position: relative;
+  width: 100%;
+  padding: 14px 20px;
+  @extend %Rubik-500;
+  font-size: 15px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out, ease, ease;
+  transition-property: color, background, box-shadow;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 9px;
+  }
 }

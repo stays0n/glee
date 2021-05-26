@@ -1,0 +1,99 @@
+.product-card {
+  max-width: 270px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  min-height: 380px;
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0px 6px 47px 3px rgba(#252525, 0.05);
+
+  &:hover {
+    .product-card__tools {
+      opacity: 1;
+    }
+  }
+
+  &__wrap {
+    margin: auto;
+    height: 210px;
+    max-width: 230px;
+    width: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__text {
+    height: 90px;
+    width: 100%;
+  }
+
+  &__name,
+  &__price {
+    display: block;
+    max-height: 30px;
+    @extend %DMS-500;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__link {
+    transition: transform 0.2s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__price {
+    color: $casper;
+    font-weight: 700;
+  }
+
+  &__tools {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 155px;
+    max-width: 165px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $white;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $casper;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  & svg {
+    width: 22px;
+    height: 22px;
+    fill: #a3bbc8;
+    transition: fill 0.3s ease;
+  }
+}

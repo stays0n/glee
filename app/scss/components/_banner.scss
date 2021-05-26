@@ -1,0 +1,194 @@
+.banner {
+  &__slider {
+    background-color: #fcd7b6;
+  }
+
+  &__slide {
+    position: relative;
+    padding: 0 300px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 12%;
+      right: 173px;
+      z-index: -1;
+      width: 634px;
+      height: 634px;
+      ;
+      background-image: url('../images/home-page/banner/banner-ellipse.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      @include width-1200 {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @include width-1700 {
+      padding: 0 150px;
+    }
+
+    @include width-1400 {
+      padding: 0 50px;
+      right: 12px;
+
+      &::before {
+        right: 12px;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include width-1200 {
+      justify-content: space-evenly;
+    }
+
+    @include width-823 {
+      justify-content: center;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+
+    @include width-823 {
+      bottom: 10px;
+    }
+  }
+
+  .slick-dots li:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  .slick-dots button {
+    padding: 5px 11px 4px;
+    min-width: 29px;
+    border-radius: 50%;
+    font-size: 11px;
+    color: $blueDianne;
+    font-weight: 500;
+    background-color: $white;
+    opacity: 0.3;
+    transition-property: opacity;
+  }
+
+  .slick-dots button:hover,
+  .slick-active button {
+    opacity: 1;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 420px;
+    padding: 220px 0 280px;
+
+    @include width-1200 {
+      padding: 135px 0;
+    }
+
+    @include width-823 {
+      padding: 40px 0 90px;
+    }
+
+    p {
+      max-width: 370px;
+      margin-bottom: 35px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: $blueBayoux;
+
+      @include width-1200 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 420px;
+    margin-bottom: 25px;
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include width-1200 {
+      font-size: 45px;
+    }
+
+    @include width-568 {
+      font-size: 30px;
+    }
+  }
+
+  &__link {
+    max-width: 200px;
+    color: $white;
+    background-color: $casper;
+
+    @include width-568 {
+      max-width: 160px;
+      padding: 10px 15px;
+    }
+
+    &:hover {
+      background:
+        linear-gradient(to right,
+          rgba(#f9f9f9, 1) 50%,
+          rgba(#f9f9f9, 0) 100%);
+      color: $blueDianne;
+
+      & svg {
+        fill: $blueDianne;
+      }
+    }
+
+    &:active {
+      background-color: $white;
+    }
+  }
+
+  &__link svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 9px;
+    fill: $white;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    max-height: 640px;
+    padding: 112px 0 118px;
+
+    @include width-1200 {
+      max-width: 450px;
+    }
+
+    @include width-823 {
+      display: none;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

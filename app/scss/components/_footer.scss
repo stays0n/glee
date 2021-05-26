@@ -5,24 +5,52 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     padding: 77px 0 60px;
     border-bottom: 1px solid #dae4e9;
     line-height: 1.7;
+
+    @include width-1200 {
+      flex-wrap: wrap;
+      gap: 0;
+    }
   }
 
   &__inner {
     max-width: 200px;
     width: 100%;
-  }
 
-  &__inner:last-child {
-    max-width: 270px;
+    @include width-1200 {
+      max-width: 33.333%;
+    }
+
+    @include width-823 {
+      max-width: 50%;
+    }
+
+    &--addres {
+      @include width-1200 {
+        max-width: 100%;
+        border-bottom: 1px solid #dae4e9;
+      }
+    }
+
+    &:last-child {
+      max-width: 270px;
+
+      @include width-1200 {
+        max-width: 33.333%;
+      }
+
+      @include width-823 {
+        max-width: 100%;
+      }
+    }
   }
 
   &__item {
     margin-bottom: 9px;
   }
-
 
   &__title {
     padding-top: 15px;
@@ -34,11 +62,20 @@
     text-transform: uppercase;
   }
 
+  &__items p {
+    margin-bottom: 34px;
+  }
+
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 90px;
+
+    @include width-823 {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 
   &__links {
@@ -61,7 +98,6 @@
   }
 
   &__elem:not(:last-child) {
-    position: relative;
     margin-right: 30px;
   }
 
@@ -86,7 +122,7 @@
   }
 
   &__link {
-    display: initial;
+    display: inline;
     transition: color 0.2s ease-out;
   }
 
@@ -96,7 +132,6 @@
 }
 
 .form {
-
   &__inner {
     display: flex;
   }
@@ -157,9 +192,5 @@
 
   &__btn:hover {
     background-color: $blueDianne;
-  }
-
-  & p {
-    margin-bottom: 34px;
   }
 }

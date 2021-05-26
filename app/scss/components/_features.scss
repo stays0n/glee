@@ -1,0 +1,93 @@
+.features {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    @extend %DMS-700;
+    background-color: $provincialPink;
+
+    @include width-823 {
+      flex-wrap: wrap;
+
+    }
+  }
+
+  &__item {
+    max-width: 590px;
+    width: 100%;
+
+    @include width-823 {
+      max-width: 50%;
+    }
+
+    @include width-568 {
+      max-width: 100%;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e4df;
+
+      @include width-823 {
+        border: none;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    max-width: 335px;
+    min-height: 170px;
+    padding: 40px 15px 15px 100px;
+    margin: 0 auto;
+
+    @include width-1200 {
+      padding: 20px 15px 15px 80px;
+      min-height: 145px;
+    }
+
+    @include width-823 {
+      padding: 10px 5px 5px 80px;
+      min-height: 120px;
+    }
+  }
+
+  &__title {
+    color: $tundora;
+  }
+
+  &__box::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include width-1200 {
+      left: 10px;
+    }
+
+    @include width-823 {
+      top: 10px;
+    }
+  }
+
+  &__box--support::before {
+    background-image: url('../images/home-page/banner/features/support.svg');
+  }
+
+  &__box--delivery::before {
+    background-image: url('../images/home-page/banner/features/delivery.svg');
+  }
+
+  &__box--payment::before {
+    background-image: url('../images/home-page/banner/features/payment.svg');
+  }
+
+  &__box p {
+    font-weight: 400;
+    color: $scorpion;
+  }
+}

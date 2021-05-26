@@ -1,0 +1,37 @@
+@mixin line-clamp($num: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $num;
+}
+
+@mixin width-568 {
+  @media (max-width: 568px) {
+    @content;
+  }
+}
+
+@mixin width-823 {
+  @media (max-width: 823px) {
+    @content;
+  }
+}
+
+@mixin width-1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+// брэйкпойнты 1400 и 1700 только для слайдера верхнего создал)
+@mixin width-1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin width-1700 {
+  @media (max-width: 1700px) {
+    @content;
+  }
+}
