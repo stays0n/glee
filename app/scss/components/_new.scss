@@ -1,0 +1,80 @@
+.new {
+  padding: 54px 0 100px;
+
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 35px;
+    column-gap: 30px;
+    margin-bottom: 120px;
+  }
+
+  &__video {
+    display: block;
+    position: relative;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include width-1200 {
+      min-height: 300px;
+    }
+    @include width-823 {
+      min-height: 200px;
+    }
+
+    &:hover {
+      svg {
+        fill: $blueBayoux;
+      }
+
+      &::after {
+        animation-play-state: running;
+      }
+
+      &::before {
+        background-color: $white;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__video::before,
+  &__video::after,
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: fill 0.2s ease, background-color 0.2s ease-out;
+  }
+
+  &__video::before {
+    content: '';
+    display: block;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background-color: $casper;
+  }
+
+  &__video::after {
+    content: '';
+    display: block;
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+    background-color: $casper;
+    opacity: 0.4;
+    animation: toWhite 1.5s ease-in-out infinite alternate paused 0s none;
+  }
+
+  & svg {
+    z-index: 1;
+    width: 22px;
+    height: 25px;
+    fill: $white;
+  }
+}
