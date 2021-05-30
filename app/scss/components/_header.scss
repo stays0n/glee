@@ -17,7 +17,7 @@
     flex-wrap: wrap;
 
     @include width-568 {
-      justify-content: center;
+      row-gap: 5px;
 
       .logo--header {
         width: 100%;
@@ -33,8 +33,8 @@
 
     @include width-1200 {
       justify-content: space-around;
-      position: fixed;
-      top: 0;
+      position: absolute;
+      top: 100px;
       right: 0;
       left: 0;
       z-index: 1;
@@ -44,9 +44,9 @@
     }
 
     @include width-823 {
-      align-items: center;
-      flex-wrap: wrap;
+      align-items: flex-start;
       position: absolute;
+      top: 0;
       height: 100vh;
       transform: translateY(-200%);
       transition: transform 0.3s ease;
@@ -56,7 +56,6 @@
   }
 
   &__item {
-
     @include width-823 {
       width: 100%;
     }
@@ -68,29 +67,25 @@
         margin-right: 0;
       }
     }
-
-    &--close {
-      display: none;
-    }
   }
+
   &__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 15;
 
     svg {
-      width: 60px;
-      height: 60px;
+      width: 44px;
+      height: 44px;
       fill: $white;
     }
   }
 
-
   &__link {
     border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
-    transition-property: border-color color opacity;
+    transition: border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 
     @include width-823 {
       display: block;
@@ -112,6 +107,11 @@
   &__tools {
     max-width: 320px;
     width: 100%;
+    transition: opacity 0.3s ease;
+
+    @include width-568 {
+      max-width: 100%;
+    }
   }
 
   &__tool {
@@ -124,7 +124,7 @@
     transition: background-color 0.2s ease-in-out, transform 0.1s ease;
 
     svg {
-      width: 25px;
+      width: 20px;
       height: 100%;
       fill: $blueDianne;
       transition: fill 0.2s ease-out;
@@ -134,11 +134,42 @@
       }
     }
 
+    .header-search {
+      width: 16px;
+      transform: translate(3px, 4px);
+    }
+
+    .header-heart {
+      transform: translate(7px, 8px);
+    }
+
+    .header-cart {
+      transform: translate(-4px, 7px);
+    }
+
+    .header__num {
+      &--heart {
+        top: 16px;
+        right: 18px;
+      }
+
+      &--cart {
+        top: 16px;
+        right: 31px;
+      }
+    }
+
     &--burger {
       display: none;
 
       @include width-823 {
         display: block;
+      }
+
+      @include width-568 {
+        position: fixed;
+        top: 10px;
+        right: 15px;
       }
     }
 
@@ -185,7 +216,8 @@
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    width: 178px;
+    max-width: 178px;
+    width: 100%;
     height: 50px;
     border-radius: 25px;
     background-color: $lightApricot;
@@ -210,7 +242,11 @@
     }
 
     @include width-823 {
-      width: 120px;
+      max-width: 120px;
+    }
+
+    @include width-568 {
+      max-width: 178px;
     }
   }
 
@@ -233,7 +269,12 @@
   }
 }
 
-.header-styles {
+.header__menu--active {
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  min-height: 70px;
   color: $white;
   background-color: rgba($сodGray, 0.8);
 
@@ -250,17 +291,35 @@
   }
 }
 
-.burger-active {
-  transform: translateY(0);
+.header--burger-active {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  // если justify-content: center то на небольших по высоте экранах крайние элементы (сверху и снизу) уходят за границы экрана и скролл до них не едет( 
+  justify-content: flex-start;
   position: fixed;
+  z-index: 12;
+  transform: translateY(0);
+}
 
-  .header__item--close {
-    display: block;
+.header__tools--fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 15px;
+  background-color: rgba($сodGray, 0.8);
+  transition: background-color 0.3s ease;
+
+  .header__tool--burger {
+    position: initial;
+  }
+
+  .header__box {
+    max-width: 120px;
   }
 }
 
-.tools-fixed {
-  position: fixed;
-  top: 10px;
-  z-index: 1;
+.header__close--active {
+  display: block;
 }

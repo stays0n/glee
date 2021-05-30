@@ -11,18 +11,44 @@
 
   &__item {
     width: 100%;
-    padding-top: 182px;
+
+    @include width-1200 {
+      &:nth-child(even) {
+        .bestseller__inner:nth-child(2n+1) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    
+    @include width-568 {
+      &:nth-child(even) {
+        .bestseller__inner:nth-child(2n+1) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    @include width-1200 {
+      &:not(:last-child) {
+        margin-bottom: 70px;
+      }
+    }
   }
 
   &__inner {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     max-width: 870px;
     width: 100%;
     min-height: 390px;
     background-color: $halfSpanishWhite;
     margin: 0 auto;
+
+    @include width-1200 {
+      max-width: initial;
+      justify-content: space-evenly;
+    }
 
     @include width-568 {
       flex-direction: column;
@@ -34,6 +60,10 @@
     top: -90px;
     width: 250px;
     height: 300px;
+
+    @include width-568 {
+      top: -40px;
+    }
   }
 
   &__img {
@@ -41,6 +71,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @include width-568 {
+      height: 100%;
+    }
   }
 
   &__title {
@@ -52,54 +86,15 @@
   }
 
   &__text {
+    padding: 20px 10px;
+
     @include width-568 {
-      padding: 15px;
+      padding: 15px 15px 50px;
     }
 
     p {
       max-width: 335px;
       margin-bottom: 26px;
     }
-  }
-
-  &__link {
-    max-width: 180px;
-    border: 1px solid rgba($blueBayoux, 0.4);
-    border-radius: 5px;
-    background-color: transparent;
-
-    &:hover {
-      background-color: $blueBayoux;
-      box-shadow: 1px -1px 4px 0px #221f1f;
-
-      .bestseller__sub {
-        color: $white;
-      }
-
-      svg {
-        fill: $white;
-      }
-    }
-
-    &:active {
-      background-color: $casper;
-      transform: scale(0.98);
-    }
-  }
-
-  &__sub {
-    color: $blueBayoux;
-    @extend %Rubik-500;
-    font-size: 15px;
-  }
-
-  & svg {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: 22px;
-    height: 9px;
-    fill: $blueBayoux;
   }
 }

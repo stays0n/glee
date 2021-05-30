@@ -1,7 +1,7 @@
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 74px;
+  margin-bottom: 70px;
   flex-wrap: wrap;
 
   @include width-1200 {
@@ -11,15 +11,14 @@
 
   .mixitup-control-active {
     color: $сodGray;
+
+    @include width-1200 {
+      border-color: $сodGray;
+    }
   }
 
   &__elem {
-
-    @include width-1200 {
-      width: 33.333%;
-    }
-
-    @include width-823 {
+    @include width-568 {
       width: 50%;
     }
 
@@ -36,11 +35,12 @@
     @extend %DMS-700;
     color: $gray;
     border-bottom: 2px solid transparent;
-    transition:
-      color 0.2s ease-out,
-      border 0.2s ease-out;
+    transition: color 0.2s ease-out, border 0.2s ease-out;
 
     @include width-1200 {
+      padding: 10px 15px;
+    }
+    @include width-568 {
       width: 100%;
     }
 

@@ -1,20 +1,3 @@
-// двигаем футер в низ страницы
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex-grow: 1;
-}
-
-//--------------------
-
 body {
   @extend %Rubik-400;
   font-size: 16px;
@@ -55,7 +38,7 @@ button {
 .features__title,
 .product-card__link,
 .news__author,
-.news__date, 
+.news__date,
 .news__author {
   @include line-clamp(1);
 }
@@ -79,9 +62,16 @@ button {
   font-size: 36px;
   text-align: center;
   color: $сodGray;
+  margin-bottom: 10px;
 
   @include width-1200 {
     font-size: 25px;
+    margin-bottom: 50px;
+  }
+
+  @include width-415 {
+    font-size: 20px;
+    line-height: 1.1;
   }
 }
 
@@ -89,16 +79,23 @@ button {
   height: 50px;
   width: 146px;
 
+  &--header {
+    @include width-568 {
+      max-width: 130px;
+    }
+  }
+
+  &--footer {
+    display: block;
+    margin-bottom: 13px;
+    transform: translateY(-8px);
+  }
+
   &__img {
     height: 100%;
     width: 100%;
     object-fit: contain;
   }
-}
-
-.logo--footer {
-  display: block;
-  margin-bottom: 13px;
 }
 
 .btn {
@@ -109,9 +106,67 @@ button {
   font-size: 15px;
   transition-duration: 0.2s;
   transition-timing-function: ease-out, ease, ease;
-  transition-property: color, background, box-shadow;
+  transition-property: color, background-color, box-shadow;
 
-  & svg {
+  &--fill {
+    max-width: 200px;
+    color: $white;
+    background-color: $casper;
+
+    svg {
+      fill: $white;
+    }
+
+    &:hover {
+      background:
+        linear-gradient(to right,
+          rgba(#f9f9f9, 1) 50%,
+          rgba(#f9f9f9, 0) 100%);
+      color: $blueDianne;
+
+      svg {
+        fill: $blueDianne;
+      }
+    }
+
+    &:active {
+      background-color: $white;
+    }
+
+    @include width-568 {
+      max-width: 160px;
+      padding: 10px 15px;
+    }
+  }
+
+  &--border {
+    max-width: 180px;
+    border: 1px solid rgba($blueBayoux, 0.4);
+    border-radius: 5px;
+    color: $blueBayoux;
+    background-color: transparent;
+
+    svg {
+      fill: $blueBayoux;
+    }
+
+    &:hover {
+      background-color: $blueBayoux;
+      box-shadow: 1px -1px 4px 0px #221f1f;
+      color: $white;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      background-color: $casper;
+      transform: scale(0.98);
+    }
+  }
+
+  svg {
     position: absolute;
     top: 50%;
     right: 20px;

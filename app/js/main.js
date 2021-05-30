@@ -1,50 +1,64 @@
 $(function () {
+  // лишний отступ у функции встроенный плагин добавляет постоянно, постараюсь внимательнее(
 
   const headerMenu = document.querySelector('.header__menu'),
-    headerTools = document.querySelector('.header__tools');
+    headerTools = document.querySelector('.header__tools'),
+    headerClose = document.querySelector('.header__close')
 
-  function showTools() {
-    if (window.innerWidth > 568 || window.pageYOffset < 60) {
-      headerTools.classList.remove('tools-fixed')
+  function showHideTools() {
+    if (window.innerWidth <= 568 || window.pageYOffset > 55) {
+      headerTools.classList.add('header__tools--fixed')
 
-    } else if (window.innerWidth <= 568 && window.pageYOffset > 60) {
-      headerTools.classList.add('tools-fixed')
+    } else {
+      headerTools.classList.remove('header__tools--fixed')
     }
   }
 
-  function showHeader() {
+  function showHideHeader() {
+    if (window.pageYOffset > 95) {
+      headerMenu.classList.add('header__menu--active')
+
+    } else if (window.pageYOffset <= 95) {
+      headerMenu.classList.remove('header__menu--active')
+    }
+  }
+
+  document.addEventListener('scroll', () => {
     if (window.innerWidth < 824 || window.innerWidth > 1200) {
-      headerMenu.classList.remove('header-styles')
+      headerMenu.classList.remove('header__menu--active')
+      return
     }
+    showHideHeader()
+  })
 
-    if (window.pageYOffset > 150) {
-      headerMenu.classList.add('header-styles')
-
-    } else if (window.pageYOffset <= 150) {
-      headerMenu.classList.remove('header-styles')
+  document.addEventListener('scroll', () => {
+    if (window.innerWidth > 568 || window.pageYOffset < 55) {
+      headerTools.classList.remove('header__tools--fixed')
+      return
     }
-  }
-
-  window.onscroll = function () {
-    showTools()
-    showHeader()
-  }
+    showHideTools()
+  })
 
   const menuBurger = document.querySelector('.header__tool--burger'),
     bodyTag = document.body;
   let menuToggleFlag = false
 
-  menuBurger.onclick = function toggleMenu() {
+  const removeActiveStyles = () => {
+    headerMenu.classList.remove('header--burger-active')
+    headerClose.classList.remove('header__close--active')
+    bodyTag.style.overflow = 'visible'
+    menuToggleFlag = false
+  }
 
+  menuBurger.onclick = function toggleMenu() {
     if (menuToggleFlag === false) {
-      headerMenu.classList.add('burger-active')
+      headerMenu.classList.add('header--burger-active')
+      headerClose.classList.add('header__close--active')
       bodyTag.style.overflow = 'hidden'
       menuToggleFlag = true
 
     } else if (menuToggleFlag === true) {
-      headerMenu.classList.remove('burger-active')
-      bodyTag.style.overflow = 'visible'
-      menuToggleFlag = false
+      removeActiveStyles()
     }
   }
 
@@ -54,9 +68,7 @@ $(function () {
     if (evt.target === menuBurger || menuBurger.contains(evt.target)) {
       return
     }
-    headerMenu.classList.remove('burger-active')
-    bodyTag.style.overflow = 'visible'
-    menuToggleFlag = false
+    removeActiveStyles()
   }
 
   const formInput = document.querySelector('.form__input'),
@@ -64,7 +76,6 @@ $(function () {
 
   formInput.addEventListener('focus', () => {
     formGroup.classList.add('active')
-
   })
 
   formInput.addEventListener('blur', () => {
@@ -109,16 +120,13 @@ $(function () {
     ]
   });
 
-
-
-
-  let containerEl1 = document.querySelector('[data-ref="container-1"]'),
-    containerEl2 = document.querySelector('[data-ref="container-2"]');
-  let config = {
-    controls: {
-      scope: 'local'
-    }
-  };
+  const containerEl1 = document.querySelector('[data-ref="container-1"]'),
+    containerEl2 = document.querySelector('[data-ref="container-2"]'),
+    config = {
+      controls: {
+        scope: 'local'
+      }
+    };
   mixitup(containerEl1, config)
   mixitup(containerEl2, config)
 

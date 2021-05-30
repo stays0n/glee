@@ -1,5 +1,13 @@
 .new {
-  padding: 54px 0 100px;
+  padding: 54px 0 47px;
+  
+  @include width-568 {
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
 
   &__list {
     display: flex;
@@ -7,7 +15,17 @@
     flex-wrap: wrap;
     row-gap: 35px;
     column-gap: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 117px;
+
+    @include width-823 {
+      row-gap: 15px;
+      column-gap: 10px;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
   }
 
   &__video {
@@ -18,11 +36,8 @@
     background-size: cover;
     background-position: center;
 
-    @include width-1200 {
-      min-height: 300px;
-    }
     @include width-823 {
-      min-height: 200px;
+      min-height: 350px;
     }
 
     &:hover {
@@ -58,6 +73,11 @@
     height: 98px;
     border-radius: 50%;
     background-color: $casper;
+
+    @include width-568 {
+      width: 48px;
+      height: 48px;
+    }
   }
 
   &__video::after {
@@ -69,12 +89,22 @@
     background-color: $casper;
     opacity: 0.4;
     animation: toWhite 1.5s ease-in-out infinite alternate paused 0s none;
+
+    @include width-568 {
+      width: 68px;
+      height: 68px;
+    }
   }
 
-  & svg {
+  svg {
     z-index: 1;
     width: 22px;
     height: 25px;
     fill: $white;
+
+    @include width-568 {
+      width: 15px;
+      height: 18px;
+    }
   }
 }

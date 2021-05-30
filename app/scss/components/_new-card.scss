@@ -1,17 +1,12 @@
 .new-card {
   display: block;
   position: relative;
-  min-width: 370px;
+  max-width: 370px;
   width: 100%;
-  min-height: 246px;
-  padding: 36px 0 30px 35px;
+  height: 246px;
+  padding: 33px 0 0 35px;
   border-radius: 5px;
   background-color: $alabaster;
-
-  @include width-823 {
-    min-width: 300px;
-    padding: 10px 0 20px 10px;
-  }
 
   &__name {
     max-width: 180px;
@@ -24,18 +19,20 @@
 
   &__wrap {
     position: absolute;
-    left: 100px;
+    right: 0;
     bottom: 30px;
     width: 270px;
     max-height: 178px;
     overflow: hidden;
 
-    @include width-823 {
-      width: 200px;
+    @include width-568 {
+      width: 230px;
+      bottom: 10px;
     }
   }
 
   &__image {
     margin: 0 20px 0 auto;
+    object-fit: contain;
   }
 }

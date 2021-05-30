@@ -2,8 +2,11 @@
   background-color: $provincialPink;
 
   &__slider {
-    height: 270px;
-    padding: 87px 0;
+    padding: 87px 0 76px;
+
+    @include width-568 {
+      padding: 50px 0;
+    }
   }
 
   &__item {
