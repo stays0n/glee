@@ -5,6 +5,12 @@
   -webkit-line-clamp: $num;
 }
 
+@mixin width-415 {
+  @media (max-width: 415px) {
+    @content;
+  }
+}
+
 @mixin width-568 {
   @media (max-width: 568px) {
     @content;

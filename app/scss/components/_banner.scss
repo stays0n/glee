@@ -15,7 +15,6 @@
       z-index: -1;
       width: 634px;
       height: 634px;
-      ;
       background-image: url('../images/home-page/banner/banner-ellipse.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -52,6 +51,7 @@
 
     @include width-823 {
       justify-content: center;
+      flex-direction: column;
     }
   }
 
@@ -74,7 +74,7 @@
   .slick-dots button {
     padding: 5px 11px 4px;
     min-width: 29px;
-    border-radius: 50%;
+    border-radius: 20px;
     font-size: 11px;
     color: $blueDianne;
     font-weight: 500;
@@ -89,18 +89,15 @@
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     max-width: 420px;
-    padding: 220px 0 280px;
+    padding: 216px 0 280px;
 
     @include width-1200 {
       padding: 135px 0;
     }
 
     @include width-823 {
-      padding: 40px 0 90px;
+      padding: 25px 0 15px;
     }
 
     p {
@@ -112,6 +109,10 @@
 
       @include width-1200 {
         font-size: 15px;
+      }
+
+      @include width-823 {
+        margin-bottom: 15px;
       }
     }
   }
@@ -128,53 +129,14 @@
       font-size: 45px;
     }
 
-    @include width-568 {
+    @include width-823 {
+      margin-bottom: 15px;
       font-size: 30px;
     }
   }
 
-  &__link {
-    max-width: 200px;
-    color: $white;
-    background-color: $casper;
-
-    @include width-568 {
-      max-width: 160px;
-      padding: 10px 15px;
-    }
-
-    &:hover {
-      background:
-        linear-gradient(to right,
-          rgba(#f9f9f9, 1) 50%,
-          rgba(#f9f9f9, 0) 100%);
-      color: $blueDianne;
-
-      & svg {
-        fill: $blueDianne;
-      }
-    }
-
-    &:active {
-      background-color: $white;
-    }
-  }
-
-  &__link svg {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 22px;
-    height: 9px;
-    fill: $white;
-  }
-
   &__box {
-    display: flex;
-    align-items: center;
     max-width: 640px;
-    max-height: 640px;
     padding: 112px 0 118px;
 
     @include width-1200 {
@@ -182,7 +144,7 @@
     }
 
     @include width-823 {
-      display: none;
+      padding: 15px 0 50px;
     }
   }
 

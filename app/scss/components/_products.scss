@@ -1,8 +1,8 @@
 .products {
-  padding: 54px 0 30px;
+  padding: 58px 0 30px;
 
-  &__title {
-    margin-bottom: 10px;
+  @include width-568 {
+    padding-bottom: 0;
   }
 
   &__list {
@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 40px;
+    margin-bottom: 179px;
   }
 
   &__item {

@@ -1,27 +1,37 @@
 .news {
+  padding-top: 54px;
   &__wrapper {
-    background: linear-gradient(to top, $provincialPink 0%, $provincialPink 170px, transparent 170px, transparent 100%);
+    background: linear-gradient(to top, $provincialPink 0, $provincialPink 170px, transparent 170px, transparent 100%);
   }
 
-  .container {
+  &__inner {
     position: relative;
   }
 
   &__title {
     text-align: left;
-    padding-right: 120px;
-    margin-bottom: 32px;
+    margin: 0 95px 30px 0;
+
+    @include width-568 {
+      margin-bottom: 60px;
+    }
   }
 
   &__all {
     position: absolute;
-    top: 27px;
+    bottom: 12px;
     right: 0;
-    padding-right: 30px;
+    max-width: 86px;
+    width: 100%;
+    padding-right: 14px;
     @extend %DMS-700;
+
+    @include width-568 {
+      bottom: -35px;
+    }
   }
 
-  & svg {
+  svg {
     width: 6px;
     height: 11px;
     transform: translateX(15px);
@@ -31,10 +41,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 30px;
+    row-gap: 30px;
+    column-gap: 30px;
 
     @include width-823 {
-      gap: 5px;
+      column-gap: 10px;
     }
   }
 
@@ -42,13 +53,17 @@
     flex-basis: 370px;
     border-radius: 5px;
     background-color: $white;
-    box-shadow: 0px 6px 47px 3px rgba(#252525, 0.05);
+    box-shadow: 0 6px 47px 3px rgba(#252525, 0.05);
   }
 
   &__wrap {
     position: relative;
     height: 250px;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+
+    @include width-415 {
+      margin-bottom: 20px;
+    }
   }
 
   &__img {
@@ -72,24 +87,22 @@
 
   &__text {
     padding: 0 29px;
+
+    @include width-415 {
+      padding: 0 15px;
+    }
   }
 
   &__heading {
-    position: relative;
     max-width: 340px;
-    height: 79px;
+    min-height: 75px;
     @extend %DMS-500;
     font-size: 18px;
     line-height: 1.2;
     color: $mineShaft;
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #e0e0e0;
+    @include width-415 {
+      font-size: 16px;
     }
   }
 
@@ -98,21 +111,52 @@
   }
 
   &__base {
-    display: flex;
-    justify-content: flex-start;
-    padding: 12px 0 18px;
+    position: relative;
+    padding: 12px 0 7px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+
+    @include width-415 {
+      padding: 5px 0 5px;
+    }
   }
 
   &__date,
   &__author {
-    width: 50%;
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    padding-left: 10px;
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
     color: $ebonyClay;
 
     &::before {
-      content: '\26DD\0020';
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 7px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
+  }
+
+  &__date::before {
+    background-image: url('../../images/icons/calendar.svg');
+  }
+
+  &__author::before {
+    background-image: url('../../images/icons/user.svg');
   }
 }

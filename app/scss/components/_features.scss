@@ -1,33 +1,49 @@
 .features {
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    @extend %DMS-700;
-    background-color: $provincialPink;
+  display: flex;
+  justify-content: space-around;
+  @extend %DMS-700;
+  background-color: $provincialPink;
 
-    @include width-823 {
-      flex-wrap: wrap;
-
-    }
+  @include width-823 {
+    flex-wrap: wrap;
   }
 
   &__item {
+    position: relative;
     max-width: 590px;
     width: 100%;
 
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: #e8e4df;
+    }
+
+    &:not(:first-child)::before {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+    }
+
     @include width-823 {
       max-width: 50%;
+
+      &:last-child::before {
+        width: 200%;
+        height: 1px;
+        left: -50%;
+      }
     }
 
     @include width-568 {
       max-width: 100%;
-    }
 
-    &:not(:last-child) {
-      border-right: 1px solid #e8e4df;
-
-      @include width-823 {
-        border: none;
+      &:not(:first-child)::before {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
       }
     }
   }
@@ -45,7 +61,7 @@
     }
 
     @include width-823 {
-      padding: 10px 5px 5px 80px;
+      padding: 20px 5px 10px 80px;
       min-height: 120px;
     }
   }
@@ -64,26 +80,18 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
-    @include width-1200 {
-      left: 10px;
-    }
-
-    @include width-823 {
-      top: 10px;
-    }
   }
 
   &__box--support::before {
-    background-image: url('../images/home-page/banner/features/support.svg');
+    background-image: url('../images/icons/support.svg');
   }
 
   &__box--delivery::before {
-    background-image: url('../images/home-page/banner/features/delivery.svg');
+    background-image: url('../images/icons/delivery.svg');
   }
 
   &__box--payment::before {
-    background-image: url('../images/home-page/banner/features/payment.svg');
+    background-image: url('../images/icons/payment.svg');
   }
 
   &__box p {
