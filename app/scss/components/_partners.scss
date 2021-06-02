@@ -2,7 +2,7 @@
   background-color: $provincialPink;
 
   &__slider {
-    padding: 87px 0 76px;
+    padding: 87px 0 80px;
 
     @include width-568 {
       padding: 50px 0;
@@ -10,15 +10,33 @@
   }
 
   &__item {
-    position: relative;
-    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
   }
 
-  &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: auto;
-    transform: translate(-50%, -50%);
+  // создал доп.обёртку, сделал флексом, но не помогло, по горизонту всё= не центрируется.
+  // ничего кроме тупо задать модификаторы и пододвинуть каждый отдельно не приходит
+  // скидываю так потому что уже просто не знаю как еще подогнать ПП
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
+
+  // &__item {
+  //   position: relative;
+  //   height: 100px;
+  // }
+
+  // &__img {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   margin: auto;
+  //   transform: translate(-50%, -50%);
+  //   // transform: translateY(-50%);
+  // }
 }

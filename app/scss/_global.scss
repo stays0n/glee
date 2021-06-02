@@ -35,17 +35,19 @@ button {
   overflow: hidden;
 }
 
-.features__title,
-.product-card__link,
+.banner__heading,
+.product-card__name,
 .news__author,
 .news__date,
-.news__author {
+.news__author,
+.new-card__sub,
+.news__sub {
   @include line-clamp(1);
 }
 
 .banner__title,
 .banner__text p,
-.features__box p,
+.banner__wrap p,
 .bestseller__title,
 .bestseller__text p,
 .new-card__link,
@@ -80,6 +82,12 @@ button {
   width: 146px;
 
   &--header {
+    margin-right: 165px;
+
+    @include width-1200 {
+      margin-right: 0;
+    }
+
     @include width-568 {
       max-width: 130px;
     }
@@ -87,8 +95,7 @@ button {
 
   &--footer {
     display: block;
-    margin-bottom: 13px;
-    transform: translateY(-8px);
+    margin-bottom: 19px;
   }
 
   &__img {
@@ -104,9 +111,7 @@ button {
   padding: 14px 20px;
   @extend %Rubik-500;
   font-size: 15px;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out, ease, ease;
-  transition-property: color, background-color, box-shadow;
+  transition: color 0.2s ease-out, background-color 0.2s ease, box-shadow 0.2s ease;
 
   &--fill {
     max-width: 200px;

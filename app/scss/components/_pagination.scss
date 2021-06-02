@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__link,
+  &__arrows {
+    border: 1px solid $casper;
+
+    &--active {
+      background-color: $casper;
+      color: $white;
+    }
+  }
+
+  &__link,
+  &__arrows {
+    line-height: 1;
+    padding: 17px 20px;
+  }
+}

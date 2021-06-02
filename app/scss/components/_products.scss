@@ -1,5 +1,9 @@
 .products {
-  padding: 58px 0 30px;
+  padding: 54px 0 30px;
+
+  @include width-823 {
+    padding: 90px 0 47px;
+  }
 
   @include width-568 {
     padding-bottom: 0;
@@ -7,11 +11,15 @@
 
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 40px;
-    margin-bottom: 179px;
+    margin-bottom: 187px;
+
+    @include width-415 {
+      margin-bottom: 110px;
+    }
   }
 
   &__item {

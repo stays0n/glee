@@ -13,24 +13,22 @@
     width: 100%;
 
     @include width-1200 {
-      &:nth-child(even) {
-        .bestseller__inner:nth-child(2n+1) {
+      &:last-child {
+        .bestseller__inner:last-child {
           flex-direction: row-reverse;
         }
       }
-    }
-    
-    @include width-568 {
-      &:nth-child(even) {
-        .bestseller__inner:nth-child(2n+1) {
-          flex-direction: column;
-        }
+
+      &:not(:last-child) {
+        margin-bottom: 70px;
       }
     }
 
-    @include width-1200 {
-      &:not(:last-child) {
-        margin-bottom: 70px;
+    @include width-568 {
+      &:last-child {
+        .bestseller__inner:last-child {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -86,7 +84,7 @@
   }
 
   &__text {
-    padding: 20px 10px;
+    padding: 16px 10px 20px;
 
     @include width-568 {
       padding: 15px 15px 50px;

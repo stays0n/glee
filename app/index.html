@@ -15,13 +15,13 @@
     <div class="container container--lg">
       <nav class="header__navigation">
         <a class="logo logo--header" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="logo">
+          <img class="logo__img" src="images/icons/logo.svg" alt="logo">
         </a>
 
-        <button class="header__close">
+        <button class="header__close" type="button">
           <span class="sr-only">Close menu</span>
           <svg>
-            <use xlink:href="images/sprite.svg#close-btn"></use>
+            <use xlink:href="images/icons/sprite.svg#close-btn"></use>
           </svg>
         </button>
 
@@ -46,54 +46,55 @@
           </li>
         </ul>
 
+        <div class="header__fill"></div>
         <div class="header__tools">
           <button class="header__tool header__tool--search" type="button">
             <span class="sr-only">Open search box</span>
-            <svg class="header-search">
-              <use xlink:href="images/sprite.svg#header-search"></use>
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#header-search"></use>
             </svg>
           </button>
 
           <div class="header__box">
             <a class="header__tool header__tool--heart" href="#">
               <span class="sr-only">Open favorites</span>
-              <svg class="header-heart">
-                <use xlink:href="images/sprite.svg#header-heart"></use>
-              </svg>
-              <div class="header__quantity">
-                <span class="header__num header__num--heart">0</span>
+              <div class="header__wrap">
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#header-heart"></use>
+                </svg>
+                <span class="header__num">0</span>
               </div>
             </a>
 
+
             <a class="header__tool header__tool--cart" href="#">
               <span class="sr-only">Open cart</span>
-              <svg class="header-cart">
-                <use xlink:href="images/sprite.svg#header-cart"></use>
-              </svg>
-              <div class="header__quantity">
-                <span class="header__num header__num--cart">0</span>
+              <div class="header__wrap">
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#header-cart"></use>
+                </svg>
+                <span class="header__num">0</span>
               </div>
             </a>
           </div>
 
-          <button class="header__tool header__tool--more" type="menu">
+          <button class="header__tool header__tool--more" type="button">
             <span class="sr-only">Open additional menu</span>
-            <svg class="header-more">
-              <use xlink:href="images/sprite.svg#header-more"></use>
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#header-more"></use>
             </svg>
           </button>
 
-          <button class="header__tool header__tool--burger">
+          <button class="header__tool header__tool--burger" type="button">
             <span class="sr-only">Open menu</span>
-            <svg class="header-burger">
-              <use xlink:href="images/sprite.svg#menu"></use>
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#menu"></use>
             </svg>
           </button>
         </div>
       </nav>
     </div>
   </header>
-
 
   <main class="main">
     <h1 class="sr-only">Premium upholstered furniture</h1>
@@ -115,7 +116,7 @@
                 <a class="btn btn--fill" href="#">
                   <span class="banner__sub">Shop Now</span>
                   <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -137,7 +138,7 @@
                 <a class="btn btn--fill" href="#">
                   <span class="banner__sub">Shop Now</span>
                   <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -159,7 +160,7 @@
                 <a class="btn btn--fill" href="#">
                   <span class="banner__sub">Shop Now</span>
                   <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -170,10 +171,10 @@
           </li>
         </ul>
 
-        <ul class="banner__features features">
-          <li class="features__item">
-            <div class="features__box features__box--support">
-              <h3 class="features__title">
+        <ul class="banner__features">
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--support">
+              <h3 class="banner__heading">
                 Support 24/7.
               </h3>
               <p>
@@ -182,9 +183,9 @@
             </div>
           </li>
 
-          <li class="features__item">
-            <div class="features__box features__box--delivery">
-              <h3 class="features__title">
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--delivery">
+              <h3 class="banner__heading">
                 Delivery.
               </h3>
               <p>
@@ -193,9 +194,9 @@
             </div>
           </li>
 
-          <li class="features__item">
-            <div class="features__box features__box--payment">
-              <h3 class="features__title">
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--payment">
+              <h3 class="banner__heading">
                 100% Payment secure.
               </h3>
               <p>
@@ -241,41 +242,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-1.png" alt="Wooden radio">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Wooden radio</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -284,41 +290,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-2.png" alt="Wooden chair">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Wooden chair</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -327,41 +338,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-3.png" alt="White chair">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">White chair</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -370,41 +386,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-4.png" alt="Retro table">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Retro table</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -413,41 +434,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-5.png" alt="Wooden radio">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Wooden radio</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -456,41 +482,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-6.png" alt="Wooden radio">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Wooden chair</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -499,41 +530,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-7.png" alt="Wooden radio">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">White chair</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
 
@@ -542,41 +578,46 @@
               <a class="product-card__wrap" href="#">
                 <img class="product-card__image" src="images/products/products-img-8.png" alt="Wooden radio">
               </a>
-              <div class="product-card__text">
+              <div class="product-card__box">
                 <h3 class="product-card__name">
                   <a class="product-card__link" href="#">Retro table</a>
                 </h3>
+                <span class="product-card__rate star" data-rateyo-rating="4"></span>
                 <span class="product-card__price">$29.00</span>
+                <p>
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation
+                </p>
+
+                <ul class="product-card__tools">
+                  <li class="product-card__tool">
+                    <a class="product-card__toggle" href="#">
+                      <span class="sr-only">Go to product page</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-search"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to cart</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-cart"></use>
+                      </svg>
+                    </button>
+                  </li>
+
+                  <li class="product-card__tool">
+                    <button class="product-card__toggle" type="button">
+                      <span class="sr-only">Add to favorites</span>
+                      <svg>
+                        <use href="images/icons/sprite.svg#tools-heart"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="product-card__tools">
-                <li class="product-card__tool">
-                  <a class="product-card__toggle" href="#">
-                    <span class="sr-only">Go to product page</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-search"></use>
-                    </svg>
-                  </a>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to cart</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-cart"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="product-card__tool">
-                  <button class="product-card__toggle" type="button">
-                    <span class="sr-only">Add to favorites</span>
-                    <svg>
-                      <use href="images/sprite.svg#tools-heart"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
             </article>
           </li>
         </ul>
@@ -598,7 +639,7 @@
                 <a class="btn btn--border" href="#">
                   View More
                   <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -619,7 +660,7 @@
                 <a class="btn btn--border" href="#">
                   View More
                   <svg>
-                    <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
                   </svg>
                 </a>
               </div>
@@ -760,14 +801,15 @@
         href="https://www.youtube.com/watch?v=yFzjU6yjVBc">
         <span class="sr-only">Play video</span>
         <svg>
-          <use xlink:href="images/sprite.svg#video-play"></use>
+          <use xlink:href="images/icons/sprite.svg#video-play"></use>
         </svg>
       </a>
     </section>
 
     <section class="news">
-      <div class="news__wrapper">
-        <!-- врапер для градиента на фоне карточек новостей:) -->
+      <div class="news__line">
+        <!-- поставил полоску на бифор обёртки, переименовал её в line -->
+        <!-- на контейнер news не спозиционировать никак, тк блок внизу не заканчивается, там еще слайдер партнёров( -->
         <div class="container">
           <div class="news__inner">
             <h2 class="news__title title">
@@ -777,7 +819,7 @@
             <a class="news__all" href="#">
               View All
               <svg>
-                <use xlink:href="images/sprite.svg#short-arrow"></use>
+                <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
               </svg>
             </a>
           </div>
@@ -785,7 +827,9 @@
           <ul class="news__list">
             <li class="news__item">
               <div class="news__wrap">
-                <img class="news__img" src="images/news/news-img-1.jpg" alt="Bedroom image">
+                <a class="news__ref" href="#">
+                  <img class="news__img" src="images/news/news-img-1.jpg" alt="Bedroom image">
+                </a>
                 <a class="news__sub" href="#">News</a>
               </div>
               <div class="news__text">
@@ -807,7 +851,9 @@
 
             <li class="news__item">
               <div class="news__wrap">
-                <img class="news__img" src="images/news/news-img-2.jpg" alt="Living room">
+                <a class="news__ref" href="#">
+                  <img class="news__img" src="images/news/news-img-2.jpg" alt="Living room">
+                </a>
                 <a class="news__sub" href="#">News</a>
               </div>
               <div class="news__text">
@@ -825,7 +871,9 @@
 
             <li class="news__item">
               <div class="news__wrap">
-                <img class="news__img" src="images/news/news-img-3.jpg" alt="Main room">
+                <a class="news__ref" href="#">
+                  <img class="news__img" src="images/news/news-img-3.jpg" alt="Main room">
+                </a>
                 <a class="news__sub" href="#">News</a>
               </div>
               <div class="news__text">
@@ -848,43 +896,33 @@
         <div class="container">
           <ul class="partners__slider">
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-1.png" alt="Peterson Stephanie">
+              <div class="partners__wrap">
+                <img class="partners__img" src="images/partners/partners-img-1.png" alt="Peterson Stephanie">
+              </div>
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-2.png" alt="KMN consulting">
+              <div class="partners__wrap">
+                <img class="partners__img" src="images/partners/partners-img-2.png" alt="KMN consulting">
+              </div>
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-3.png" alt="Chainforce">
+              <div class="partners__wrap">
+                <img class="partners__img" src="images/partners/partners-img-3.png" alt="Chainforce">
+              </div>
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-4.png" alt="Next G3N">
+              <div class="partners__wrap">
+                <img class="partners__img" src="images/partners/partners-img-4.png" alt="Next G3N">
+              </div>
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-5.png" alt="The Vintage">
-            </li>
-
-            <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-1.png" alt="Peterson Stephanie">
-            </li>
-
-            <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-2.png" alt="KMN consulting">
-            </li>
-
-            <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-3.png" alt="Chainforce">
-            </li>
-
-            <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-4.png" alt="Next G3N">
-            </li>
-
-            <li class="partners__item">
-              <img class="partners__img" src="images/partners/partners-img-5.png" alt="The Vintage">
+              <div class="partners__wrap">
+                <img class="partners__img" src="images/partners/partners-img-5.png" alt="The Vintage">
+              </div>
             </li>
           </ul>
         </div>
@@ -897,9 +935,9 @@
 
     <div class="container">
       <div class="footer__wrapper">
-        <div class="footer__inner footer__inner--addres">
+        <div class="footer__addres">
           <a class="logo logo--footer" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
+            <img class="logo__img" src="images/icons/logo.svg" alt="logo">
           </a>
 
           <address class="contacts">
@@ -991,30 +1029,6 @@
         </div>
         <nav class="footer__nav">
           <ul class="footer__links">
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Home</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">About</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Blog</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Contact</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Home</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">About</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Blog</a>
-            </li>
-            <li class="footer__elem">
-              <a class="footer__ref" href="#">Contact</a>
-            </li>
             <li class="footer__elem">
               <a class="footer__ref" href="#">Home</a>
             </li>

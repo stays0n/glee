@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding: 77px 0 60px;
+    padding: 73px 0 56px;
     border-bottom: 1px solid #dae4e9;
     line-height: 1.7;
 
@@ -20,10 +20,11 @@
     }
 
     @include width-568 {
-  justify-content: center;
+      justify-content: center;
     }
   }
 
+  &__addres,
   &__inner {
     max-width: 200px;
     width: 100%;
@@ -49,12 +50,15 @@
     }
   }
 
+  &__inner {
+    padding-top: 22px;
+  }
+
   &__item {
     margin-bottom: 9px;
   }
 
   &__title {
-    padding-top: 15px;
     margin-bottom: 20px;
     @extend %DMS-700;
     font-size: 16px;
@@ -87,12 +91,15 @@
 
   &__link,
   &__ref {
-    transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out, border 0.2s ease-out, transform 0.2s ease-out;
+    border-bottom: 1px solid transparent;
   }
 
   &__link:hover,
   &__ref:hover {
+    border-color: inherit;
     color: $сodGray;
+    transform: scale(1.1);
   }
 
   &__elem {
@@ -125,10 +132,12 @@
 
   &__link {
     display: inline;
-    transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out, border 0.2s ease-out;
+    border-bottom: 1px solid transparent;
   }
 
   &__link:hover {
+    border-color: inherit;
     color: $сodGray;
   }
 }
@@ -177,7 +186,7 @@
   }
 
   &__group.active .form__label {
-    transform: translate(0, -4px) scale(0.9);
+    transform: translate(0, -16px) scale(0.9);
   }
 
   &__input:focus,

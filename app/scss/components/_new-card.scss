@@ -17,6 +17,14 @@
     color: $сodGray;
   }
 
+  &__sub {
+    position: relative;
+    z-index: 1;
+    max-width: 270px;
+    color: $casper;
+    @extend %DMS-700;
+  }
+
   &__wrap {
     position: absolute;
     right: 0;
