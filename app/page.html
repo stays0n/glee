@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glee — anypage</title>
-
+  <title>Glee — Home page</title>
   <link rel="icon" href="images/favicon/favicon.ico">
-
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -16,9 +14,16 @@
   <header class="header">
     <div class="container container--lg">
       <nav class="header__navigation">
-        <a class="logo" href="#">
+        <a class="logo logo--header" href="#">
           <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
+
+        <button class="header__close">
+          <span class="sr-only">Close menu</span>
+          <svg>
+            <use xlink:href="images/sprite.svg#close-btn"></use>
+          </svg>
+        </button>
 
         <ul class="header__menu">
           <li class="header__item">
@@ -43,7 +48,7 @@
 
         <div class="header__tools">
           <button class="header__tool header__tool--search" type="button">
-            <span class="sr-only">Search</span>
+            <span class="sr-only">Open search box</span>
             <svg class="header-search">
               <use xlink:href="images/sprite.svg#header-search"></use>
             </svg>
@@ -51,36 +56,44 @@
 
           <div class="header__box">
             <a class="header__tool header__tool--heart" href="#">
-              <span class="sr-only">Favorites</span>
+              <span class="sr-only">Open favorites</span>
               <svg class="header-heart">
                 <use xlink:href="images/sprite.svg#header-heart"></use>
               </svg>
               <div class="header__quantity">
-                <span class="header__num">0</span>
+                <span class="header__num header__num--heart">0</span>
               </div>
             </a>
 
             <a class="header__tool header__tool--cart" href="#">
-              <span class="sr-only">Cart</span>
+              <span class="sr-only">Open cart</span>
               <svg class="header-cart">
                 <use xlink:href="images/sprite.svg#header-cart"></use>
               </svg>
               <div class="header__quantity">
-                <span class="header__num">0</span>
+                <span class="header__num header__num--cart">0</span>
               </div>
             </a>
           </div>
 
           <button class="header__tool header__tool--more" type="menu">
-            <span class="sr-only">More button</span>
+            <span class="sr-only">Open additional menu</span>
             <svg class="header-more">
               <use xlink:href="images/sprite.svg#header-more"></use>
+            </svg>
+          </button>
+
+          <button class="header__tool header__tool--burger">
+            <span class="sr-only">Open menu</span>
+            <svg class="header-burger">
+              <use xlink:href="images/sprite.svg#menu"></use>
             </svg>
           </button>
         </div>
       </nav>
     </div>
   </header>
+
 
   <main class="main">
 
@@ -91,7 +104,7 @@
 
     <div class="container">
       <div class="footer__wrapper">
-        <div class="footer__inner">
+        <div class="footer__inner footer__inner--addres">
           <a class="logo logo--footer" href="#">
             <img class="logo__img" src="images/logo.svg" alt="logo">
           </a>
@@ -169,13 +182,11 @@
           <div class="footer__items">
             <p>Subscribe by our newsletter and get update protidin.</p>
             <form class="form">
-              <div class="form__inner">
-                <div class="form__group">
-                  <input class="form__input" type="email" id="input-mail">
-                  <label class="form__label" for="input-mail">Email address</label>
-                </div>
-                <button class="form__btn" type="submit">Subscribe</button>
+              <div class="form__group">
+                <input class="form__input" type="email" id="input-mail">
+                <label class="form__label" for="input-mail">Email address</label>
               </div>
+              <button class="form__btn" type="submit">Subscribe</button>
             </form>
           </div>
         </div>
@@ -187,6 +198,30 @@
         </div>
         <nav class="footer__nav">
           <ul class="footer__links">
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Home</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">About</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Blog</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Contact</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Home</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">About</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Blog</a>
+            </li>
+            <li class="footer__elem">
+              <a class="footer__ref" href="#">Contact</a>
+            </li>
             <li class="footer__elem">
               <a class="footer__ref" href="#">Home</a>
             </li>

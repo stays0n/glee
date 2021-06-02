@@ -29,7 +29,7 @@
     font-weight: 500;
     color: $blueBayoux;
     flex-wrap: wrap;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 
     @include width-1200 {
       justify-content: space-around;
@@ -49,10 +49,13 @@
       top: 0;
       height: 100vh;
       transform: translateY(-200%);
-      transition: transform 0.3s ease;
       background-color: rgba($сodGray, 0.8);
       overflow: auto;
     }
+  }
+
+  &__fill {
+    display: none;
   }
 
   &__item {
@@ -117,45 +120,77 @@
   &__tool {
     display: flex;
     justify-content: center;
-    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 25px;
     transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+
+    &:hover {
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      svg {
+        transform: scale(0.85);
+      }
+    }
 
     svg {
       width: 20px;
       height: 100%;
       fill: $blueDianne;
       transition: fill 0.2s ease-out;
+    }
 
-      &.header-more {
+    &--search {
+      svg {
+        width: 16px;
+        transform: translate(3px, 4px);
+
+        @include width-1200 {
+          transform: translate(0);
+          width: 20px;
+        }
+      }
+    }
+
+    &--heart {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .header__wrap {
+        transform: translate(7px, 8px);
+
+        @include width-1200 {
+          transform: translate(0);
+        }
+      }
+    }
+
+    &--cart {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .header__wrap {
+        transform: translate(-4px, 7px);
+
+        @include width-1200 {
+          transform: translate(0);
+        }
+      }
+    }
+
+    &--more {
+      svg {
         fill: $white;
       }
-    }
 
-    .header-search {
-      width: 16px;
-      transform: translate(3px, 4px);
-    }
-
-    .header-heart {
-      transform: translate(7px, 8px);
-    }
-
-    .header-cart {
-      transform: translate(-4px, 7px);
-    }
-
-    .header__num {
-      &--heart {
-        top: 16px;
-        right: 18px;
-      }
-
-      &--cart {
-        top: 16px;
-        right: 31px;
+      &:hover {
+        svg {
+          fill: $blueDianne;
+        }
       }
     }
 
@@ -173,16 +208,6 @@
       }
     }
 
-    &--heart {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &--cart {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
     &--burger,
     &--search,
     &--more:hover {
@@ -190,25 +215,9 @@
     }
 
     &--burger:hover,
-    &--more,
-    &--search:hover {
+    &--search:hover,
+    &--more {
       background-color: $casper;
-    }
-
-    &:hover {
-      svg {
-        fill: $white;
-      }
-
-      .header-more {
-        fill: $blueDianne;
-      }
-    }
-
-    &:active {
-      svg {
-        transform: scale(0.85);
-      }
     }
   }
 
@@ -223,7 +232,7 @@
     background-color: $lightApricot;
 
     .header__tool {
-      flex-grow: 1;
+      width: 100%;
 
       &:hover {
         background-color: $casper;
@@ -254,7 +263,7 @@
     display: inline-block;
     position: absolute;
     top: 10px;
-    right: 25px;
+    right: -10px;
     height: 16px;
     padding: 4px 5px;
     border-radius: 8px;
@@ -262,10 +271,11 @@
     line-height: 1;
     text-align: center;
     background-color: $white;
+  }
 
-    @include width-823 {
-      right: 10px;
-    }
+  &__wrap {
+    display: inline-block;
+    position: relative;
   }
 }
 
@@ -273,7 +283,7 @@
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 12;
   min-height: 70px;
   color: $white;
   background-color: rgba($сodGray, 0.8);
@@ -294,10 +304,9 @@
 .header--burger-active {
   flex-direction: column;
   flex-wrap: nowrap;
-  // если justify-content: center то на небольших по высоте экранах крайние элементы (сверху и снизу) уходят за границы экрана и скролл до них не едет( 
   justify-content: flex-start;
   position: fixed;
-  z-index: 12;
+  z-index: 13;
   transform: translateY(0);
 }
 
@@ -306,17 +315,29 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
-  padding: 15px;
+  z-index: 12;
+  max-width: 100%;
+  padding: 10px 15px 7px;
   background-color: rgba($сodGray, 0.8);
-  transition: background-color 0.3s ease;
 
-  .header__tool--burger {
-    position: initial;
+  .header__tool {
+    width: 44px;
+    height: 44px;
   }
 
   .header__box {
     max-width: 120px;
+    height: 44px;
+    margin: 0 15px;
+
+    @include width-415 {
+      margin: 0 12px;
+    }
+  }
+
+  .header__tool--burger {
+    position: initial;
+    margin-left: auto;
   }
 }
 

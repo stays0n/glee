@@ -1,7 +1,20 @@
 .news {
   padding-top: 54px;
-  &__wrapper {
-    background: linear-gradient(to top, $provincialPink 0, $provincialPink 170px, transparent 170px, transparent 100%);
+
+  &__line {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      height: 170px;
+      background-color: $provincialPink;
+    }
   }
 
   &__inner {
@@ -25,17 +38,29 @@
     width: 100%;
     padding-right: 14px;
     @extend %DMS-700;
+    transition: text-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(5px);
+      text-shadow: -1px 0 1px $casper;
+
+      svg {
+        filter: drop-shadow(-1px 0 1px $casper);
+      }
+    }
 
     @include width-568 {
       bottom: -35px;
     }
+    
+    svg {
+      width: 6px;
+      height: 11px;
+      transform: translateX(15px);
+      transition: transform 0.2s ease, 0.3s ease, filter 0.2 ease;
+    }
   }
 
-  svg {
-    width: 6px;
-    height: 11px;
-    transform: translateX(15px);
-  }
 
   &__list {
     display: flex;
@@ -66,9 +91,19 @@
     }
   }
 
+  &__ref {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+
   &__img {
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__sub {
@@ -76,6 +111,8 @@
     position: absolute;
     left: 28px;
     bottom: -13px;
+    max-width: 315px;
+    max-height: 30px;
     padding: 2px 31px;
     border-radius: 15px;
     @extend %Poppins-700;
@@ -83,6 +120,12 @@
     text-transform: uppercase;
     color: $white;
     background-color: $casper;
+    transition: background-color 0.2s ease-in, color 0.2s ease-out;
+
+    &:hover {
+      background-color: $gray;
+      color: $mineShaft;
+    }
   }
 
   &__text {

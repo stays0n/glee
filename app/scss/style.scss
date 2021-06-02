@@ -7,9 +7,9 @@
 @import 'keyframes';
 @import 'global';
 
+// home-page
 @import 'components/header';
 @import 'components/banner';
-@import 'components/features';
 @import 'components/products';
 @import 'components/product-card';
 @import 'components/filter';
@@ -19,3 +19,10 @@
 @import 'components/news';
 @import 'components/partners';
 @import 'components/footer';
+
+// shop-page
+@import 'components/top';
+@import 'components/breadcrumbs';
+@import 'components/shop1';
+@import 'components/pagination';
+

@@ -1,0 +1,15 @@
+.top {
+  &__wrapper {
+    padding: 28px 0 24px;
+    text-align: center;
+    background-color: $mystic;
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    @extend %Rubik-300;
+    font-size: 36px;
+    line-height: 1;
+    color: $ebonyClay;
+  }
+}
