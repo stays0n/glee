@@ -16,27 +16,10 @@
     height: 100px;
   }
 
-  // создал доп.обёртку, сделал флексом, но не помогло, по горизонту всё= не центрируется.
-  // ничего кроме тупо задать модификаторы и пододвинуть каждый отдельно не приходит
-  // скидываю так потому что уже просто не знаю как еще подогнать ПП
-  &__wrap {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
-
-  // &__item {
-  //   position: relative;
-  //   height: 100px;
-  // }
-
-  // &__img {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   margin: auto;
-  //   transform: translate(-50%, -50%);
-  //   // transform: translateY(-50%);
-  // }
 }

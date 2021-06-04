@@ -18,6 +18,8 @@ $halfSpanishWhite: #feefe2;
 $alabaster: #f8f8f8;
 
 %sr-only {
+  // я им прячу чекбоксы и радиокнопки на странице shop
+  // так можно или лучше прописывать класс?
   position: absolute;
   width: 1px;
   height: 1px;

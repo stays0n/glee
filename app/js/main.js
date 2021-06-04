@@ -2,8 +2,12 @@ $(function () {
 
   const headerMenu = document.querySelector('.header__menu'),
     headerTools = document.querySelector('.header__tools'),
-    headerClose = document.querySelector('.header__close'),
     header = document.querySelector('.header')
+
+  const bodyTag = document.body;
+  toggleOverflowHiddenToBoddy = () => {
+    bodyTag.classList.contains('body-hidden') === true ? bodyTag.classList.remove('body-hidden') : bodyTag.classList.add('body-hidden')
+  }
 
   function togglePaddindOnToolsFixed() {
     if (window.innerWidth < 569 && window.pageYOffset > 54) {
@@ -51,44 +55,77 @@ $(function () {
     toggleTools()
   })
 
-  const menuBurger = document.querySelector('.header__tool--burger'),
-    bodyTag = document.body;
-  let menuToggleFlag = false
+  // burger
+  function burgerMenu(selector) {
+    const menu = $(selector),
+      button = $('.header__tool--burger'),
+      links = menu.find('.header__link'),
+      closeButton = $('.header__close')
 
-  const toggleActiveStyles = isRemove => {
-    if (isRemove) {
-      headerMenu.classList.remove('header--burger-active')
-      headerClose.classList.remove('header__close--active')
-      bodyTag.style.overflow = ''
-      menuToggleFlag = false
-    } else {
-      headerMenu.classList.add('header--burger-active')
-      headerClose.classList.add('header__close--active')
-      bodyTag.style.overflow = 'hidden'
-      menuToggleFlag = true
+    button.on('click', (e) => {
+      e.preventDefault()
+      toggleMenu()
+    });
+    closeButton.on('click', (e) => {
+      e.preventDefault()
+      toggleMenu()
+    })
+    links.on('click', () => toggleMenu())
+
+    function toggleMenu() {
+      if (innerWidth < 824) {
+        menu.toggleClass('header--burger-active')
+        closeButton.toggleClass('header__close--active')
+
+        if (menu.hasClass('header--burger-active')) {
+          toggleOverflowHiddenToBoddy()
+        } else {
+          toggleOverflowHiddenToBoddy()
+        }
+      }
     }
   }
 
-  menuBurger.onclick = () => menuToggleFlag ? toggleActiveStyles(true) : toggleActiveStyles(false)
-
-  document.addEventListener('click', outsideEvtListener);
-
-  function outsideEvtListener(evt) {
-    if (evt.target === menuBurger || menuBurger.contains(evt.target)) {
-      return
-    }
-    toggleActiveStyles(true)
+  if ('.header__tool--burger') {
+    burgerMenu('.header__menu');
   }
 
+  // shop-filters
+  function filtersMenu(selector) {
+    const menu = $(selector),
+      button = $('.shop-catalog__funnel'),
+      links = menu.find('.filters-recent__wrap, .filters-recent__link'),
+      overlay = $('.header__overlay')
+
+    button.on('click', (e) => {
+      e.preventDefault()
+      toggleFilters()
+    });
+    links.on('click', () => toggleFilters())
+    overlay.on('click', () => toggleFilters())
+
+    function toggleFilters() {
+      menu.toggleClass('filters--active')
+      button.toggleClass('shop-catalog__funnel--active')
+      if (menu.hasClass('filters--active')) {
+        toggleOverflowHiddenToBoddy()
+      } else {
+        toggleOverflowHiddenToBoddy()
+      }
+    }
+  }
+  if ('.filters') {
+    filtersMenu('.filters')
+  }
+
+  // footer form
   const formInput = document.querySelector('.form__input'),
-    formGroup = document.querySelector('.form__group');
+    formGroup = document.querySelector('.form__group')
 
-  formInput.addEventListener('focus', () => {
-    formGroup.classList.add('active')
-  })
+  formInput.addEventListener('focus', () => formGroup.classList.add('active'))
 
   formInput.addEventListener('blur', () => {
-    if (formInput.value === '') {
+    if (!formInput.value) {
       formGroup.classList.remove('active')
     }
   })
@@ -99,11 +136,11 @@ $(function () {
     $(this).addClass('shop-catalog__btn--active')
   });
 
-  $('.button-list').on('click', function () {
+  $('.shop-catalog__btn--list').on('click', function () {
     $('.shop-catalog__grid').addClass('shop-catalog__grid--list')
   });
 
-  $('.button-grid').on('click', function () {
+  $('.shop-catalog__btn--grid').on('click', function () {
     $('.shop-catalog__grid').removeClass('shop-catalog__grid--list')
   });
 
@@ -117,7 +154,7 @@ $(function () {
     arrows: false,
     slidesToShow: 5,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 1000,
     centerMode: true,
     centerPadding: '-100px',
@@ -186,7 +223,12 @@ $(function () {
         scope: 'local'
       }
     };
-  mixitup(containerEl1, config)
-  mixitup(containerEl2, config)
 
+  if (containerEl1) {
+    mixitup(containerEl1, config)
+  }
+
+  if (containerEl2) {
+    mixitup(containerEl2, config)
+  }
 });

@@ -1,0 +1,407 @@
+@@include('./_doctype.html', {
+  'titleTag': 'Glee — Home page'
+})
+
+<body>
+  @@include('./_header.html')
+
+  <main class="main">
+    <h1 class="sr-only">Premium upholstered furniture</h1>
+
+    <section class="banner">
+      <div class="container container--lg">
+        <h2 class="sr-only">Current trends</h2>
+
+        <ul class="banner__slider">
+          <li class="banner__slide">
+            <div class="banner__inner">
+              <div class="banner__text">
+                <h3 class="banner__title">
+                  Smart and trendy
+                </h3>
+                <p>
+                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+                <a class="btn btn--fill" href="#">
+                  <span class="banner__sub">Shop Now</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="banner__box">
+                <img class="banner__image" src="images/home-page/banner/slider-img-1.png" alt="White sofa">
+              </div>
+            </div>
+          </li>
+
+          <li class="banner__slide">
+            <div class="banner__inner">
+              <div class="banner__text">
+                <h3 class="banner__title">
+                  Smart and trendy
+                </h3>
+                <p>
+                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+                <a class="btn btn--fill" href="#">
+                  <span class="banner__sub">Shop Now</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="banner__box">
+                <img class="banner__image" src="images/home-page/banner/slider-img-1.png" alt="White sofa">
+              </div>
+            </div>
+          </li>
+
+          <li class="banner__slide">
+            <div class="banner__inner">
+              <div class="banner__text">
+                <h3 class="banner__title">
+                  Smart and trendy
+                </h3>
+                <p>
+                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                </p>
+                <a class="btn btn--fill" href="#">
+                  <span class="banner__sub">Shop Now</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="banner__box">
+                <img class="banner__image" src="images/home-page/banner/slider-img-1.png" alt="White sofa">
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="banner__features">
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--support">
+              <h3 class="banner__heading">
+                Support 24/7.
+              </h3>
+              <p>
+                Contact us 24 hours a day, 7 days a week.
+              </p>
+            </div>
+          </li>
+
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--delivery">
+              <h3 class="banner__heading">
+                Delivery.
+              </h3>
+              <p>
+                Free shipping on all US order.
+              </p>
+            </div>
+          </li>
+
+          <li class="banner__item">
+            <div class="banner__wrap banner__wrap--payment">
+              <h3 class="banner__heading">
+                100% Payment secure.
+              </h3>
+              <p>
+                We ensure secure payment with PEV.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container" data-ref="container-1">
+        <h2 class="products__title title">
+          Products of the week
+        </h2>
+
+        <ul class="filter">
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter="all">All</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".furnitures">Furnitures</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".chairs">Chairs</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".lighting">Lighting</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".decor">Decor</button>
+          </li>
+        </ul>
+
+        <ul class="products__list">
+          <li class="products__item mix furnitures">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-1.png"',
+              'name': 'Wooden radio',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix chairs">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-2.png"',
+              'name': 'Wooden chair',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix lighting">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-3.png"',
+              'name': 'White chair',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix decor">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-4.png"',
+              'name': 'Retro table',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix furnitures">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-5.png"',
+              'name': 'Wooden radio',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix chairs">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-6.png"',
+              'name': 'Wooden chair',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix lighting">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-7.png"',
+              'name': 'White chair',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+
+          <li class="products__item mix decor">
+            @@include('./_product-card.html', {
+              'src': 'src="images/products/products-img-8.png"',
+              'name': 'Retro table',
+              'rate': 'data-rateyo-rating="4"'
+              })
+          </li>
+        </ul>
+      </div>
+
+      <div class="container container--lg">
+        <ul class="bestseller">
+          <li class="bestseller__item">
+            <div class="bestseller__inner">
+              <div class="bestseller__wrap">
+                <img class="bestseller__img" src="images/products/bestseller/bestseller-img-1.png"
+                  alt="Mirum Notare Tellus">
+              </div>
+              <div class="bestseller__text">
+                <h3 class="bestseller__title">Mirum Notare Tellus</h3>
+                <p>
+                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                </p>
+                <a class="btn btn--border" href="#">
+                  View More
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="bestseller__item">
+            <div class="bestseller__inner">
+              <div class="bestseller__wrap">
+                <img class="bestseller__img" src="images/products/bestseller/bestseller-img-2.png"
+                  alt="Malesuada Tempor Euismod">
+              </div>
+              <div class="bestseller__text">
+                <h3 class="bestseller__title">Malesuada Tempor Euismod</h3>
+                <p>
+                  50W 8000lm Compact Size for HID StreetLight ReplacementLEDCornLight
+                </p>
+                <a class="btn btn--border" href="#">
+                  View More
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="new">
+      <div class="container" data-ref="container-2">
+        <h2 class="new__title title">
+          New Design
+        </h2>
+
+        <ul class="filter">
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter="all">All</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".furnitures">Furnitures</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".chair">Chairs</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".lighting">Lighting</button>
+          </li>
+
+          <li class="filter__elem">
+            <button class="filter__btn" type="button" data-filter=".decor">Decor</button>
+          </li>
+        </ul>
+
+        <ul class="new__list">
+          <li class="new__item mix chair lighting">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Beat Flat Pendant Black
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-1.png" alt="Beat Flat Pendant Black">
+              </div>
+            </article>
+          </li>
+
+          <li class="new__item mix furnitures">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Lampe Sur Pieds Bamboo
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-2.png" alt="Lampe Sur Pieds Bamboo">
+              </div>
+            </article>
+          </li>
+
+          <li class="new__item mix lighting">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Rattan Rocking Chair
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-3.png" alt="Rattan Rocking Chair">
+              </div>
+            </article>
+          </li>
+
+          <li class="new__item mix decor">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Rattan Rocking Chair
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-4.png" alt="Rattan Rocking Chair">
+              </div>
+            </article>
+          </li>
+
+          <li class="new__item mix furnitures ">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Rattan Rocking Chair
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-5.png" alt="Rattan Rocking Chair">
+              </div>
+            </article>
+          </li>
+
+          <li class="new__item mix chair decor">
+            <article class="new-card">
+              <div class="new-card__text">
+                <h3 class="new-card__name">
+                  <a class="new-card__link" href="#">
+                    Lampe Sur Pieds Bamboo
+                  </a>
+                </h3>
+                <a class="new-card__sub" href="#">Classic</a>
+              </div>
+              <div class="new-card__wrap">
+                <img class="new-card__image" src="images/new/new-img-6.png" alt="Lampe Sur Pieds Bamboo">
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+
+      <a class="new__video" style="background-image: url(images/new/video/video-bg.jpg)" data-fancybox
+        href="https://www.youtube.com/watch?v=yFzjU6yjVBc">
+        <span class="sr-only">Play video</span>
+        <svg>
+          <use xlink:href="images/icons/sprite.svg#video-play"></use>
+        </svg>
+      </a>
+    </section>
+
+    @@include('./_news.html')
+  
+  </main>
+
+  @@include('./_footer.html')
+
+  <script defer src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<article class="product-card">
+  <a class="product-card__wrap" href="#">
+    <img class="product-card__image" alt="Wooden radio" @@src>
+  </a>
+  <div class="product-card__box">
+    <h3 class="product-card__name">
+      <a class="product-card__link" href="#">@@name</a>
+    </h3>
+    <span class="product-card__rate star" @@rate></span>
+    <span class="product-card__price">$29.00</span>
+    <p>
+      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation
+    </p>
+
+    <ul class="product-card__tools">
+      <li class="product-card__tool">
+        <a class="product-card__toggle" href="#">
+          <span class="sr-only">Go to product page</span>
+          <svg>
+            <use href="images/icons/sprite.svg#tools-search"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="product-card__tool">
+        <button class="product-card__toggle" type="button">
+          <span class="sr-only">Add to cart</span>
+          <svg>
+            <use href="images/icons/sprite.svg#tools-cart"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li class="product-card__tool">
+        <button class="product-card__toggle" type="button">
+          <span class="sr-only">Add to favorites</span>
+          <svg>
+            <use href="images/icons/sprite.svg#tools-heart"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</article>

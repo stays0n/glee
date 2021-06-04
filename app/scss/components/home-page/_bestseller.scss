@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin: 0 auto;
 
   @include width-1200 {
     flex-wrap: wrap;
@@ -14,19 +13,19 @@
 
     @include width-1200 {
       &:last-child {
-        .bestseller__inner:last-child {
+        .bestseller__inner {
           flex-direction: row-reverse;
         }
       }
 
-      &:not(:last-child) {
+      &:first-child {
         margin-bottom: 70px;
       }
     }
 
     @include width-568 {
       &:last-child {
-        .bestseller__inner:last-child {
+        .bestseller__inner {
           flex-direction: column;
         }
       }
@@ -44,8 +43,9 @@
     margin: 0 auto;
 
     @include width-1200 {
-      max-width: initial;
+      max-width: 100%;
       justify-content: space-evenly;
+      padding: 0 5px;
     }
 
     @include width-568 {
@@ -55,20 +55,21 @@
 
   &__wrap {
     position: relative;
-    top: -90px;
-    width: 250px;
+    top: -40px;
+    left: 5px;
+    max-width: 250px;
+    width: 100%;
     height: 300px;
 
-    @include width-568 {
-      top: -40px;
+    @include width-1200 {
+      left: 0;
     }
   }
 
   &__img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    object-fit: contain;
 
     @include width-568 {
       height: 100%;

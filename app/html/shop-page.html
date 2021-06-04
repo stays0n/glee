@@ -1,0 +1,351 @@
+@@include('./_doctype.html', {
+'titleTag': 'Glee — Shop'
+})
+
+<body>
+  @@include('./_header.html')
+
+  <main class="main">
+    <h1 class="sr-only">Products page</h1>
+
+    @@include('./_breadcrumbs.html', {
+    'title' : 'Product list 1',
+    'breadCrumbs' : {
+    'first': 'Home',
+    'second': 'Product list 1'
+    }
+    })
+
+    <section class="shop">
+      <div class="container">
+        <div class="shop__wrapper">
+          <div class="shop__filters filters">
+            <div class="filters__item filters-category">
+              <h3 class="filters__title">
+                Category
+              </h3>
+
+              <form class="filters-category__form">
+                <label class="filters-category__label">
+                  <input class="filters-category__input" type="radio" name="category" checked>
+                  <div class="filters-category__checkbox">
+                    <span>Chair</span>
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="filters-category__label">
+                  <input class="filters-category__input" type="radio" name="category">
+                  <div class="filters-category__checkbox">
+                    <span>Table</span>
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="filters-category__label">
+                  <input class="filters-category__input" type="radio" name="category">
+                  <div class="filters-category__checkbox">
+                    <span>Lamp</span>
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="filters-category__label">
+                  <input class="filters-category__input" type="radio" name="category">
+                  <div class="filters-category__checkbox">
+                    <span>Watch</span>
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+                    </svg>
+                  </div>
+                </label>
+
+                <label class="filters-category__label">
+                  <input class="filters-category__input" type="radio" name="category">
+                  <div class="filters-category__checkbox">
+                    <span>Clock</span>
+                    <svg>
+                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+                    </svg>
+                  </div>
+                </label>
+              </form>
+            </div>
+
+            <div class="filters__item filters-price">
+              <h3 class="filters__title">
+                Price
+              </h3>
+
+              <form class="filters-price__form" action="#">
+                <input class="filters-price__input" type="text" data-min="0" data-max="800" data-from="100"
+                  data-to="500" data-step="0.01">
+                <div class="filters-price__prices">
+                  <span class="filters-price__from"></span>
+                  <span class="filters-price__to"></span>
+                </div>
+              </form>
+            </div>
+
+            <div class="filters__item filters-brand">
+              <h3 class="filters__title">
+                Brand
+              </h3>
+
+              <form class="filters-brand__form" action="#">
+                <label class="filters-brand__label">
+                  <input class="filters-brand__input" type="checkbox" checked>
+                  <div class="filters-brand__checkbox">
+                    <span class="filters-brand__name">RFL</span>
+                    <span class="filters-brand__num">(10)</span>
+                  </div>
+                </label>
+
+                <label class="filters-brand__label">
+                  <input class="filters-brand__input" type="checkbox">
+                  <div class="filters-brand__checkbox">
+                    <span class="filters-brand__name">Brothers</span>
+                    <span class="filters-brand__num">(21)</span>
+                  </div>
+                </label>
+
+                <label class="filters-brand__label">
+                  <input class="filters-brand__input" type="checkbox">
+                  <div class="filters-brand__checkbox">
+                    <span class="filters-brand__name">Regal</span>
+                    <span class="filters-brand__num">(3)</span>
+                  </div>
+                </label>
+
+                <label class="filters-brand__label">
+                  <input class="filters-brand__input" type="checkbox">
+                  <div class="filters-brand__checkbox">
+                    <span class="filters-brand__name">Nadia</span>
+                    <span class="filters-brand__num">(14)</span>
+                  </div>
+                </label>
+
+                <label class="filters-brand__label">
+                  <input class="filters-brand__input" type="checkbox">
+                  <div class="filters-brand__checkbox">
+                    <span class="filters-brand__name">Otobi</span>
+                    <span class="filters-brand__num">(6)</span>
+                  </div>
+                </label>
+              </form>
+            </div>
+
+            <div class="filters__item filters-recent">
+              <h3 class="filters__title">
+                Recent products
+              </h3>
+
+              <div class="filters-recent__wrapper">
+                <a class="filters-recent__wrap" href="#">
+                  <img class="filters-recent__img" src="images/shop-page/recent-1.png" alt="Pendant lamp">
+                </a>
+                <div class="filters-recent__box">
+                  <h4 class="filters-recent__name">
+                    <a class="filters-recent__link" href="#">Pendant lamp</a>
+                  </h4>
+                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+                    data-rateyo-spacing="6px"></span>
+                  <span class="filters-recent__price">23$</span>
+                </div>
+              </div>
+
+              <div class="filters-recent__wrapper">
+                <a class="filters-recent__wrap" href="#">
+                  <img class="filters-recent__img" src="images/shop-page/recent-2.png" alt="Pendant lamp">
+                </a>
+                <div class="filters-recent__box">
+                  <h4 class="filters-recent__name">
+                    <a class="filters-recent__link" href="#">Pendant lamp</a>
+                  </h4>
+                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+                    data-rateyo-spacing="6px"></span>
+                  <span class="filters-recent__price">23$</span>
+                </div>
+              </div>
+
+              <div class="filters-recent__wrapper">
+                <a class="filters-recent__wrap" href="#">
+                  <img class="filters-recent__img" src="images/shop-page/recent-3.png" alt="Pendant lamp">
+                </a>
+                <div class="filters-recent__box">
+                  <h4 class="filters-recent__name">
+                    <a class="filters-recent__link" href="#">Pendant lamp</a>
+                  </h4>
+                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+                    data-rateyo-spacing="6px"></span>
+                  <span class="filters-recent__price">23$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-catalog">
+            <div class="shop-catalog__filter">
+              <div class="shop-catalog__buttons">
+                <span class="shop-catalog__view">View</span>
+                <button class="shop-catalog__btn shop-catalog__btn--grid shop-catalog__btn--active" type="button">
+                  <span class="sr-only">Grid view of elements</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#grid"></use>
+                  </svg>
+                </button>
+
+                <button class="shop-catalog__btn shop-catalog__btn--list" type="button">
+                  <span class="sr-only">List view of elements</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#list"></use>
+                  </svg>
+                </button>
+
+                <button class="shop-catalog__funnel" type="button">
+                  <span class="sr-only">Filters</span>
+                  <svg>
+                    <use xlink:href="images/icons/sprite.svg#funnel"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="shop-catalog__selects">
+                <form class="shop-catalog__form">
+                  <select class="shop-catalog__sort select-style">
+                    <option value="">Sort By Default</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+
+                  <select class="shop-catalog__show select-style">
+                    <option value="">Show 9</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+
+            <ul class="shop-catalog__grid">
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-1.png"',
+                'name': 'Wooden radio',
+                'rate': 'data-rateyo-rating="4"',
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-2.png"',
+                'name': 'Wooden chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-3.png"',
+                'name': 'White chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-4.png"',
+                'name': 'Retro table',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-5.png"',
+                'name': 'Wooden radio',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-4.png"',
+                'name': 'Retro table',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-6.png"',
+                'name': 'Wooden chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-7.png"',
+                'name': 'White chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/products/products-img-8.png"',
+                'name': 'Retro table',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/new/new-img-2.png"',
+                'name': 'Wooden chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/new/new-img-5.png"',
+                'name': 'White chair',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+
+              <li class="shop-catalog__item">
+                @@include('./_product-card.html', {
+                'src': 'src="images/new/new-img-4.png"',
+                'name': 'Retro table',
+                'rate': 'data-rateyo-rating="4"'
+                })
+              </li>
+            </ul>
+
+            @@include('./_pagination.html')
+          </div>
+        </div>
+      </div>
+
+      @@include('./_partners.html')
+    </section>
+
+  </main>
+
+  @@include('./_footer.html')
+
+  <script defer src="js/main.min.js"></script>
+</body>
+
+</html>

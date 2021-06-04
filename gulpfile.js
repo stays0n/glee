@@ -12,6 +12,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const fileInclude = require('gulp-file-include');
 
 function browsersync() {
   browserSync.init({
@@ -22,10 +23,29 @@ function browsersync() {
   })
 }
 
+function fileinclude() {
+  return src([
+      'app/html/*.html'
+    ])
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: 'app/html/parts',
+      context: {
+        shopProductCard: 'product-text'
+      }
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
+
 function styles() {
   return src([
-      'app/scss/style.scss',
       'node_modules/slick-slider/slick/slick.scss',
+      'node_modules/rateyo/src/jquery.rateyo.css',
+      'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+      'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+      'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+      'app/scss/style.scss',
     ])
     .pipe(scss({
       outputStyle: 'compressed'
@@ -100,16 +120,18 @@ function cleanDist() {
 }
 
 function watching() {
+  watch(['app/html/**/*.html'], fileinclude);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
+exports.fileinclude = fileinclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
-exports.default = parallel(styles, scripts, browsersync, watching); // >gulp (отключить слежение ctrl + c)
+exports.default = parallel(fileinclude, styles, scripts, browsersync, watching); // >gulp (отключить слежение ctrl + c)
 
 exports.cleanDist = cleanDist;
 exports.images = images;

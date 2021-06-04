@@ -1,0 +1,47 @@
+.products {
+  padding: 54px 0 30px;
+
+  @include width-823 {
+    padding: 90px 0 47px;
+  }
+
+  @include width-568 {
+    padding-bottom: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 30px;
+    margin: 0 auto 187px;
+
+    @include width-1200 {
+      gap: 30px 20px;
+      max-width: 775px;
+    }
+
+    @include width-415 {
+      margin-bottom: 110px;
+    }
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+
+    @include width-1200 {
+      max-width: 245px;
+    }
+
+    @include width-823 {
+      max-width: 48%;
+      min-width: 250px;
+      flex: 0 1 50%;
+    }
+
+    @include width-568 {
+      max-width: 100%;
+      flex: 0 1 100%;
+    }
+  }
+}
