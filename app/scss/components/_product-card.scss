@@ -9,12 +9,18 @@
   background-color: $white;
   box-shadow: 0 6px 47px 3px rgba(#252525, 0.05);
 
+  @include width-823 {
+    max-width: 100%;
+  }
+
   @include width-568 {
     min-height: initial;
   }
 
   &:hover {
     .product-card__tools {
+      // я когда через опасити сделал и попробовал с телефона тапнуть по карточке, то попадаешь по ещё прозрачной кнопке
+      // а трансформ бесит, да.
       transform: translateY(0);
     }
   }
@@ -99,7 +105,7 @@
     border-radius: 50%;
     background-color: $white;
     transition: background-color 0.3s ease;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.2);
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.2);
 
     &:hover {
       background-color: $casper;

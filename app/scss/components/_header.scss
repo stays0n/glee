@@ -44,8 +44,12 @@
     }
 
     @include width-823 {
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: flex-start;
-      position: absolute;
+      flex-wrap: nowrap;
+      position: fixed;
+      z-index: 13;
       top: 0;
       height: 100vh;
       transform: translateY(-200%);
@@ -123,7 +127,7 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 
     &:hover {
       svg {
@@ -195,6 +199,7 @@
     }
 
     &--burger {
+      z-index: 10;
       display: none;
 
       @include width-823 {
@@ -279,6 +284,8 @@
   }
 }
 
+// эти стили тут поставил из-за специфичности
+// когда они наверху, то не перебивают стили ниже, я пробовал)
 .header__menu--active {
   align-items: center;
   position: fixed;
@@ -302,12 +309,11 @@
 }
 
 .header--burger-active {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  position: fixed;
-  z-index: 13;
   transform: translateY(0);
+}
+
+.header__close--active {
+  display: block;
 }
 
 .header__tools--fixed {
@@ -339,8 +345,4 @@
     position: initial;
     margin-left: auto;
   }
-}
-
-.header__close--active {
-  display: block;
 }

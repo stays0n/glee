@@ -1,0 +1,27 @@
+@@include('./_doctype.html', {
+  'titleTag': 'Glee — About Us'
+})
+
+<body>
+  @@include('./_header.html')
+
+  <main class="main">
+    <h1 class="sr-only">About Us page</h1>
+
+    @@include('./_breadcrumbs.html', {
+      'title' : 'About Us',
+      'breadCrumbs' : {
+        'first': 'Home',
+        'second': 'About Us'
+      }
+    })
+
+    @@include('./_news.html')
+  </main>
+
+  @@include('./_footer.html')
+
+  <script defer src="js/main.min.js"></script>
+</body>
+
+</html>

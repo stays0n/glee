@@ -1,3 +1,28 @@
+.top {
+  &__wrapper {
+    padding: 28px 0 24px;
+    text-align: center;
+    background-color: $mystic;
+
+    @include width-568 {
+      padding: 10px 0 6px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    @extend %Rubik-300;
+    font-size: 36px;
+    line-height: 1;
+    color: $ebonyClay;
+
+    @include width-568 {
+      font-size: 25px;
+    }
+  }
+
+}
+
 .breadcrumbs {
   &__list {
     display: flex;

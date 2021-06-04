@@ -25,5 +25,9 @@
   &__arrows {
     line-height: 1;
     padding: 17px 20px;
+
+    @include width-568 {
+      padding: 13px 16px;
+    }
   }
 }

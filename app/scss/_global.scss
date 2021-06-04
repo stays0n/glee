@@ -22,6 +22,14 @@ button {
   }
 }
 
+.body-hidden {
+  overflow: hidden;
+
+  .header__overlay {
+    display: block;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -50,12 +58,12 @@ button {
 .banner__wrap p,
 .bestseller__title,
 .bestseller__text p,
-.new-card__link,
-.contacts__item {
+.new-card__link {
   @include line-clamp();
 }
 
-.news__link {
+.news__link,
+.product-card__box p {
   @include line-clamp(3);
 }
 
@@ -100,7 +108,6 @@ button {
 
   &__img {
     height: 100%;
-    width: 100%;
     object-fit: contain;
   }
 }

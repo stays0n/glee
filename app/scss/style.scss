@@ -9,20 +9,19 @@
 
 // home-page
 @import 'components/header';
-@import 'components/banner';
-@import 'components/products';
+@import 'components/home-page/banner';
+@import 'components/home-page/products';
 @import 'components/product-card';
 @import 'components/filter';
-@import 'components/bestseller';
-@import 'components/new';
-@import 'components/new-card';
+@import 'components/home-page/bestseller';
+@import 'components/home-page/new';
+@import 'components/home-page/new-card';
 @import 'components/news';
 @import 'components/partners';
 @import 'components/footer';
 
 // shop-page
-@import 'components/top';
 @import 'components/breadcrumbs';
-@import 'components/shop1';
+@import 'components/shop-page/shop';
 @import 'components/pagination';
 

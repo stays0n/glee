@@ -12,7 +12,6 @@
       position: absolute;
       top: 12%;
       right: 173px;
-      z-index: -1;
       width: 634px;
       height: 634px;
       background-image: url('../images/home-page/banner/banner-ellipse.png');
@@ -136,6 +135,7 @@
   }
 
   &__box {
+    position: relative;
     max-width: 640px;
     padding: 112px 0 118px;
 
@@ -235,6 +235,10 @@
       min-height: 120px;
     }
 
+    @include width-415 {
+      padding: 75px 10px 10px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -245,6 +249,12 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+
+      @include width-415 {
+       top: 15px;
+       left: 50%;
+       transform: translateX(-50%);
+      }
     }
 
     &--support::before {
