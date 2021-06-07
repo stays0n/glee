@@ -31,7 +31,8 @@ function fileinclude() {
       prefix: '@@',
       basepath: 'app/html/parts',
       context: {
-        shopProductCard: 'product-text'
+        name: 'current',
+        arr: [],
       }
     }))
     .pipe(dest('app'))

@@ -100,7 +100,8 @@
       color: $white;
     }
 
-    &:hover {
+    &:hover,
+    &--current {
       border-color: inherit;
       color: $сodGray;
 
@@ -327,8 +328,13 @@
   background-color: rgba($сodGray, 0.8);
 
   .header__tool {
-    width: 44px;
     height: 44px;
+
+    &--search,
+    &--more,
+    &--burger {
+      width: 44px;
+    }
   }
 
   .header__box {

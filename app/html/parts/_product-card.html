@@ -1,17 +1,22 @@
 <article class="product-card">
   <a class="product-card__wrap" href="#">
-    <img class="product-card__image" alt="Wooden radio" @@src>
+    <img class="product-card__image" alt="Wooden radio" src="@@src">
   </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">@@name</a>
     </h3>
-    <span class="product-card__rate star" @@rate></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    @@if(context.isFull) {
+      <span class="product-card__rate star" @@rate></span>
+    }
     <span class="product-card__price">$29.00</span>
+    @@if(context.isFull) {
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  }
 
     <ul class="product-card__tools">
       <li class="product-card__tool">

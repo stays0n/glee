@@ -22,4 +22,9 @@
     align-items: center;
     height: 100%;
   }
+
+  &__img {
+    height: 100px;
+    object-fit: scale-down;
+  }
 }

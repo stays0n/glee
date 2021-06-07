@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <header class="header">
+
+<header class="header">
   <div class="container container--lg">
     <nav class="header__navigation">
       <a class="logo logo--header" href="#">
@@ -27,13 +28,13 @@
 
       <ul class="header__menu">
         <li class="header__item">
-          <a class="header__link" href="#">Home+</a>
+          <a class="header__link " href="#">Home+</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="#">About</a>
+          <a class="header__link " href="#">About</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="#">Services</a>
+          <a class="header__link header__link--current" href="#">Services</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="#">Pages+</a>
@@ -95,252 +96,257 @@
   <div class="header__overlay"></div>
 </header>
 
-  <main class="main">
-    <h1 class="sr-only">Products page</h1>
+<main class="main">
+  <h1 class="sr-only">Products page</h1>
 
-    <section class="top">
-  <div class="top__wrapper">
-    <h2 class="top__title">Product list 1</h2>
+  <section class="breadcrumbs">
+  <div class="container">
+    <h2 class="breadcrumbs__title">Product list 1</h2>
 
-    <div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
       <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            Home
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">
-            Product list 1
-          </a>
-        </li>
+         
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#1">
+              Home
+            </a>
+          </li>
+          
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">
+              Product list 1
+            </span>
+          </li>
       </ul>
     </div>
   </div>
 </section>
 
-    <section class="shop">
-      <div class="container">
-        <div class="shop__wrapper">
-          <div class="shop__filters filters">
-            <div class="filters__item filters-category">
-              <h3 class="filters__title">
-                Category
-              </h3>
+  <section class="shop">
+    <div class="container">
+      <div class="shop__wrapper">
+        <aside class="shop__filters filters">
+          <div class="filters__item filters-category">
+            <h3 class="filters__title">
+              Category
+            </h3>
 
-              <form class="filters-category__form">
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="radio" name="category" checked>
-                  <div class="filters-category__checkbox">
-                    <span>Chair</span>
-                    <svg>
-                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
-                    </svg>
-                  </div>
-                </label>
+            <form class="filters-category__form">
+              <ul class="filters-category__list">
+                <li class="filters-category__item">
+  <label class="filters-category__label">
+    <input class="filters-category__input sr-only" type="radio" name="category" checked>
+    <div class="filters-category__checkbox">
+      <span>Chair</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+      </svg>
+    </div>
+  </label>
+</li><li class="filters-category__item">
+  <label class="filters-category__label">
+    <input class="filters-category__input sr-only" type="radio" name="category" >
+    <div class="filters-category__checkbox">
+      <span>Table</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+      </svg>
+    </div>
+  </label>
+</li><li class="filters-category__item">
+  <label class="filters-category__label">
+    <input class="filters-category__input sr-only" type="radio" name="category" >
+    <div class="filters-category__checkbox">
+      <span>Lamp</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+      </svg>
+    </div>
+  </label>
+</li><li class="filters-category__item">
+  <label class="filters-category__label">
+    <input class="filters-category__input sr-only" type="radio" name="category" >
+    <div class="filters-category__checkbox">
+      <span>Watch</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+      </svg>
+    </div>
+  </label>
+</li><li class="filters-category__item">
+  <label class="filters-category__label">
+    <input class="filters-category__input sr-only" type="radio" name="category" >
+    <div class="filters-category__checkbox">
+      <span>Clock</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
+      </svg>
+    </div>
+  </label>
+</li>
+              </ul>
+            </form>
+          </div>
 
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="radio" name="category">
-                  <div class="filters-category__checkbox">
-                    <span>Table</span>
-                    <svg>
-                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
-                    </svg>
-                  </div>
-                </label>
+          <div class="filters__item filters-price">
+            <h3 class="filters__title">
+              Price
+            </h3>
 
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="radio" name="category">
-                  <div class="filters-category__checkbox">
-                    <span>Lamp</span>
-                    <svg>
-                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
-                    </svg>
-                  </div>
-                </label>
+            <form class="filters-price__form" action="#">
+              <input class="filters-price__input" type="text" data-min="0" data-max="800" data-from="100" data-to="500"
+                data-step="0.01">
+              <div class="filters-price__prices">
+                <span class="filters-price__from"></span>
+                <span class="filters-price__to"></span>
+              </div>
+            </form>
+          </div>
 
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="radio" name="category">
-                  <div class="filters-category__checkbox">
-                    <span>Watch</span>
-                    <svg>
-                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
-                    </svg>
-                  </div>
-                </label>
+          <div class="filters__item filters-brand">
+            <h3 class="filters__title">
+              Brand
+            </h3>
 
-                <label class="filters-category__label">
-                  <input class="filters-category__input" type="radio" name="category">
-                  <div class="filters-category__checkbox">
-                    <span>Clock</span>
-                    <svg>
-                      <use xlink:href="images/icons/sprite.svg#short-arrow"></use>
-                    </svg>
-                  </div>
-                </label>
-              </form>
+            <form class="filters-brand__form" action="#">
+              <ul class="filters-brand__list">
+                <li class="filters-brand__item">
+  <label class="filters-brand__label">
+    <input class="filters-brand__input sr-only" type="checkbox" checked>
+    <div class="filters-brand__checkbox">
+      <span class="filters-brand__name">RFL</span>
+      <span class="filters-brand__num">(10)</span>
+    </div>
+  </label>
+</li><li class="filters-brand__item">
+  <label class="filters-brand__label">
+    <input class="filters-brand__input sr-only" type="checkbox" >
+    <div class="filters-brand__checkbox">
+      <span class="filters-brand__name">Brothers</span>
+      <span class="filters-brand__num">(21)</span>
+    </div>
+  </label>
+</li><li class="filters-brand__item">
+  <label class="filters-brand__label">
+    <input class="filters-brand__input sr-only" type="checkbox" >
+    <div class="filters-brand__checkbox">
+      <span class="filters-brand__name">Regal</span>
+      <span class="filters-brand__num">(3)</span>
+    </div>
+  </label>
+</li><li class="filters-brand__item">
+  <label class="filters-brand__label">
+    <input class="filters-brand__input sr-only" type="checkbox" >
+    <div class="filters-brand__checkbox">
+      <span class="filters-brand__name">Nadia</span>
+      <span class="filters-brand__num">(14)</span>
+    </div>
+  </label>
+</li><li class="filters-brand__item">
+  <label class="filters-brand__label">
+    <input class="filters-brand__input sr-only" type="checkbox" >
+    <div class="filters-brand__checkbox">
+      <span class="filters-brand__name">Otobi</span>
+      <span class="filters-brand__num">(6)</span>
+    </div>
+  </label>
+</li>
+              </ul>
+            </form>
+          </div>
+
+          <div class="filters__item filters-recent">
+            <h3 class="filters__title">
+              Recent products
+            </h3>
+
+            <ul class="filters-recent__list">
+              <li class="filters-recent__wrapper">
+  <a class="filters-recent__wrap" href="#">
+    <img class="filters-recent__img" src="images/shop-page/recent-1.png" alt="Pendant lamp">
+  </a>
+  <div class="filters-recent__box">
+    <h4 class="filters-recent__name">
+      <a class="filters-recent__link" href="#">Pendant lamp</a>
+    </h4>
+    <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+      data-rateyo-spacing="6px"></span>
+    <span class="filters-recent__price">23$</span>
+  </div>
+</li><li class="filters-recent__wrapper">
+  <a class="filters-recent__wrap" href="#">
+    <img class="filters-recent__img" src="images/shop-page/recent-2.png" alt="Pendant lamp">
+  </a>
+  <div class="filters-recent__box">
+    <h4 class="filters-recent__name">
+      <a class="filters-recent__link" href="#">Pendant lamp</a>
+    </h4>
+    <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+      data-rateyo-spacing="6px"></span>
+    <span class="filters-recent__price">23$</span>
+  </div>
+</li><li class="filters-recent__wrapper">
+  <a class="filters-recent__wrap" href="#">
+    <img class="filters-recent__img" src="images/shop-page/recent-3.png" alt="Pendant lamp">
+  </a>
+  <div class="filters-recent__box">
+    <h4 class="filters-recent__name">
+      <a class="filters-recent__link" href="#">Pendant lamp</a>
+    </h4>
+    <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
+      data-rateyo-spacing="6px"></span>
+    <span class="filters-recent__price">23$</span>
+  </div>
+</li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="shop-catalog">
+          <div class="shop-catalog__filter">
+            <div class="shop-catalog__buttons">
+              <span class="shop-catalog__view">View</span>
+              <button class="shop-catalog__btn shop-catalog__btn--grid shop-catalog__btn--active" type="button">
+  <span class="sr-only">Grid view of elements</span>
+  <svg>
+    <use xlink:href="images/icons/sprite.svg#grid"></use>
+  </svg>
+</button><button class="shop-catalog__btn shop-catalog__btn--list" type="button">
+  <span class="sr-only">List view of elements</span>
+  <svg>
+    <use xlink:href="images/icons/sprite.svg#list"></use>
+  </svg>
+</button><button class="shop-catalog__funnel" type="button">
+  <span class="sr-only">Filters</span>
+  <svg>
+    <use xlink:href="images/icons/sprite.svg#funnel"></use>
+  </svg>
+</button>
             </div>
 
-            <div class="filters__item filters-price">
-              <h3 class="filters__title">
-                Price
-              </h3>
+            <div class="shop-catalog__selects">
+              <form class="shop-catalog__form">
+                <select class="shop-catalog__sort select-style">
+                  <!-- класс select-style тут стилизует селекты через плагин form-styler-->
+                  <option value="Sort-By-Default">Sort By Default</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
 
-              <form class="filters-price__form" action="#">
-                <input class="filters-price__input" type="text" data-min="0" data-max="800" data-from="100"
-                  data-to="500" data-step="0.01">
-                <div class="filters-price__prices">
-                  <span class="filters-price__from"></span>
-                  <span class="filters-price__to"></span>
-                </div>
+                <select class="shop-catalog__show select-style">
+                  <option value="Show99">Show 9</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
               </form>
-            </div>
-
-            <div class="filters__item filters-brand">
-              <h3 class="filters__title">
-                Brand
-              </h3>
-
-              <form class="filters-brand__form" action="#">
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox" checked>
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">RFL</span>
-                    <span class="filters-brand__num">(10)</span>
-                  </div>
-                </label>
-
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Brothers</span>
-                    <span class="filters-brand__num">(21)</span>
-                  </div>
-                </label>
-
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Regal</span>
-                    <span class="filters-brand__num">(3)</span>
-                  </div>
-                </label>
-
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Nadia</span>
-                    <span class="filters-brand__num">(14)</span>
-                  </div>
-                </label>
-
-                <label class="filters-brand__label">
-                  <input class="filters-brand__input" type="checkbox">
-                  <div class="filters-brand__checkbox">
-                    <span class="filters-brand__name">Otobi</span>
-                    <span class="filters-brand__num">(6)</span>
-                  </div>
-                </label>
-              </form>
-            </div>
-
-            <div class="filters__item filters-recent">
-              <h3 class="filters__title">
-                Recent products
-              </h3>
-
-              <div class="filters-recent__wrapper">
-                <a class="filters-recent__wrap" href="#">
-                  <img class="filters-recent__img" src="images/shop-page/recent-1.png" alt="Pendant lamp">
-                </a>
-                <div class="filters-recent__box">
-                  <h4 class="filters-recent__name">
-                    <a class="filters-recent__link" href="#">Pendant lamp</a>
-                  </h4>
-                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
-                    data-rateyo-spacing="6px"></span>
-                  <span class="filters-recent__price">23$</span>
-                </div>
-              </div>
-
-              <div class="filters-recent__wrapper">
-                <a class="filters-recent__wrap" href="#">
-                  <img class="filters-recent__img" src="images/shop-page/recent-2.png" alt="Pendant lamp">
-                </a>
-                <div class="filters-recent__box">
-                  <h4 class="filters-recent__name">
-                    <a class="filters-recent__link" href="#">Pendant lamp</a>
-                  </h4>
-                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
-                    data-rateyo-spacing="6px"></span>
-                  <span class="filters-recent__price">23$</span>
-                </div>
-              </div>
-
-              <div class="filters-recent__wrapper">
-                <a class="filters-recent__wrap" href="#">
-                  <img class="filters-recent__img" src="images/shop-page/recent-3.png" alt="Pendant lamp">
-                </a>
-                <div class="filters-recent__box">
-                  <h4 class="filters-recent__name">
-                    <a class="filters-recent__link" href="#">Pendant lamp</a>
-                  </h4>
-                  <span class="filters-recent__rate star" data-rateyo-rating="4" data-rateyo-star-width="13px"
-                    data-rateyo-spacing="6px"></span>
-                  <span class="filters-recent__price">23$</span>
-                </div>
-              </div>
             </div>
           </div>
 
-          <div class="shop-catalog">
-            <div class="shop-catalog__filter">
-              <div class="shop-catalog__buttons">
-                <span class="shop-catalog__view">View</span>
-                <button class="shop-catalog__btn shop-catalog__btn--grid shop-catalog__btn--active" type="button">
-                  <span class="sr-only">Grid view of elements</span>
-                  <svg>
-                    <use xlink:href="images/icons/sprite.svg#grid"></use>
-                  </svg>
-                </button>
-
-                <button class="shop-catalog__btn shop-catalog__btn--list" type="button">
-                  <span class="sr-only">List view of elements</span>
-                  <svg>
-                    <use xlink:href="images/icons/sprite.svg#list"></use>
-                  </svg>
-                </button>
-
-                <button class="shop-catalog__funnel" type="button">
-                  <span class="sr-only">Filters</span>
-                  <svg>
-                    <use xlink:href="images/icons/sprite.svg#funnel"></use>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="shop-catalog__selects">
-                <form class="shop-catalog__form">
-                  <select class="shop-catalog__sort select-style">
-                    <option value="">Sort By Default</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                  </select>
-
-                  <select class="shop-catalog__show select-style">
-                    <option value="">Show 9</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
-                  </select>
-                </form>
-              </div>
-            </div>
-
-            <ul class="shop-catalog__grid">
-              <li class="shop-catalog__item">
-                <article class="product-card">
+          <ul class="shop-catalog__grid">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-1.png">
   </a>
@@ -348,12 +354,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Wooden radio</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -385,10 +396,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-2.png">
   </a>
@@ -396,12 +407,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Wooden chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -433,10 +449,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-3.png">
   </a>
@@ -444,12 +460,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">White chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -481,10 +502,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-4.png">
   </a>
@@ -492,12 +513,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Retro table</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -529,10 +555,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-5.png">
   </a>
@@ -540,12 +566,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Wooden radio</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -577,10 +608,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-4.png">
   </a>
@@ -588,12 +619,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Retro table</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -625,10 +661,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-6.png">
   </a>
@@ -636,12 +672,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Wooden chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -673,10 +714,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-7.png">
   </a>
@@ -684,12 +725,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">White chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -721,10 +767,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/products/products-img-8.png">
   </a>
@@ -732,12 +778,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Retro table</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -769,10 +820,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/new/new-img-2.png">
   </a>
@@ -780,12 +831,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Wooden chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -817,10 +873,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/new/new-img-5.png">
   </a>
@@ -828,12 +884,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">White chair</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -865,10 +926,10 @@
     </ul>
   </div>
 </article>
-              </li>
+            </li>
 
-              <li class="shop-catalog__item">
-                <article class="product-card">
+            <li class="shop-catalog__item">
+              <article class="product-card">
   <a class="product-card__wrap" href="#">
     <img class="product-card__image" alt="Wooden radio" src="images/new/new-img-4.png">
   </a>
@@ -876,12 +937,17 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">Retro table</a>
     </h3>
-    <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
+    
+      <span class="product-card__rate star" data-rateyo-rating="4"></span>
+    
     <span class="product-card__price">$29.00</span>
+    
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
+  
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
@@ -913,10 +979,10 @@
     </ul>
   </div>
 </article>
-              </li>
-            </ul>
+            </li>
+          </ul>
 
-            <div class="pagination">
+          <div class="pagination">
   <ul class="pagination__list">
     <li class="pagination__item">
       <a href="#" class="pagination__link pagination__link--active" href="#">1</a>
@@ -927,14 +993,16 @@
     <li class="pagination__item">
       <a href="#" class="pagination__link" href="#">3</a>
     </li>
+    <li class="pagination__item">
+      <a href="#" class="pagination__link" href="#">Next</a>
+    </li>
   </ul>
-  <a class="pagination__arrows pagination__arrows--next" href="#">Next</a>
 </div>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div class="partners">
+    <div class="partners">
   <div class="container">
     <ul class="partners__slider">
       <li class="partners__item">
@@ -975,15 +1043,15 @@
     </ul>
   </div>
 </div>
-    </section>
+  </section>
 
-  </main>
+</main>
 
-  <footer class="footer">
+<footer class="footer">
   <h2 class="sr-only">Contact information</h2>
 
   <div class="container">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper footer__wrapper--shop">
       <div class="footer__addres">
         <a class="logo logo--footer" href="#">
           <img class="logo__img" src="images/icons/logo.svg" alt="logo">
@@ -1096,7 +1164,7 @@
   </div>
 </footer>
 
-  <script defer src="js/main.min.js"></script>
+<script defer src="js/main.min.js"></script>
 </body>
 
 </html>

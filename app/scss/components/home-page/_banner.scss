@@ -12,6 +12,7 @@
       position: absolute;
       top: 12%;
       right: 173px;
+      z-index: -1;
       width: 634px;
       height: 634px;
       background-image: url('../images/home-page/banner/banner-ellipse.png');
@@ -22,6 +23,15 @@
       @include width-1200 {
         width: 400px;
         height: 400px;
+      }
+
+      @include width-823 {
+        width: 300px;
+        height: 300px;
+      }
+
+      @include width-415 {
+        display: none;
       }
     }
 
@@ -135,7 +145,6 @@
   }
 
   &__box {
-    position: relative;
     max-width: 640px;
     padding: 112px 0 118px;
 

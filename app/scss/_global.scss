@@ -20,6 +20,10 @@ button {
   &--lg {
     max-width: 1800px;
   }
+
+  &--team {
+    max-width: 1235px;
+  }
 }
 
 .body-hidden {
@@ -49,7 +53,8 @@ button {
 .news__date,
 .news__author,
 .new-card__sub,
-.news__sub {
+.news__sub,
+.filters-recent__link {
   @include line-clamp(1);
 }
 
@@ -58,7 +63,9 @@ button {
 .banner__wrap p,
 .bestseller__title,
 .bestseller__text p,
-.new-card__link {
+.new-card__link,
+.product-card__link,
+.experience__caption p {
   @include line-clamp();
 }
 
