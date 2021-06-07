@@ -5,14 +5,15 @@
   &__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 7px;
   }
 
-  &__item {
+  &__item:not(:last-child) {
     margin-right: 15px;
   }
 
-  &__link,
-  &__arrows {
+  &__link {
     border: 1px solid $casper;
 
     &--active {
@@ -21,13 +22,18 @@
     }
   }
 
-  &__link,
-  &__arrows {
+  &__link {
     line-height: 1;
-    padding: 17px 20px;
+    padding: 16px 20px;
+    transition: color 0.3s linear, background-color 0.3s linear;
 
     @include width-568 {
       padding: 13px 16px;
+    }
+
+    &:not(.pagination__link--active):hover {
+      background-color: $blueBayoux;
+      color: $white;
     }
   }
 }

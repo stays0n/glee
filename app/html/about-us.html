@@ -1,27 +1,175 @@
-@@include('./_doctype.html', {
-  'titleTag': 'Glee — About Us'
+@@include('./_head.html', {
+'titleTag': 'Glee — About Us'
 })
 
-<body>
-  @@include('./_header.html')
+@@include('./_header.html', {
+'current': 'header__link--current',
+'page': 'about-us'
+})
 
-  <main class="main">
-    <h1 class="sr-only">About Us page</h1>
+<main class="main">
+  <h1 class="sr-only">About Us page</h1>
 
-    @@include('./_breadcrumbs.html', {
-      'title' : 'About Us',
-      'breadCrumbs' : {
-        'first': 'Home',
-        'second': 'About Us'
-      }
-    })
+  @@include('./_breadcrumbs.html', {
+  'title' : 'About Us',
+  'crumbsCurrent': 'About Us',
+  arr: [
+  {
+  crumb: 'Home',
+  link: '#1'
+  }
+  ],
+  })
 
-    @@include('./_news.html')
-  </main>
+  <section class="experience">
+    <div class="container">
+      <div class="experience__wrapper">
+        <div class="experience__wrap">
+          <img class="experience__img" src="images/about-us-page/experience/experience-img.jpg"
+            alt="Our employee at work">
+        </div>
 
-  @@include('./_footer.html')
+        <div class="experience__about">
+          <div class="experience__suptitle">
+            <span class="experience__years">12</span>
+            <div class="experience__sup">
+              Years Experience Working
+            </div>
+          </div>
 
-  <script defer src="js/main.min.js"></script>
-</body>
+          <h2 class="experience__title title">
+            Mission of our creative house
+          </h2>
 
-</html>
+          <p>
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum
+          </p>
+
+          <ul class="experience__achievements">
+            @@loop('./_experience-element.html', [
+            {
+            'modifier': 'experience__heading--projects',
+            'num': '520+',
+            'word': 'Projects'
+            },
+            {
+            'modifier': 'experience__heading--revenue',
+            'num': '$4M',
+            'word': 'Revenue'
+            },
+            {
+            'modifier': 'experience__heading--awards',
+            'num': '250',
+            'word': 'Awards'
+            }
+            ])
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience__progress">
+      <div class="container container--team">
+        <ul class="experience__list">
+          @@loop('./_experience-item.html', [
+          {
+          'modifier': 'experience__caption--satisfied',
+          'stat': '99%',
+          'text': 'Satisﬁed Clients Rate'
+          },
+          {
+          'modifier': 'experience__caption--delivered',
+          'stat': '5020+',
+          'text': 'Products Delivered'
+          },
+          {
+          'modifier': 'experience__caption--worked',
+          'stat': '23hr',
+          'text': 'Daily Working Time'
+          },
+          {
+          'modifier': 'experience__caption--brands',
+          'stat': '140+',
+          'text': 'Brands in Store'
+          }
+          ])
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <div class="team__wrapper">
+        <div class="team__text">
+          <h2 class="team__title title">
+            Our Team
+          </h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum dolor
+            sit
+            amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <button class="team__btn btn btn--border" type="button">Join With US
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#arrow-right-md"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="team__gallery">
+          @@loop('./_team-employee.html', [
+          {
+          'img-src': 'images/about-us-page/team/team-item-1.jpg',
+          'img-alt': 'Eliza Elliot',
+          'name': 'Eliza Elliot',
+          'position': 'Commodo tempor',
+          'link-inst': '#',
+          'sronly-inst': 'Instagram',
+          'link-gplus': '#',
+          'sronly-gplus': 'Goggle+'
+          },
+          {
+          'img-src': 'images/about-us-page/team/team-item-2.jpg',
+          'img-alt': 'Roscoe A.',
+          'name': 'Roscoe A.',
+          'position': 'Commodo tempor',
+          'link-inst': '#',
+          'sronly-inst': 'Instagram',
+          'link-gplus': '#',
+          'sronly-gplus': 'Goggle+'
+          },
+          {
+          'img-src': 'images/about-us-page/team/team-item-3.jpg',
+          'img-alt': 'Ruby M.',
+          'name': 'Ruby M.',
+          'position': 'Commodo tempor',
+          'link-inst': '#',
+          'sronly-inst': 'Instagram',
+          'link-gplus': '#',
+          'sronly-gplus': 'Goggle+'
+          },
+          {
+          'img-src': 'images/about-us-page/team/team-item-4.jpg',
+          'img-alt': 'Marie F. Bloss',
+          'name': 'Marie F. Bloss',
+          'position': 'Commodo tempor',
+          'link-inst': '#',
+          'sronly-inst': 'Instagram',
+          'link-gplus': '#',
+          'sronly-gplus': 'Goggle+'
+          }
+          ])
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  @@include('./_news.html')
+</main>
+
+@@include('./_footer.html')

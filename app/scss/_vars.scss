@@ -16,21 +16,12 @@ $lightApricot: #fcd7b6;
 $provincialPink: #fef7f0;
 $halfSpanishWhite: #feefe2;
 $alabaster: #f8f8f8;
-
-%sr-only {
-  // я им прячу чекбоксы и радиокнопки на странице shop
-  // так можно или лучше прописывать класс?
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
+$tundora: #4c4c4c;
+$mystic2: #e6eaf0;
+$lightApricot2: #fcd7b6;
+$comet: #565872;
+$mineShaft2: #333333;
+$rollingStone: #737980;
 
 %Rubik-300 {
   font-family: 'Rubik', sans-serif;
@@ -45,6 +36,11 @@ $alabaster: #f8f8f8;
 %Rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%Rubik-700 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
 }
 
 %DMS-400 {

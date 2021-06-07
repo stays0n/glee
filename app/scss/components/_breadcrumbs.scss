@@ -1,12 +1,10 @@
-.top {
-  &__wrapper {
-    padding: 28px 0 24px;
-    text-align: center;
-    background-color: $mystic;
+.breadcrumbs {
+  padding: 28px 0 24px;
+  text-align: center;
+  background-color: $mystic;
 
-    @include width-568 {
-      padding: 10px 0 6px;
-    }
+  @include width-568 {
+    padding: 10px 0 6px;
   }
 
   &__title {
@@ -21,9 +19,6 @@
     }
   }
 
-}
-
-.breadcrumbs {
   &__list {
     display: flex;
     justify-content: center;
@@ -31,6 +26,7 @@
   }
 
   &__item {
+    color: $rollingStone;
 
     &:not(:last-child) {
       padding-right: 5px;
@@ -42,6 +38,6 @@
   }
 
   &__link {
-    color: $ebonyClay;
+    color: $rollingStone;
   }
 }

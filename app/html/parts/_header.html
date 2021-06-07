@@ -14,13 +14,13 @@
 
       <ul class="header__menu">
         <li class="header__item">
-          <a class="header__link" href="#">Home+</a>
+          <a class="header__link @@if(context.name === 'current' && context.page === 'home-page') {@@current}" href="#">Home+</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="#">About</a>
+          <a class="header__link @@if(context.name === 'current' && context.page === 'about-us') {@@current}" href="#">About</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="#">Services</a>
+          <a class="header__link @@if(context.name === 'current' && context.page === 'shop-page') {@@current}" href="#">Services</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="#">Pages+</a>

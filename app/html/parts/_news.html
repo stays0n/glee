@@ -16,67 +16,36 @@
 
       <ul class="news__list">
         <li class="news__item">
-          <div class="news__wrap">
-            <a class="news__ref" href="#">
-              <img class="news__img" src="images/news/news-img-1.jpg" alt="Bedroom image">
-            </a>
-            <a class="news__sub" href="#">News</a>
-          </div>
-          <div class="news__text">
-            <h3 class="news__heading">
-              <a class="news__link" href="#">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </a>
-            </h3>
-            <div class="news__base">
-              <time class="news__date" datetime="2020-01-28">
-                28 January, 2020
-              </time>
-              <span class="news__author">
-                By admin
-              </span>
-            </div>
-          </div>
+          @@include('./_news-elem.html', {
+          'ref-href': '#',
+          'img-src': 'images/news/news-img-1.jpg',
+          'img-alt': 'Bedroom image',
+          'sub-href': '#',
+          'link-href': '#',
+          'link-value': 'Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+          })
         </li>
 
         <li class="news__item">
-          <div class="news__wrap">
-            <a class="news__ref" href="#">
-              <img class="news__img" src="images/news/news-img-2.jpg" alt="Living room">
-            </a>
-            <a class="news__sub" href="#">News</a>
-          </div>
-          <div class="news__text">
-            <h3 class="news__heading">
-              <a class="news__link" href="#">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </a>
-            </h3>
-            <div class="news__base">
-              <time class="news__date" datetime="2020-01-28">28 January, 2020</time>
-              <span class="news__author">By admin</span>
-            </div>
-          </div>
+          @@include('./_news-elem.html', {
+          'ref-href': '#',
+          'img-src': 'images/news/news-img-2.jpg',
+          'img-alt': 'Living room',
+          'sub-href': '#',
+          'link-href': '#',
+          'link-value': 'Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore'
+          })
         </li>
 
         <li class="news__item">
-          <div class="news__wrap">
-            <a class="news__ref" href="#">
-              <img class="news__img" src="images/news/news-img-3.jpg" alt="Main room">
-            </a>
-            <a class="news__sub" href="#">News</a>
-          </div>
-          <div class="news__text">
-            <h3 class="news__heading">
-              <a class="news__link" href="#">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </a>
-            </h3>
-            <div class="news__base">
-              <time class="news__date" datetime="2020-01-28">28 January, 2020</time>
-              <span class="news__author">By admin</span>
-            </div>
-          </div>
+          @@include('./_news-elem.html', {
+          'ref-href': '#',
+          'img-src': 'images/news/news-img-3.jpg',
+          'img-alt': 'Main room',
+          'sub-href': '#',
+          'link-href': '#',
+          'link-value': 'Rncididunt ut labore et dolore magna aliqua. Ut enim'
+          })
         </li>
       </ul>
     </div>

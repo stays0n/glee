@@ -6,9 +6,13 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding: 73px 0 56px;
+    padding: 73px 0 60px;
     border-bottom: 1px solid #dae4e9;
-    line-height: 1.7;
+    line-height: 1.6;
+
+    &--shop {
+      padding: 64px 0 60px;
+    }
 
     @include width-1200 {
       flex-wrap: wrap;
@@ -138,7 +142,7 @@
   }
 
   &__item {
-    margin-bottom: 11px;
+    margin-bottom: 14px;
   }
 
   &__to {
