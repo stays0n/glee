@@ -1,0 +1,56 @@
+.blog-page {
+  padding: 120px 0;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    position: relative;
+    max-width: 830px;
+    width: 100%;
+    margin-right: 70px;
+
+    @include width-1200 {
+      margin-right: 20px;
+    }
+
+    @include width-823 {
+      margin-right: 0;
+    }
+
+    .pagination {
+      justify-content: flex-start;
+    }
+  }
+
+  &__list {
+    margin-bottom: 78px;
+  }
+
+  &__item {
+    margin-bottom: 51px;
+  }
+
+  &__filters {
+    max-width: 270px;
+    width: 100%;
+
+    @include width-823 {
+      max-width: 70%;
+      padding: 15px;
+    }
+
+    @include width-568 {
+      max-width: 85%;
+    }
+  }
+
+  .filters-search {
+    margin-bottom: 50px;
+  }
+
+  .filters-category {
+    margin-bottom: 34px;
+  }
+}

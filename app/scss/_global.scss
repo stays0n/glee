@@ -4,6 +4,7 @@ body {
   line-height: 1.9;
   color: $blueDianne;
   background-color: $white;
+  transition: padding 0.3s ease;
 }
 
 button {
@@ -64,13 +65,13 @@ button {
 .bestseller__title,
 .bestseller__text p,
 .new-card__link,
-.product-card__link,
-.experience__caption p {
+.product-card__link {
   @include line-clamp();
 }
 
 .news__link,
-.product-card__box p {
+.product-card__box p,
+.blog-article__text p {
   @include line-clamp(3);
 }
 
@@ -126,6 +127,14 @@ button {
   @extend %Rubik-500;
   font-size: 15px;
   transition: color 0.2s ease-out, background-color 0.2s ease, box-shadow 0.2s ease;
+
+  &--form {
+    padding: 12px 34px 11px;
+    color: $white;
+    background-color: $casper;
+    transition: background-color 0.2s ease-in-out;
+    letter-spacing: 1.3px;
+  }
 
   &--fill {
     max-width: 200px;

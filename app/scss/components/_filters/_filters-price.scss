@@ -1,0 +1,38 @@
+.filters-price {
+  margin-bottom: 72px;
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .irs--flat {
+    height: 15px;
+    margin-bottom: 22px;
+
+
+    .irs-line {
+      top: 11px;
+      height: 2px;
+      background-color: #c2d2db;
+    }
+
+    .irs-bar {
+      top: 11px;
+      height: 3px;
+      background-color: $casper;
+    }
+
+    .irs-handle {
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      background-color: $casper;
+
+      i {
+        display: none;
+      }
+    }
+  }
+}

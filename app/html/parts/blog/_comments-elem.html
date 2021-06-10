@@ -1,0 +1,22 @@
+<article class="comments__elem @@if(context.isModified){comments__elem--modified}">
+  <img class="comments__img" src="@@img-src" alt="User avatar">
+  <div class="comments__content">
+    <div class="comments__compiler">
+      <span class="comments__author">
+        @@author
+      </span>
+      <time class="comments__day">
+        Add 11 Oct 2020
+      </time>
+    </div>
+    <p>
+      @@text
+    </p>
+    <a class="comments__reply" href="#">
+      <span class="comments__sub">Reply</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#arrow-right-md"></use>
+      </svg>
+    </a>
+  </div>
+</article>

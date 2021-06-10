@@ -16,7 +16,7 @@
   arr: [
   {
   crumb: 'Home',
-  link: '#1'
+  link: 'index.html'
   }
   ],
   })
@@ -32,7 +32,7 @@
 
             <form class="filters-category__form">
               <ul class="filters-category__list">
-                @@loop('./_filters-category-label.html', [
+                @@loop('./_filters/_filters-category-label.html', [
                 {'isChecked': true, 'name': 'Chair'},
                 {'isChecked': false, 'name': 'Table'},
                 {'isChecked': false, 'name': 'Lamp'},
@@ -65,7 +65,7 @@
 
             <form class="filters-brand__form" action="#">
               <ul class="filters-brand__list">
-                @@loop('./_filters-brand-label.html', [
+                @@loop('./_filters/_filters-brand-label.html', [
                 {'isChecked': true, 'name': 'RFL', 'num': '10'},
                 {'isChecked': false, 'name': 'Brothers', 'num': '21'},
                 {'isChecked': false, 'name': 'Regal', 'num': '3'},
@@ -82,7 +82,7 @@
             </h3>
 
             <ul class="filters-recent__list">
-              @@loop('./_filters-recent-wrapper.html', [
+              @@loop('./_filters/_filters-recent-wrapper.html', [
               {
               'wrap-href': '#',
               'img-src': 'images/shop-page/recent-1.png',
@@ -279,5 +279,5 @@
 </main>
 
 @@include('./_footer.html', {
-  'isShop': true
+  'isModified': true
 })

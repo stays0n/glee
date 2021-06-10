@@ -17,14 +17,29 @@
 @import 'components/home-page/new';
 @import 'components/home-page/new-card';
 @import 'components/news';
+@import 'components/news-elem';
 @import 'components/partners';
 @import 'components/footer';
 
 // shop-page
 @import 'components/breadcrumbs';
+@import 'components/_filters/filters-category&brand';
+@import 'components/_filters/filters-price';
+@import 'components/_filters/filters-recent';
 @import 'components/shop-page/shop';
 @import 'components/pagination';
 
 // about-us
 @import 'components/about-us/experience';
 @import 'components/about-us/team';
+
+// blog-page
+@import 'components/blog/blog-page';
+@import 'components/blog/blog-article';
+@import 'components/_filters/filters-search';
+@import 'components/_filters/filters-posts';
+@import 'components/_filters/filters-funnel';
+
+// blog-one
+@import 'components/blog/blog-one';
+@import 'components/blog/comments';

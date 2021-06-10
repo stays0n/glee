@@ -1,0 +1,256 @@
+@@include('./_head.html', {
+'titleTag': 'Glee — Blog one',
+})
+
+@@include('./_header.html', {
+'current': 'header__link--current',
+'page': 'blog-one'
+})
+
+<main class="main">
+  <h1 class="sr-only">Blog about furniture collections</h1>
+
+  @@include('./_breadcrumbs.html', {
+  'title' : 'Blog Details',
+  'crumbsCurrent': 'Blog details',
+  arr: [
+  {
+  crumb: 'Home',
+  link: 'index.html'
+  },
+  {
+  'crumb': 'Blog',
+  'link': 'blog-page.html'
+  }
+  ],
+  })
+
+  <section class="blog-one">
+    <div class="container">
+      <h2 class="sr-only">
+        About this collection
+      </h2>
+
+      <div class="blog-one__wrapper">
+        <div class="blog-one__content">
+          <button class="blog-one__funnel filters-funnel btn" type="button">
+            <span class="filters-funnel__sub">Open sidebar</span>
+          </button>
+
+          @@include('./blog/_blog-article.html', {
+          'img-src': 'images/blog/blog-page-1.jpg',
+          'img-alt': 'Fonsectetur adipisicing eiusmod',
+          'title': 'Fonsectetur adipisicing eiusmod',
+          'tag': 'div'
+          })
+
+          <div class="blog-one__review">
+            <h4>
+              Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              venia Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            </h4>
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet,
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <blockquote>
+              <p>
+                Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris
+              </p>
+              <cite>
+                Wiusmod tempor
+              </cite>
+            </blockquote>
+
+            <div class="image">
+              <img class="left-image" src="images/blog/blog-one.jpg" alt="Riusmod tempor incididunt">
+              <h4>
+                Riusmod tempor incididunt
+              </h4>
+              <p>
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </p>
+            </div>
+
+            <h4>
+              Kajtsal jervcm eoaspckred
+            </h4>
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            </p>
+          </div>
+
+          <div class="blog-one__box">
+            <div class="blog-one__compiler">
+              <img class="blog-one__pic" src="images/blog/blog-one-author.jpg" alt="Author avatar">
+              <div class="blog-one__author">
+                <span class="blog-one__name">Mark N. Hernandez</span>
+                <span class="blog-one__position">Designer</span>
+              </div>
+            </div>
+
+            <div class="blog-one__data">
+              <div class="blog-one__wrap">
+                <span class="blog-one__capture">Tags:</span>
+                <ul class="blog-one__list">
+                  @@loop('./blog/_blog-one-tag-item.html', [
+                  {'tag': 'All,'},
+                  {'tag': 'Trending'}
+                  ])
+                </ul>
+              </div>
+
+              <div class="blog-one__wrap">
+                <span class="blog-one__capture">Share:</span>
+                <ul class="blog-one__list">
+                  @@loop('./blog/_blog-one-share-item.html', [
+                  {'icon': 'facebook'},
+                  {'icon': 'twitter'},
+                  {'icon': 'inst'},
+                  {'icon': 'g+'}
+                  ])
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-one__comments">
+            <span class="blog-one__status">
+              3 Comments
+            </span>
+            <ul class="blog-one__enumeration">
+              <li class="blog-one__element comments">
+                @@include('./blog/_comments-elem.html', {
+                'img-src': 'images/blog/blog-comment-1.jpg',
+                'author': 'Delores G. Roberts',
+                'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem, ultrices'
+                })
+              </li>
+
+              <li class="blog-one__element comments">
+                @@include('./blog/_comments-elem.html', {
+                'img-src': 'images/blog/blog-comment-2.jpg',
+                'author': 'Shannon S. Williams',
+                'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra',
+                'isModified': true
+                })
+              </li>
+
+              <li class="blog-one__element comments">
+                @@include('./blog/_comments-elem.html', {
+                'img-src': 'images/blog/blog-comment-3.jpg',
+                'author': 'Nicholas R. Coley',
+                'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse orci sem,'
+                })
+              </li>
+            </ul>
+          </div>
+
+          <form class="blog-one__form">
+            <h3 class="blog-one__title">
+              Leave A Comment
+            </h3>
+            <ul class="blog-one__fields">
+              <li class="blog-one__field blog-one__field--first">
+                <input class="blog-one__input" id="blog-name" type="text">
+                <label class="blog-one__label" for="blog-name">Name</label>
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#user-input"></use>
+                </svg>
+              </li>
+
+              <li class="blog-one__field blog-one__field--second">
+                <input class="blog-one__input" id="blog-email" type="email">
+                <label class="blog-one__label" for="blog-email">E-mail</label>
+                <svg>
+                  <use xlink:href="images/icons/sprite.svg#envelope"></use>
+                </svg>
+              </li>
+            </ul>
+
+            <div class="blog-one__textbox">
+              <textarea class="blog-one__textarea" placeholder="Comment" id="blog-textarea"></textarea>
+              <label class="sr-only" for="blog-textarea">Comment input</label>
+              <svg>
+                <use xlink:href="images/icons/sprite.svg#typing"></use>
+              </svg>
+            </div>
+
+            <button class="blog-one__btn btn--form" type="submit">Post Comment</button>
+          </form>
+
+          @@include('./_pagination.html')
+        </div>
+
+        <aside class="blog-one__filters filters">
+          <div class="filters__item filters-search">
+            @@include('./_filters/_filters-search-form.html')
+          </div>
+
+          <div class="filters__item filters-category">
+            <h3 class="filters__title">
+              Category
+            </h3>
+
+            <form class="filters-category__form">
+              <ul class="filters-category__list">
+                @@loop('./_filters/_filters-category-label.html', [
+                {'isChecked': true, 'name': 'Chair'},
+                {'isChecked': false, 'name': 'Table'},
+                {'isChecked': false, 'name': 'Lamp'},
+                {'isChecked': false, 'name': 'Watch'},
+                {'isChecked': false, 'name': 'Clock'},
+                ])
+              </ul>
+            </form>
+          </div>
+
+          <div class="filters__item filters-posts">
+            <h3 class="filters__title">
+              Recent posts
+            </h3>
+
+            <ul class="filters-posts__list">
+              @@loop('./_filters/_filters-posts-item.html', [
+              {
+              'img-src': 'images/blog/blog-posts-1.jpg',
+              'img-alt': 'Corem ipsum dolor tetur adipisicing elit',
+              'link-value': 'Corem ipsum dolor tetur adipisicing elit'
+              },
+              {
+              'img-src': 'images/blog/blog-posts-2.jpg',
+              'img-alt': 'Fdipisicing elit, sed do eiusmod tempor',
+              'link-value': 'Fdipisicing elit, sed do eiusmod tempor'
+              },
+              {
+              'img-src': 'images/blog/blog-posts-3.jpg',
+              'img-alt': 'Eonsectetur adipisicing elit, sed do eiusmod ',
+              'link-value': 'Eonsectetur adipisicing elit, sed do eiusmod '
+              },
+              {
+              'img-src': 'images/blog/blog-posts-4.jpg',
+              'img-alt': 'gnim ad minim veniam, quis nostrud ',
+              'link-value': 'gnim ad minim veniam, quis nostrud '
+              },
+              ])
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  @@include('./_partners.html', {
+  'isModified': true
+  })
+</main>
+
+@@include('./_footer.html', {
+'isModified': true
+})

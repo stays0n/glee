@@ -10,17 +10,17 @@ $(function () {
   }
 
   function togglePaddindOnToolsFixed() {
-    if (window.innerWidth < 569 && window.pageYOffset > 54) {
+    if (window.innerWidth < 569 && window.pageYOffset > 55) {
       header.style.paddingBottom = 85 + 'px'
       toggleTools()
 
-    } else if (window.innerWidth > 569 || window.pageYOffset <= 54) {
+    } else if (window.innerWidth > 569 || window.pageYOffset <= 55) {
       header.style.paddingBottom = ''
     }
   }
 
   function toggleTools() {
-    if (window.innerWidth <= 823 || window.pageYOffset > 55) {
+    if (window.innerWidth <= 823 && window.pageYOffset > 55) {
       headerTools.classList.add('header__tools--fixed')
 
     } else {
@@ -56,7 +56,7 @@ $(function () {
   })
 
   // burger
-  function burgerMenu(selector) {
+    function burgerMenu(selector) {
     const menu = $(selector),
       button = $('.header__tool--burger'),
       links = menu.find('.header__link'),
@@ -86,49 +86,127 @@ $(function () {
     }
   }
 
-  if ('.header__tool--burger') {
-    burgerMenu('.header__menu');
+  if (headerMenu) {
+    burgerMenu(headerMenu);
   }
 
   // shop-filters
+  const shopFilters = $('.shop__filters'),
+    overlay = $('.header__overlay')
+
   function filtersMenu(selector) {
     const menu = $(selector),
       button = $('.shop-catalog__funnel'),
       links = menu.find('.filters-recent__wrap, .filters-recent__link'),
-      overlay = $('.header__overlay')
+      overlayHere = overlay
 
     button.on('click', (e) => {
       e.preventDefault()
       toggleFilters()
     });
     links.on('click', () => toggleFilters())
-    overlay.on('click', () => toggleFilters())
+    overlayHere.on('click', () => toggleFilters())
 
     function toggleFilters() {
       menu.toggleClass('filters--active')
       button.toggleClass('shop-catalog__funnel--active')
       if (menu.hasClass('filters--active')) {
-        toggleOverflowHiddenToBoddy()
+        bodyTag.classList.add('body-hidden')
       } else {
-        toggleOverflowHiddenToBoddy()
+        bodyTag.classList.remove('body-hidden')
       }
     }
   }
-  if ('.filters') {
-    filtersMenu('.filters')
+  if (shopFilters) {
+    filtersMenu(shopFilters)
   }
 
-  // footer form
-  const formInput = document.querySelector('.form__input'),
-    formGroup = document.querySelector('.form__group')
+  // blog-page-filters
+  const blogPageFilters = $('.blog-page__filters')
+  
+  function filtersMenuBlogPage(selector) {
+    const menu = $(selector),
+      button = $('.blog-page__funnel'),
+      links = menu.find('.filters-posts__wrap, .filters-posts__link, .filters-search__btn'),
+      overlayHere = overlay
 
-  formInput.addEventListener('focus', () => formGroup.classList.add('active'))
+    button.on('click', (e) => {
+      e.preventDefault()
+      toggleFilters()
+    });
+    links.on('click', () => toggleFilters())
+    overlayHere.on('click', () => toggleFilters())
 
-  formInput.addEventListener('blur', () => {
-    if (!formInput.value) {
-      formGroup.classList.remove('active')
+    function toggleFilters() {
+      menu.toggleClass('filters--active')
+      button.toggleClass('filters-funnel--active')
+      if (menu.hasClass('filters--active')) {
+        bodyTag.classList.add('body-hidden')
+      } else {
+        bodyTag.classList.remove('body-hidden')
+      }
     }
-  })
+  }
+  if (blogPageFilters) {
+    filtersMenuBlogPage(blogPageFilters)
+  }
+
+  // blog-one-filters
+  const blogOneFilters = $('.blog-one__filters')
+  
+  function filtersMenuBlogOne(selector) {
+    const menu = $(selector),
+      button = $('.blog-one__funnel'),
+      links = menu.find('.filters-posts__wrap, .filters-posts__link, .filters-search__btn'),
+      overlayHere = overlay
+
+    button.on('click', (e) => {
+      e.preventDefault()
+      toggleFilters()
+    });
+    links.on('click', () => toggleFilters())
+    overlayHere.on('click', () => toggleFilters())
+
+    function toggleFilters() {
+      menu.toggleClass('filters--active')
+      button.toggleClass('filters-funnel--active')
+      if (menu.hasClass('filters--active')) {
+        bodyTag.classList.add('body-hidden')
+      } else {
+        bodyTag.classList.remove('body-hidden')
+      }
+    }
+  }
+  if (blogOneFilters) {
+    filtersMenuBlogOne(blogOneFilters)
+  }
+
+  // form label
+  const formInput = document.querySelector('.form__input'),
+    formGroup = document.querySelector('.form__group'),
+    blogInputFirst = document.getElementById('blog-name'),
+    blogGroupFirst = document.querySelector('.blog-one__field--first'),
+    blogInputSecond = document.getElementById('blog-email'),
+    blogGroupSecond = document.querySelector('.blog-one__field--second')
+
+  function moveLabel(input, group) {
+    input.addEventListener('focus', () => group.classList.add('active'))
+    input.addEventListener('blur', () => {
+      if (!input.value) {
+        group.classList.remove('active')
+      }
+    })
+  }
+
+  if (formInput && formGroup) {
+    moveLabel(formInput, formGroup)
+  }
+  if (blogInputFirst && blogGroupFirst) {
+    moveLabel(blogInputFirst, blogGroupFirst)
+  }
+  if (blogInputSecond && blogGroupSecond) {
+    moveLabel(blogInputSecond, blogGroupSecond)
+  }
 
   // shop-catalog toggle
   $('.shop-catalog__btn').on('click', function () {
@@ -154,8 +232,8 @@ $(function () {
     arrows: false,
     slidesToShow: 5,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     centerMode: true,
     centerPadding: '-100px',
     responsive: [{
@@ -188,26 +266,26 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [{
-      breakpoint: 1451,
-      settings: {
-        slidesToShow: 3,
-        centerMode: true,
+        breakpoint: 1451,
+        settings: {
+          slidesToShow: 3,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 901,
+        settings: {
+          slidesToShow: 2,
+          autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 569,
+        settings: {
+          slidesToShow: 1,
+        }
       }
-    },
-    {
-      breakpoint:901,
-      settings: {
-        slidesToShow: 2,
-        autoplaySpeed: 2000,
-      }
-    },
-    {
-      breakpoint: 569,
-      settings: {
-        slidesToShow: 1,
-      }
-    }
-  ]
+    ]
   });
 
   // rangeslider
