@@ -14,16 +14,16 @@
 
       <ul class="header__menu">
         <li class="header__item">
-          <a class="header__link @@if(context.name === 'current' && context.page === 'home-page') {@@current}" href="#">Home+</a>
+          <a class="header__link header__link--modified @@if(context.name === 'current' && context.page === 'home-page'){@@current}" href="index.html">Home</a>
         </li>
         <li class="header__item">
-          <a class="header__link @@if(context.name === 'current' && context.page === 'about-us') {@@current}" href="#">About</a>
+          <a class="header__link @@if(context.name === 'current' && context.page === 'about-us'){@@current}" href="about-us.html">About</a>
         </li>
         <li class="header__item">
-          <a class="header__link @@if(context.name === 'current' && context.page === 'shop-page') {@@current}" href="#">Services</a>
+          <a class="header__link @@if(context.name === 'current' && context.page === 'shop-page'){@@current}" href="shop-page.html">Services</a>
         </li>
         <li class="header__item">
-          <a class="header__link" href="#">Pages+</a>
+          <a class="header__link header__link--modified @@if(context.name === 'current' && context.page === 'blog-page'){@@current}" href="blog-page.html">Pages</a>
         </li>
         <li class="header__item">
           <a class="header__link" href="#">News</a>
@@ -35,7 +35,7 @@
 
       <div class="header__tools">
         <button class="header__tool header__tool--search" type="button">
-          <span class="sr-only">Open search box</span>
+          <span class="sr-only">Open search input</span>
           <svg>
             <use xlink:href="images/icons/sprite.svg#header-search"></use>
           </svg>

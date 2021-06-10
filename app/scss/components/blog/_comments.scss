@@ -1,0 +1,73 @@
+.comments {
+  &:not(:last-child) {
+    .comments__content {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__elem {
+    display: flex;
+
+    &--modified {
+      max-width: 700px;
+      margin-left: auto;
+    }
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    object-fit: cover;
+
+    @include width-1200 {
+      margin-right: 15px;
+    }
+
+    @include width-823 {
+      width: 70px;
+      height: 70px;
+    }
+
+    @include width-568 {
+      display: none;
+    }
+  }
+
+  &__content {
+    p {
+      color: $comet;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__compiler {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px;
+    line-height: 1.1;
+  }
+
+  &__author {
+    @extend %Rubik-700;
+    color: $blueBayoux;
+  }
+
+  &__day {
+    font-size: 14px;
+    color: $silverChalice;
+  }
+
+  &__reply {
+    font-size: 14px;
+    color: $blueBayoux2;
+    line-height: 1;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $blueBayoux2;
+      vertical-align: middle;
+    }
+  }
+}

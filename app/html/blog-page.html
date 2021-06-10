@@ -1,0 +1,143 @@
+@@include('./_head.html', {
+'titleTag': 'Glee — Blog page',
+})
+
+@@include('./_header.html', {
+'current': 'header__link--current',
+'page': 'blog-page'
+})
+
+<main class="main">
+  <h1 class="sr-only">Blog about furniture collections</h1>
+
+  @@include('./_breadcrumbs.html', {
+  'title' : 'Blog',
+  'crumbsCurrent': 'Blog',
+  arr: [
+  {
+  crumb: 'Home',
+  link: 'index.html'
+  }
+  ],
+  })
+
+  <section class="blog-page">
+    <div class="container">
+      <h2 class="sr-only">
+        Options for furniture collections
+      </h2>
+
+      <div class="blog-page__wrapper">
+        <div class="blog-page__content">
+          <button class="blog-page__funnel filters-funnel btn" type="button">
+            <span class="filters-funnel__sub">Open sidebar</span>
+          </button>
+
+          <ul class="blog-page__list">
+            <li class="blog-page__item">
+              @@include('./blog/_blog-article.html', {
+              'img-src': 'images/blog/blog-page-1.jpg',
+              'img-alt': 'Fonsectetur adipisicing eiusmod',
+              'title': 'Fonsectetur adipisicing eiusmod',
+              'isFull': true,
+              'tag': 'a'
+              })
+            </li>
+            <li class="blog-page__item">
+              @@include('./blog/_blog-article.html', {
+              'img-src': 'images/blog/blog-page-2.jpg',
+              'img-alt': 'Fonsectetur adipisicing elit,',
+              'title': 'Fonsectetur adipisicing elit,',
+              'isFull': true,
+              'tag': 'a'
+              })
+            </li>
+            <li class="blog-page__item">
+              @@include('./blog/_blog-article.html', {
+              'img-src': 'images/blog/blog-page-3.jpg',
+              'img-alt': 'Fsectetur adipisicing tempor incididunt',
+              'title': 'Fsectetur adipisicing tempor incididunt',
+              'isFull': true,
+              'tag': 'a'
+              })
+            </li>
+            <li class="blog-page__item">
+              @@include('./blog/_blog-article.html', {
+              'img-src': 'images/blog/blog-page-4.jpg',
+              'img-alt': 'vonsectetur adipisicing elit',
+              'title': 'vonsectetur adipisicing elit',
+              'isFull': true,
+              'tag': 'a'
+              })
+            </li>
+          </ul>
+
+          @@include('./_pagination.html')
+        </div>
+
+        <aside class="blog-page__filters filters">
+          <div class="filters__item filters-search">
+            @@include('./_filters/_filters-search-form.html')
+          </div>
+
+          <div class="filters__item filters-category">
+            <h3 class="filters__title">
+              Category
+            </h3>
+
+            <form class="filters-category__form">
+              <ul class="filters-category__list">
+                @@loop('./_filters/_filters-category-label.html', [
+                {'isChecked': true, 'name': 'Chair'},
+                {'isChecked': false, 'name': 'Table'},
+                {'isChecked': false, 'name': 'Lamp'},
+                {'isChecked': false, 'name': 'Watch'},
+                {'isChecked': false, 'name': 'Clock'},
+                ])
+              </ul>
+            </form>
+          </div>
+
+          <div class="filters__item filters-posts">
+            <h3 class="filters__title">
+              Recent posts
+            </h3>
+
+            <ul class="filters-posts__list">
+              @@loop('./_filters/_filters-posts-item.html', [
+              {
+              'img-src': 'images/blog/blog-posts-1.jpg',
+              'img-alt': 'Corem ipsum dolor tetur adipisicing elit',
+              'link-value': 'Corem ipsum dolor tetur adipisicing elit'
+              },
+              {
+              'img-src': 'images/blog/blog-posts-2.jpg',
+              'img-alt': 'Fdipisicing elit, sed do eiusmod tempor',
+              'link-value': 'Fdipisicing elit, sed do eiusmod tempor'
+              },
+              {
+              'img-src': 'images/blog/blog-posts-3.jpg',
+              'img-alt': 'Eonsectetur adipisicing elit, sed do eiusmod ',
+              'link-value': 'Eonsectetur adipisicing elit, sed do eiusmod '
+              },
+              {
+              'img-src': 'images/blog/blog-posts-4.jpg',
+              'img-alt': 'gnim ad minim veniam, quis nostrud ',
+              'link-value': 'gnim ad minim veniam, quis nostrud '
+              },
+              ])
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  @@include('./_partners.html', {
+  'isModified': true
+  })
+</main>
+
+@@include('./_footer.html', {
+'isModified': true
+})

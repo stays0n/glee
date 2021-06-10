@@ -6,9 +6,8 @@
     <h3 class="product-card__name">
       <a class="product-card__link" href="#">@@name</a>
     </h3>
-    <!-- когда подключаю rayeYo по айдишнику, то работает только с самым первым элементом с айди star( -->
     @@if(context.isFull) {
-      <span class="product-card__rate star" @@rate></span>
+    <span class="product-card__rate star" @@rate></span>
     }
     <span class="product-card__price">$29.00</span>
     @@if(context.isFull) {
@@ -16,7 +15,7 @@
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation
     </p>
-  }
+    }
 
     <ul class="product-card__tools">
       <li class="product-card__tool">

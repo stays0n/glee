@@ -16,13 +16,15 @@
   arr: [
   {
   crumb: 'Home',
-  link: '#1'
+  link: 'index.html'
   }
   ],
   })
 
   <section class="experience">
     <div class="container">
+      <h2 class="sr-only">Our many years of experience</h2>
+
       <div class="experience__wrapper">
         <div class="experience__wrap">
           <img class="experience__img" src="images/about-us-page/experience/experience-img.jpg"
@@ -37,9 +39,9 @@
             </div>
           </div>
 
-          <h2 class="experience__title title">
+          <h3 class="experience__title title">
             Mission of our creative house
-          </h2>
+          </h3>
 
           <p>
             consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -48,7 +50,7 @@
           </p>
 
           <ul class="experience__achievements">
-            @@loop('./_experience-element.html', [
+            @@loop('./about-us/_experience-element.html', [
             {
             'modifier': 'experience__heading--projects',
             'num': '520+',
@@ -73,7 +75,7 @@
     <div class="experience__progress">
       <div class="container container--team">
         <ul class="experience__list">
-          @@loop('./_experience-item.html', [
+          @@loop('./about-us/_experience-item.html', [
           {
           'modifier': 'experience__caption--satisfied',
           'stat': '99%',
@@ -102,11 +104,13 @@
 
   <section class="team">
     <div class="container">
+      <h2 class="sr-only">Who we are?</h2>
+
       <div class="team__wrapper">
         <div class="team__text">
-          <h2 class="team__title title">
+          <h3 class="team__title title">
             Our Team
-          </h2>
+          </h3>
 
           <p>
             Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum dolor
@@ -122,16 +126,14 @@
         </div>
 
         <ul class="team__gallery">
-          @@loop('./_team-employee.html', [
+          @@loop('./about-us/_team-employee.html', [
           {
           'img-src': 'images/about-us-page/team/team-item-1.jpg',
           'img-alt': 'Eliza Elliot',
           'name': 'Eliza Elliot',
           'position': 'Commodo tempor',
           'link-inst': '#',
-          'sronly-inst': 'Instagram',
           'link-gplus': '#',
-          'sronly-gplus': 'Goggle+'
           },
           {
           'img-src': 'images/about-us-page/team/team-item-2.jpg',
@@ -139,9 +141,7 @@
           'name': 'Roscoe A.',
           'position': 'Commodo tempor',
           'link-inst': '#',
-          'sronly-inst': 'Instagram',
           'link-gplus': '#',
-          'sronly-gplus': 'Goggle+'
           },
           {
           'img-src': 'images/about-us-page/team/team-item-3.jpg',
@@ -149,9 +149,7 @@
           'name': 'Ruby M.',
           'position': 'Commodo tempor',
           'link-inst': '#',
-          'sronly-inst': 'Instagram',
           'link-gplus': '#',
-          'sronly-gplus': 'Goggle+'
           },
           {
           'img-src': 'images/about-us-page/team/team-item-4.jpg',
@@ -159,9 +157,7 @@
           'name': 'Marie F. Bloss',
           'position': 'Commodo tempor',
           'link-inst': '#',
-          'sronly-inst': 'Instagram',
           'link-gplus': '#',
-          'sronly-gplus': 'Goggle+'
           }
           ])
         </ul>
@@ -172,4 +168,6 @@
   @@include('./_news.html')
 </main>
 
-@@include('./_footer.html')
+@@include('./_footer.html', {
+'isModified': true
+})

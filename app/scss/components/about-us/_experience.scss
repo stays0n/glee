@@ -2,9 +2,11 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 120px 0;
+    padding: 120px 0 122px;
 
     @include width-1200 {
+      flex-direction: column;
+      align-items: center;
       padding: 80px 0;
     }
 
@@ -15,15 +17,16 @@
   }
 
   &__wrap {
-    width: 100%;
+    // width: 100%;
+    margin-right: 45px;
 
     @include width-1200 {
-      width: 75%;
+      margin-right: 0;
     }
 
-    @include width-823 {
-      display: none;
-    }
+    // @include width-823 {
+    //   display: none;
+    // }
   }
 
   &__img {
@@ -34,20 +37,32 @@
     @include width-1200 {
       object-fit: cover;
     }
+
+    @include width-823 {
+      height: 530px;
+    }
+
+    @include width-568 {
+      height: 480px;
+    }
+
+    @include width-415 {
+      height: 400px;
+    }
   }
 
   &__about {
-    max-width: 600px;
+    max-width: 552px;
     width: 100%;
-    padding: 65px 0 50px 45px;
+    padding-top: 65px;
 
     @include width-1200 {
-      padding: 30px 0 50px 15px;
+      padding-top: 30px;
     }
 
-    @include width-823 {
-      padding: 0;
-    }
+    // @include width-823 {
+    //   padding: 0;
+    // }
 
     p {
       margin-bottom: 58px;
@@ -92,7 +107,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 32px 0;
+    padding-top: 32px;
     line-height: 1;
 
     @include width-1200 {
@@ -223,7 +238,7 @@
   }
 
   &__progress {
-    background-color: $lightApricot2;
+    background-color: $lightApricot;
     padding: 49px 0 75px;
 
     @include width-823 {

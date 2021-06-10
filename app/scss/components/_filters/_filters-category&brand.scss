@@ -1,0 +1,49 @@
+.filters-category,
+.filters-brand {
+  margin-bottom: 49px;
+
+  &__label {
+    display: block;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__input {
+
+    &:checked+.filters-category__checkbox,
+    &:checked+.filters-brand__checkbox {
+      background-color: $mystic;
+    }
+  }
+
+  &__checkbox {
+    padding: 6px 25px 7px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    user-select: none;
+    border-radius: 5px;
+    transition: background-color 0.1s ease;
+
+    &:hover {
+      background-color: #c9ced2;
+    }
+
+    svg {
+      width: 5px;
+      height: 10px;
+    }
+  }
+
+  &__name {
+    margin-right: 20px;
+  }
+}
+
+.filters-brand {
+  margin-bottom: 44px;
+}

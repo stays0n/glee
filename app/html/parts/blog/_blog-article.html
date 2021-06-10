@@ -1,0 +1,30 @@
+<article class="blog-article">
+  <@@tag class="blog-article__wrap" href="blog-one.html">
+    <img class="blog-article__img" src="@@img-src" alt="@@img-alt">
+    <div class="blog-article__base">
+      <time class="blog-article__date" datetime="2020-01-28">
+        28 January, 2020
+      </time>
+      <span class="blog-article__author">
+        By admin
+      </span>
+    </div>
+  </@@tag>
+  <div class="blog-article__text">
+    <h3 class="blog-article__title">
+      @@title
+    </h3>
+    @@if(context.isFull){
+    <p>
+      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur adipisicing
+      elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    </p>
+    <a class="blog-article__btn btn btn--border" href="blog-one.html">
+      <span class="blog-article__sub">View More</span>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
+      </svg>
+    </a>}
+  </div>
+</article>

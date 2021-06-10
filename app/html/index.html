@@ -15,7 +15,7 @@
       <h2 class="sr-only">Current trends</h2>
 
       <ul class="banner__slider">
-        @@loop('./_banner-slide.html', [
+        @@loop('./home-page/_banner-slide.html', [
         {
         'title': 'Smart and trendy',
         'text': 'Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt',
@@ -38,7 +38,7 @@
       </ul>
 
       <ul class="banner__features">
-        @@loop('./_banner-features-item.html', [
+        @@loop('./home-page/_banner-features-item.html', [
         {
         'modifier': 'banner__wrap--support',
         'title': 'Support 24/7.',
@@ -66,7 +66,7 @@
       </h2>
 
       <ul class="filter">
-        @@loop('_filter-elem.html', [
+        @@loop('home-page/_filter-elem.html', [
         {'data-filter': 'all', 'value': 'All'},
         {'data-filter': '.furnitures', 'value': 'Furnitures'},
         {'data-filter': '.chairs', 'value': 'Chairs'},
@@ -144,7 +144,7 @@
 
     <div class="container container--lg">
       <ul class="bestseller">
-        @@loop('./_bestseller-item.html', [
+        @@loop('./home-page/_bestseller-item.html', [
         {
         'img-src': 'images/products/bestseller/bestseller-img-1.png',
         'img-alt': 'Mirum Notare Tellus',
@@ -169,7 +169,7 @@
       </h2>
 
       <ul class="filter">
-        @@loop('_filter-elem.html', [
+        @@loop('home-page/_filter-elem.html', [
         {'data-filter': 'all', 'value': 'All'},
         {'data-filter': '.furnitures', 'value': 'Furnitures'},
         {'data-filter': '.chairs', 'value': 'Chairs'},
@@ -179,8 +179,8 @@
       </ul>
 
       <ul class="new__list">
-        <li class="new__item mix chair lighting">
-          @@include('./_new-card.html', {
+        <li class="new__item mix chairs lighting">
+          @@include('./home-page/_new-card.html', {
           'link': 'Beat Flat Pendant Black',
           'link-href': '#',
           'sub': 'Classic',
@@ -191,7 +191,7 @@
         </li>
 
         <li class="new__item mix furnitures">
-          @@include('./_new-card.html', {
+          @@include('./home-page/_new-card.html', {
           'link': 'Lampe Sur Pieds Bamboo',
           'link-href': '#',
           'sub': 'Classic',
@@ -202,7 +202,7 @@
         </li>
 
         <li class="new__item mix lighting">
-          @@include('./_new-card.html', {
+          @@include('./home-page/_new-card.html', {
           'link': 'Rattan Rocking Chair',
           'link-href': '#',
           'sub': 'Classic',
@@ -213,7 +213,7 @@
         </li>
 
         <li class="new__item mix decor">
-          @@include('./_new-card.html', {
+          @@include('./home-page/_new-card.html', {
           'link': 'Rattan Rocking Chair',
           'link-href': '#',
           'sub': 'Classic',
@@ -224,7 +224,7 @@
         </li>
 
         <li class="new__item mix furnitures ">
-          @@include('./_new-card.html', {
+          @@include('./home-page/_new-card.html', {
           'link': 'Rattan Rocking Chair',
           'link-href': '#',
           'sub': 'Classic',
@@ -234,8 +234,8 @@
           })
         </li>
 
-        <li class="new__item mix chair decor">
-          @@include('./_new-card.html', {
+        <li class="new__item mix chairs decor">
+          @@include('./home-page/_new-card.html', {
           'link': 'Lampe Sur Pieds Bamboo',
           'link-href': '#',
           'sub': 'Classic',
@@ -260,5 +260,5 @@
 </main>
 
 @@include('./_footer.html', {
-  'isShop': false
+  'isModified': false
 })

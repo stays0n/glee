@@ -1,0 +1,57 @@
+.filters-recent {
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrap {
+    max-width: 67px;
+    width: 100%;
+    height: 67px;
+    border: 2px solid #f2f2f2;
+    margin-right: 23px;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: $casper;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__box {
+    color: $mineShaft2;
+  }
+
+  &__rate {
+    padding: 0;
+    margin-bottom: 1px;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: inherit;
+    }
+  }
+
+  &__price {
+    font-size: 15px;
+  }
+}
