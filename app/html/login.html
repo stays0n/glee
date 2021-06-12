@@ -1,0 +1,65 @@
+@@include('./_head.html', {
+'titleTag': 'Glee — Log in',
+})
+
+@@include('./_header.html', {
+'page': 'Log in'
+})
+
+<main class="main">
+  <h1 class="sr-only">Log in</h1>
+
+  @@include('./_breadcrumbs.html', {
+  'title' : 'Log in',
+  'crumbsCurrent': 'Log in',
+  arr: [
+  {
+  crumb: 'Home',
+  link: 'index.html'
+  }
+  ],
+  })
+
+  <section class="modal">
+    <div class="container">
+      <h2 class="sr-only">
+        Fill out the "Log in" form
+      </h2>
+
+      <form class="modal__form" action="#">
+        <label class="modal__label" for="#login">
+          Username or email address *
+        </label>
+        <input class="modal__input" type="text" id="login" required>
+
+        <label class="modal__label" for="#pass">
+          Password *
+        </label>
+        <input class="modal__input" type="password" id="pass" required>
+        <button class="modal__btn" type="submit">Login</button>
+
+        <div class="modal__box">
+          <label class="modal__check">
+            <input type="checkbox">
+            Remember me
+          </label>
+
+          <a class="modal__lost" href="#">
+            Lost your password?
+          </a>
+        </div>
+
+        <p class="modal__sub">Not registered? No problem</p>
+        <a class="modal__create" href="#">Create an account</a>
+      </form>
+    </div>
+  </section>
+
+  @@include('./_partners.html', {
+    'isModified': true
+  })
+</main>
+
+@@include('./_footer.html', {
+'isModified': true
+})

@@ -56,7 +56,7 @@ $(function () {
   })
 
   // burger
-    function burgerMenu(selector) {
+  function burgerMenu(selector) {
     const menu = $(selector),
       button = $('.header__tool--burger'),
       links = menu.find('.header__link'),
@@ -95,7 +95,7 @@ $(function () {
     overlay = $('.header__overlay')
 
   function filtersMenu(selector) {
-    const menu = $(selector),
+    let menu = $(selector),
       button = $('.shop-catalog__funnel'),
       links = menu.find('.filters-recent__wrap, .filters-recent__link'),
       overlayHere = overlay
@@ -104,6 +104,7 @@ $(function () {
       e.preventDefault()
       toggleFilters()
     });
+
     links.on('click', () => toggleFilters())
     overlayHere.on('click', () => toggleFilters())
 
@@ -123,7 +124,7 @@ $(function () {
 
   // blog-page-filters
   const blogPageFilters = $('.blog-page__filters')
-  
+
   function filtersMenuBlogPage(selector) {
     const menu = $(selector),
       button = $('.blog-page__funnel'),
@@ -153,7 +154,7 @@ $(function () {
 
   // blog-one-filters
   const blogOneFilters = $('.blog-one__filters')
-  
+
   function filtersMenuBlogOne(selector) {
     const menu = $(selector),
       button = $('.blog-one__funnel'),
@@ -182,12 +183,12 @@ $(function () {
   }
 
   // form label
-  const formInput = document.querySelector('.form__input'),
-    formGroup = document.querySelector('.form__group'),
-    blogInputFirst = document.getElementById('blog-name'),
-    blogGroupFirst = document.querySelector('.blog-one__field--first'),
-    blogInputSecond = document.getElementById('blog-email'),
-    blogGroupSecond = document.querySelector('.blog-one__field--second')
+  const formInput = document.querySelector('.footer__input'),
+    formGroup = document.querySelector('.footer__group'),
+    blogInputFirst = document.getElementById('form-name'),
+    blogGroupFirst = document.querySelector('.form__field--first'),
+    blogInputSecond = document.getElementById('form-email'),
+    blogGroupSecond = document.querySelector('.form__field--second')
 
   function moveLabel(input, group) {
     input.addEventListener('focus', () => group.classList.add('active'))
@@ -221,6 +222,16 @@ $(function () {
   $('.shop-catalog__btn--grid').on('click', function () {
     $('.shop-catalog__grid').removeClass('shop-catalog__grid--list')
   });
+
+  // production tabs
+  $('.tabs__btn').on('click', function(evt) {
+    evt.preventDefault()
+    $('.tabs__btn').removeClass('tabs__btn--active')
+    $(this).addClass('tabs__btn--active')
+
+    $('.tabs__item').removeClass('tabs__item--active')
+    $($(this).attr('href')).addClass('tabs__item--active')
+  })
 
   // slickslider
   $('.banner__slider').slick({
@@ -265,6 +276,7 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    speed: 300,
     responsive: [{
         breakpoint: 1451,
         settings: {
@@ -277,6 +289,60 @@ $(function () {
         settings: {
           slidesToShow: 2,
           autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 569,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+
+  $('.sliders__small').slick({
+    asNavFor: '.sliders__big',
+    arrows: false,
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          autoplay: true,
+          autoplaySpeed: 4000,
+        }
+      }
+    ]
+  });
+
+  $('.sliders__big').slick({
+    asNavFor: '.sliders__small',
+    fade: true,
+    arrows: false
+  });
+
+  $('.related__list').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"><svg><use xlink:href="images/icons/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-next"><svg><use xlink:href="images/icons/sprite.svg#arrow-right"></use></svg></button>',
+    appendArrows: $('.related__arrows'),
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 951,
+        settings: {
+          slidesToShow: 2,
         }
       },
       {
@@ -320,7 +386,7 @@ $(function () {
   });
 
   // formstyler
-  $('.select-style').styler();
+  $('.select-style, .production__input').styler();
 
   // mixitup
   const containerEl1 = document.querySelector('[data-ref="container-1"]'),

@@ -55,7 +55,8 @@ button {
 .news__author,
 .new-card__sub,
 .news__sub,
-.filters-recent__link {
+.filters-recent__link,
+.blog-article__link {
   @include line-clamp(1);
 }
 
@@ -65,7 +66,8 @@ button {
 .bestseller__title,
 .bestseller__text p,
 .new-card__link,
-.product-card__link {
+.product-card__link,
+.filters-posts__link {
   @include line-clamp();
 }
 

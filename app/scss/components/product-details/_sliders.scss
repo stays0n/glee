@@ -1,0 +1,78 @@
+.sliders {
+  display: flex;
+  margin-right: 71px;
+
+  @include width-1200 {
+    margin-right: 15px;
+  }
+
+  @include width-823 {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .slick-vertical .slick-slide {
+    height: 160px;
+    width: 140px;
+    margin-bottom: 27px;
+    border: none;
+    width: 140px !important;
+    // слик инлайново устанавливает ширину и только так получилось перебить
+  }
+
+  &__small {
+    max-width: 140px;
+    width: 100%;
+    height: 533px;
+    margin-right: 24px;
+    overflow: hidden;
+
+    @include width-1200 {
+      height: 450px;
+    }
+
+    @include width-568 {
+      display: none;
+    }
+  }
+
+  &__small-item {
+    width: 100%;
+    width: 140px;
+    height: 160px;
+    border: 2px solid #f2f2f2;
+    cursor: pointer;
+
+  }
+
+  &__small-img {
+    width: 100%;
+    height: 156px;
+    object-fit: contain;
+  }
+
+  &__big {
+    max-width: 380px;
+    width: 100%;
+
+    @include width-1200 {
+      max-width: 295px;
+    }
+  }
+
+  &__big-item {
+    border: 2px solid #f2f2f2;
+  }
+
+  &__big-img {
+    max-width: 236px;
+    width: 100%;
+    height: 530px;
+    margin: 0 auto;
+    object-fit: contain;
+
+    @include width-1200 {
+      height: 450px;
+    }
+  }
+}

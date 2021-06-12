@@ -8,7 +8,7 @@
   &__wrap {
     position: relative;
     height: 100%;
-    margin-bottom: 22px;
+    margin-bottom: 12px;
     overflow: hidden;
   }
 
@@ -18,16 +18,18 @@
     object-fit: cover;
     transition: transform 0.3s ease;
 
-    &:hover {
-      transform: scale(1.05);
-    }
-
     @include width-568 {
       height: 350px;
     }
 
     @include width-415 {
       height: 300px;
+    }
+  }
+
+  &__img--hover {
+    &:hover {
+      transform: scale(1.05);
     }
   }
 
@@ -100,6 +102,14 @@
 
     @include width-568 {
       font-size: 22px;
+    }
+  }
+
+  &__link {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
 

@@ -1,0 +1,100 @@
+.form {
+  svg {
+    width: 18px;
+    height: 14px;
+    fill: $blueBayoux;
+  }
+
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+
+    @include width-823 {
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include width-823 {
+      max-width: 100%;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    &.active {
+      .form__label {
+        transform: translate(-19px, -50px);
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 10px 50px 10px 10px;
+    border: 1px solid $mercury;
+
+    &:focus {
+      border-color: $casper;
+      outline: 1px solid $casper;
+
+      &::placeholder {
+        color: $mineShaft2;
+      }
+
+      ~.form__label {
+        color: $mineShaft2;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-50%);
+    color: $dustyGray2;
+    transition: transform 0.2s linear;
+  }
+
+  &__textbox {
+    position: relative;
+    max-width: 830px;
+    width: 100%;
+    margin-bottom: 29px;
+
+    svg {
+      position: absolute;
+      top: 19px;
+      right: 21px;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    max-width: 830px;
+    width: 100%;
+    min-height: 120px;
+  }
+
+  &__btn {
+    @extend %Rubik-400;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $blueDianne;
+    }
+  }
+}

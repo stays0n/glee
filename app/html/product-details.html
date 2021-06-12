@@ -1,0 +1,169 @@
+@@include('./_head.html', {
+'titleTag': 'Glee — Product Detalis',
+})
+
+@@include('./_header.html', {
+'page': 'product-details'
+})
+
+<main class="main">
+  <h1 class="sr-only">Details about Pendant lamp</h1>
+
+  @@include('./_breadcrumbs.html', {
+  'title' : 'Product Detalis',
+  'crumbsCurrent': 'Product Detalis',
+  arr: [
+  {
+  crumb: 'Home',
+  link: 'index.html'
+  }
+  ],
+  })
+
+  <section class="production">
+    <div class="container">
+      <div class="production__wrapper">
+        <div class="production__sliders sliders">
+          <ul class="sliders__small">
+            @@loop('./product-details/_sliders-items.html', [
+            {'size': 'small', 'image': 'sliders-img-1.jpg'},
+            {'size': 'small', 'image': 'sliders-img-2.jpg'},
+            {'size': 'small', 'image': 'sliders-img-3.jpg'},
+            {'size': 'small', 'image': 'sliders-img-4.jpg'}
+            ])
+          </ul>
+
+          <ul class="sliders__big">
+            @@loop('./product-details/_sliders-items.html', [
+            {'size': 'big', 'image': 'sliders-img-1.jpg'},
+            {'size': 'big', 'image': 'sliders-img-2.jpg'},
+            {'size': 'big', 'image': 'sliders-img-3.jpg'},
+            {'size': 'big', 'image': 'sliders-img-4.jpg'}
+            ])
+          </ul>
+        </div>
+
+        <div class="production__content">
+          <h2 class="production__title">
+            Pendant lamp
+          </h2>
+
+          <span class="production__rate star" data-rateyo-rating="4"></span>
+          <span class="production__price">23$</span>
+          <p>
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+
+          <form class="production__form" action="#">
+            <label class="sr-only" for="production-quantity">
+              Quantity of goods
+            </label>
+            <input class="production__input" id="production-quantity" type="number" value="1" min="1">
+            <button class="production__btn btn--form" type="submit">
+              Add to cart
+            </button>
+          </form>
+
+          <ul class="production__data">
+            @@loop('./product-details/_production-elem.html', [
+            {'sub': 'SKU:', 'feature': '014'},
+            {'sub': 'Category:', 'feature': 'Lights'},
+            {'sub': 'Tag:', 'feature': 'Decorative'}
+            ])
+          </ul>
+        </div>
+      </div>
+
+      <div class="production__tabs tabs">
+        <ul class="tabs__top">
+          <li class="tabs__elem">
+            <a class="tabs__btn tabs__btn--active" href="#tab-1">
+              Description
+            </a>
+          </li>
+
+          <li class="tabs__elem">
+            <a class="tabs__btn" href="#tab-2">
+              Additional information
+            </a>
+          </li>
+
+          <li class="tabs__elem">
+            <a class="tabs__btn" href="#tab-3">
+              Reviews<span>(2)</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tabs__content">
+          <div class="tabs__item tabs__item--active" id="tab-1">
+            <p>
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="tabs__item" id="tab-2">
+            <p>
+              content 2
+            </p>
+          </div>
+          <div class="tabs__item" id="tab-3">
+            <p>
+              content 3
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related">
+    <div class="container">
+      <div class="related__box">
+        <h2 class="related__title title">
+          Related products
+        </h2>
+
+        <div class="related__arrows"></div>
+      </div>
+
+      <ul class="related__list">
+        <li class="related__item">
+          @@include('./_product-card.html', {
+          'src': 'images/products/products-img-1.png',
+          'name': 'Wooden radio'
+          })
+        </li>
+        <li class="related__item">
+          @@include('./_product-card.html', {
+          'src': 'images/products/products-img-2.png',
+          'name': 'Wooden chair'
+          })
+        </li>
+        <li class="related__item">
+          @@include('./_product-card.html', {
+          'src': 'images/products/products-img-3.png',
+          'name': 'White chair'
+          })
+        </li>
+        <li class="related__item">
+          @@include('./_product-card.html', {
+          'src': 'images/products/products-img-4.png',
+          'name': 'Retro table'
+          })
+        </li>
+        <li class="related__item">
+          @@include('./_product-card.html', {
+          'src': 'images/products/products-img-5.png',
+          'name': 'Wooden radio'
+          })
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  @@include('./_news.html')
+</main>
+
+@@include('./_footer.html', {
+'isModified': true
+})

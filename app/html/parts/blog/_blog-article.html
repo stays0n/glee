@@ -1,6 +1,6 @@
 <article class="blog-article">
   <@@tag class="blog-article__wrap" href="blog-one.html">
-    <img class="blog-article__img" src="@@img-src" alt="@@img-alt">
+    <img class="blog-article__img @@if(context.name === 'current' && context.page === 'blog-page'){blog-article__img--hover}" src="@@img-src" alt="@@title">
     <div class="blog-article__base">
       <time class="blog-article__date" datetime="2020-01-28">
         28 January, 2020
@@ -11,9 +11,17 @@
     </div>
   </@@tag>
   <div class="blog-article__text">
+    @@if(context.page === 'blog-page') {
+    <h3 class="blog-article__title">
+      <a class="blog-article__link" href="blog-one.html">@@title</a>
+    </h3>
+    }
+    @@if(context.page !== 'blog-page') {
     <h3 class="blog-article__title">
       @@title
     </h3>
+    }
+
     @@if(context.isFull){
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
