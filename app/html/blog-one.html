@@ -3,7 +3,6 @@
 })
 
 @@include('./_header.html', {
-'current': 'header__link--current',
 'page': 'blog-one'
 })
 
@@ -39,7 +38,6 @@
 
           @@include('./blog/_blog-article.html', {
           'img-src': 'images/blog/blog-page-1.jpg',
-          'img-alt': 'Fonsectetur adipisicing eiusmod',
           'title': 'Fonsectetur adipisicing eiusmod',
           'tag': 'div'
           })
@@ -152,38 +150,17 @@
             </ul>
           </div>
 
-          <form class="blog-one__form">
+          <div class="blog-one__form">
             <h3 class="blog-one__title">
               Leave A Comment
             </h3>
-            <ul class="blog-one__fields">
-              <li class="blog-one__field blog-one__field--first">
-                <input class="blog-one__input" id="blog-name" type="text">
-                <label class="blog-one__label" for="blog-name">Name</label>
-                <svg>
-                  <use xlink:href="images/icons/sprite.svg#user-input"></use>
-                </svg>
-              </li>
 
-              <li class="blog-one__field blog-one__field--second">
-                <input class="blog-one__input" id="blog-email" type="email">
-                <label class="blog-one__label" for="blog-email">E-mail</label>
-                <svg>
-                  <use xlink:href="images/icons/sprite.svg#envelope"></use>
-                </svg>
-              </li>
-            </ul>
-
-            <div class="blog-one__textbox">
-              <textarea class="blog-one__textarea" placeholder="Comment" id="blog-textarea"></textarea>
-              <label class="sr-only" for="blog-textarea">Comment input</label>
-              <svg>
-                <use xlink:href="images/icons/sprite.svg#typing"></use>
-              </svg>
-            </div>
-
-            <button class="blog-one__btn btn--form" type="submit">Post Comment</button>
-          </form>
+            @@include('./_form.html', {
+              'textarea-placeholder': 'Comment',
+              'textarea-label': 'Comment input',
+              'btn-value': 'Post Comment',
+            })
+          </div>
 
           @@include('./_pagination.html')
         </div>

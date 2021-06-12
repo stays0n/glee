@@ -19,8 +19,20 @@
       margin-right: 0;
     }
 
+    .blog-article__wrap {
+      margin-bottom: 22px;
+    }
+
     .pagination {
       justify-content: flex-start;
+    }
+  }
+
+  &__filters {
+    max-width: 270px;
+
+    @include width-823 {
+      width: 100%;
     }
   }
 
@@ -214,12 +226,23 @@
 
   &__link {
     color: $dustyGray2;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $blueBayoux;
+      text-decoration: underline;
+    }
 
     svg {
       vertical-align: middle;
       width: 15px;
       height: 15px;
       fill: $dustyGray2;
+      transition: fill 0.3s ease;
+
+      &:hover {
+        fill: $blueBayoux;
+      }
     }
   }
 
@@ -267,105 +290,5 @@
 
   &__form {
     margin-bottom: 40px;
-
-    svg {
-      width: 18px;
-      height: 14px;
-      fill: $blueBayoux;
-    }
-  }
-
-  &__fields {
-    display: flex;
-    justify-content: space-between;
-
-    @include width-823 {
-      flex-direction: column;
-    }
-  }
-
-  &__field {
-    position: relative;
-    max-width: 400px;
-    width: 100%;
-    margin-bottom: 20px;
-
-    @include width-823 {
-     max-width: 100%;
-    }
-
-    svg {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      transition: opacity 0.3s ease;
-    }
-
-    &.active {
-      .blog-one__label {
-        transform: translate(-19px, -50px);
-      }
-    }
-  }
-
-  &__input,
-  &__textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid $mercury;
-
-    &:focus {
-      border-color: $casper;
-      outline: 1px solid $casper;
-
-      &::placeholder {
-        color: $mineShaft2;
-      }
-
-      ~svg {
-        opacity: 0;
-      }
-
-      ~.blog-one__label {
-        color: $mineShaft2;
-      }
-    }
-  }
-
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 19px;
-    transform: translateY(-50%);
-    color: $dustyGray2;
-    transition: transform 0.2s linear;
-  }
-
-  &__textbox {
-    position: relative;
-    max-width: 830px;
-    width: 100%;
-    margin-bottom: 29px;
-
-    svg {
-      position: absolute;
-      top: 19px;
-      right: 21px;
-      transition: opacity 0.3s ease;
-    }
-  }
-
-  &__textarea {
-    resize: none;
-    max-width: 830px;
-    width: 100%;
-    min-height: 120px;
-  }
-
-  &__btn {
-    @extend %Rubik-400;
-    font-size: 14px;
-    text-transform: uppercase;
   }
 }

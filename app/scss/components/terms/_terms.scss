@@ -1,0 +1,52 @@
+.terms {
+  padding: 110px 0 42px;
+
+  @include width-823 {
+    padding-top: 75px;
+  }
+
+  &__box {
+    &--types {
+      .terms__title {
+        margin-bottom: 18px;
+      }
+
+      margin-bottom: 59px;
+    }
+
+    &--collect {
+      margin-bottom: 55px;
+
+      .terms__title {
+        margin-bottom: 9px;
+      }
+    }
+
+    &--use {
+      .terms__title {
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.7;
+    font-weight: 500;
+
+    @include width-415 {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    list-style-type: decimal-leading-zero;
+    padding-inline-start: 34px;
+  }
+
+  &__item {
+    margin-bottom: 19px;
+    padding-left: 6px;
+  }
+}

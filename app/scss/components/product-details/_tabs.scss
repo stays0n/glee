@@ -1,0 +1,66 @@
+.tabs {
+  &__top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1078px;
+    margin: 0 92px 31px 0;
+    gap: 10px 13px;
+
+    @include width-823 {
+      margin-right: 0;
+      justify-content: flex-start;
+    }
+  }
+
+  &__elem {
+    flex: 0 1 241px;
+
+    @include width-1200 {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__btn {
+    max-width: 241px;
+    width: 100%;
+    padding: 9px;
+    text-align: center;
+    border-radius: 5px;
+    @extend %Rubik-500;
+    font-size: 18px;
+    color: $blueDianne;
+    background-color: $mystic;
+    transition: background-color 0.3s ease, color 0.2s ease;
+
+    &:not(.tabs__btn--active):hover {
+      color: $white;
+      background-color: $blueDianne;
+    }
+
+    &:not(.tabs__btn--active):active {
+      color: $mineShaft;
+    }
+
+    @include width-568 {
+      font-size: 14px;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $casper;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

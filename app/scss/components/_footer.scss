@@ -134,14 +134,14 @@
     position: absolute;
     left: 0;
   }
-}
 
-.contacts {
-  &__items {
+  &__contacts {}
+
+  &__parts {
     font-style: normal;
   }
 
-  &__item {
+  &__part {
     margin-bottom: 14px;
   }
 
@@ -149,20 +149,20 @@
     text-transform: uppercase;
   }
 
-  &__link {
+  &__resourse {
     display: inline;
     transition: color 0.2s ease-out, border 0.2s ease-out;
     border-bottom: 1px solid transparent;
   }
 
-  &__link:hover {
+  &__resourse:hover {
     border-color: inherit;
     color: $сodGray;
   }
-}
 
-.form {
-  display: flex;
+  &__form {
+    display: flex;
+  }
 
   &__input,
   &__btn {
@@ -204,7 +204,7 @@
     cursor: text;
   }
 
-  &__group.active .form__label {
+  &__group.active .footer__label {
     transform: translate(0, -16px) scale(0.9);
   }
 

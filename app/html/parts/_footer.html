@@ -8,25 +8,25 @@
           <img class="logo__img" src="images/icons/logo.svg" alt="logo">
         </a>
 
-        <address class="contacts">
-          <ul class="contacts__items">
-            <li class="contacts__item">
-              <span class="contacts__to">Address:</span>
-              <a class="contacts__link" href="#">
+        <address class="footer__contacts">
+          <ul class="footer__parts">
+            <li class="footer__part">
+              <span class="footer__to">Address:</span>
+              <a class="footer__resourse" href="#">
                 4772 Wines Lane Houston, TX 77032
               </a>
             </li>
 
-            <li class="contacts__item">
-              <span class="contacts__to">Telephone:</span>
-              <a class="contacts__link" href="tel:+8323475843">
+            <li class="footer__part">
+              <span class="footer__to">Telephone:</span>
+              <a class="footer__resourse" href="tel:+8323475843">
                 +832-347-5843
               </a>
             </li>
 
-            <li class="contacts__item">
-              <span class="contacts__to">Email:</span>
-              <a class="contacts__link" href="mailto:contact@Glee.com">
+            <li class="footer__part">
+              <span class="footer__to">Email:</span>
+              <a class="footer__resourse" href="mailto:contact@Glee.com">
                 contact@Glee.com
               </a>
             </li>
@@ -39,19 +39,19 @@
 
         <ul class="footer__items">
           <li class="footer__item">
-            <a class="footer__link" href="#">About us</a>
+            <a class="footer__link" href="about-us.html">About us</a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="#">Return Policy</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">Our Blog</a>
+            <a class="footer__link" href="blog-page.html">Our Blog</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">Contact Us</a>
+            <a class="footer__link" href="contacts.html">Contact Us</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">Terms & Condition</a>
+            <a class="footer__link" href="terms.html">Terms & Condition</a>
           </li>
         </ul>
       </div>
@@ -67,7 +67,7 @@
             <a class="footer__link" href="#">Checkout</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">Login</a>
+            <a class="footer__link" href="login.html">Login</a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="#">Register</a>
@@ -80,12 +80,12 @@
 
         <div class="footer__items">
           <p>Subscribe by our newsletter and get update protidin.</p>
-          <form class="form">
-            <div class="form__group">
-              <input class="form__input" type="email" id="input-mail">
-              <label class="form__label" for="input-mail">Email address</label>
+          <form class="footer__form">
+            <div class="footer__group">
+              <input class="footer__input" type="email" id="input-mail">
+              <label class="footer__label" for="input-mail">Email address</label>
             </div>
-            <button class="form__btn" type="submit">Subscribe</button>
+            <button class="footer__btn" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
@@ -98,16 +98,16 @@
       <nav class="footer__nav">
         <ul class="footer__links">
           <li class="footer__elem">
-            <a class="footer__ref" href="#">Home</a>
+            <a class="footer__ref" href="index.html">Home</a>
           </li>
           <li class="footer__elem">
-            <a class="footer__ref" href="#">About</a>
+            <a class="footer__ref" href="about-us.html">About</a>
           </li>
           <li class="footer__elem">
-            <a class="footer__ref" href="#">Blog</a>
+            <a class="footer__ref" href="blog-page.html">Blog</a>
           </li>
           <li class="footer__elem">
-            <a class="footer__ref" href="#">Contact</a>
+            <a class="footer__ref" href="contacts.html">Contact</a>
           </li>
         </ul>
       </nav>
@@ -115,6 +115,22 @@
   </div>
 </footer>
 
+@@if(context.isMap === true){
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+<script>
+  function initMap() {
+    const uluru = { lat: 29.76133359722803, lng: -95.2822982697579};
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 9,
+      center: uluru,
+    });
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }
+</script>
+}
 <script defer src="js/main.min.js"></script>
 </body>
 

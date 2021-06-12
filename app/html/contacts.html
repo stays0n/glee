@@ -1,0 +1,125 @@
+@@include('./_head.html', {
+'titleTag': 'Glee — Contacts',
+})
+
+@@include('./_header.html', {
+'page': 'contacts'
+})
+
+<main class="main">
+  <h1 class="sr-only">Our contacts</h1>
+
+  @@include('./_breadcrumbs.html', {
+  'title' : 'Contact',
+  'crumbsCurrent': 'Contact',
+  arr: [
+  {
+  crumb: 'Home',
+  link: 'index.html'
+  }
+  ],
+  })
+
+  <section class="contacts">
+    <div class="container">
+      <span class="contacts__sub">
+        Write Here
+      </span>
+      <h2 class="contacts__title title">
+        Get In Touch
+      </h2>
+
+      <ul class="contacts__elems">
+        <li class="contacts__elem">
+          <div class="contacts__svg">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#contacts-marker"></use>
+            </svg>
+          </div>
+
+          <h3 class="contacts__heading">
+            Address
+          </h3>
+          <a class="contacts__link contacts__link--modified" href="#">
+            2416 Mapleview Drive Tampa, FL 33634
+          </a>
+        </li>
+
+        <li class="contacts__elem">
+          <div class="contacts__svg">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#contacts-envelope"></use>
+            </svg>
+          </div>
+          <h3 class="contacts__heading">
+            Our Email
+          </h3>
+
+          <ul class="contacts__items">
+            <li class="contacts__item">
+              <span class="contacts__descr">Main Email :</span>
+              <a class="contacts__link" href="mailto:contact@website.com">
+                contact@website.com
+              </a>
+            </li>
+
+            <li class="contacts__item">
+              <span class="contacts__descr">Inquiries :</span>
+              <a class="contacts__link" href="mailto:Info@mail.com">
+                Info@mail.com
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="contacts__elem">
+          <div class="contacts__svg">
+            <svg>
+              <use xlink:href="images/icons/sprite.svg#contacts-phone"></use>
+            </svg>
+          </div>
+          <h3 class="contacts__heading">
+            Our Phone
+          </h3>
+
+          <ul class="contacts__items">
+            <li class="contacts__item">
+              <span class="contacts__descr">Office Telephone :</span>
+              <a class="contacts__link" href="tel:0029129102320">
+                0029129102320
+              </a>
+            </li>
+
+            <li class="contacts__item">
+              <span class="contacts__descr">Mobile :</span>
+              <a class="contacts__link" href="tel:000 2324 39493">
+                000 2324 39493
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="contacts__box">
+        <div class="contacts__form">
+          @@include('./_form.html', {
+          'textarea-placeholder': 'Message',
+          'textarea-label': 'Enter the message',
+          'btn-value': 'Send message'
+          })
+        </div>
+
+        <div class="contacts__map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('./_news.html')
+</main>
+
+@@include('./_footer.html', {
+'isModified': true,
+'isMap': true
+})

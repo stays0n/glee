@@ -27,6 +27,8 @@
 @import 'components/_filters/filters-price';
 @import 'components/_filters/filters-recent';
 @import 'components/shop-page/shop';
+@import 'components/shop-page/filters';
+@import 'components/shop-page/shop-catalog';
 @import 'components/pagination';
 
 // about-us
@@ -43,3 +45,19 @@
 // blog-one
 @import 'components/blog/blog-one';
 @import 'components/blog/comments';
+@import 'components/form';
+
+// terms and conditions
+@import 'components/terms/terms';
+
+// product-details
+@import 'components/product-details/production';
+@import 'components/product-details/sliders';
+@import 'components/product-details/tabs';
+@import 'components/product-details/related';
+
+// login
+@import 'components/login/login';
+
+// contacts
+@import 'components/contacts/contacts';

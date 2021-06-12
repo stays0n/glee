@@ -28,6 +28,10 @@
   &__item {
     color: $rollingStone;
 
+    a:hover {
+      color: $portGore;
+    }
+
     &:not(:last-child) {
       padding-right: 5px;
     }
@@ -39,5 +43,6 @@
 
   &__link {
     color: $rollingStone;
+    transition: color 0.3s ease;
   }
 }

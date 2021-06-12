@@ -1,0 +1,29 @@
+<form class="form">
+  <div class="form__fields">
+    <div class="form__field form__field--first">
+      <input class="form__input" id="form-name" type="text" required>
+      <label class="form__label" for="form-name">Name</label>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#user-input"></use>
+      </svg>
+    </div>
+
+    <div class="form__field form__field--second">
+      <input class="form__input" id="form-email" type="email" required>
+      <label class="form__label" for="form-email">E-mail</label>
+      <svg>
+        <use xlink:href="images/icons/sprite.svg#envelope"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="form__textbox">
+    <textarea class="form__textarea" placeholder="@@textarea-placeholder" id="form-textarea"></textarea>
+    <label class="sr-only" for="form-textarea">@@textarea-label</label>
+    <svg>
+      <use xlink:href="images/icons/sprite.svg#typing"></use>
+    </svg>
+  </div>
+
+  <button class="form__btn btn--form" type="submit">@@btn-value</button>
+</form>

@@ -3,7 +3,6 @@
 })
 
 @@include('./_header.html', {
-'current': 'header__link--current',
 'page': 'blog-page'
 })
 
@@ -37,37 +36,40 @@
             <li class="blog-page__item">
               @@include('./blog/_blog-article.html', {
               'img-src': 'images/blog/blog-page-1.jpg',
-              'img-alt': 'Fonsectetur adipisicing eiusmod',
               'title': 'Fonsectetur adipisicing eiusmod',
               'isFull': true,
-              'tag': 'a'
+              'tag': 'a',
+              'page': 'blog-page'
               })
             </li>
+
             <li class="blog-page__item">
               @@include('./blog/_blog-article.html', {
               'img-src': 'images/blog/blog-page-2.jpg',
-              'img-alt': 'Fonsectetur adipisicing elit,',
               'title': 'Fonsectetur adipisicing elit,',
               'isFull': true,
-              'tag': 'a'
+              'tag': 'a',
+              'page': 'blog-page'
               })
             </li>
+
             <li class="blog-page__item">
               @@include('./blog/_blog-article.html', {
               'img-src': 'images/blog/blog-page-3.jpg',
-              'img-alt': 'Fsectetur adipisicing tempor incididunt',
               'title': 'Fsectetur adipisicing tempor incididunt',
               'isFull': true,
-              'tag': 'a'
+              'tag': 'a',
+              'page': 'blog-page'
               })
             </li>
+            
             <li class="blog-page__item">
               @@include('./blog/_blog-article.html', {
               'img-src': 'images/blog/blog-page-4.jpg',
-              'img-alt': 'vonsectetur adipisicing elit',
               'title': 'vonsectetur adipisicing elit',
               'isFull': true,
-              'tag': 'a'
+              'tag': 'a',
+              'page': 'blog-page'
               })
             </li>
           </ul>

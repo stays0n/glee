@@ -1,0 +1,68 @@
+.related {
+  padding-top: 61px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+      border: 2px solid $casper;
+      border-radius: 5px;
+
+      &:active {
+        background-color: $mystic;
+      }
+
+      @include width-568 {
+        width: 44px;
+        height: 44px;
+      }
+
+      svg {
+        width: 22px;
+        height: 9px;
+        fill: $casper;
+      }
+    }
+
+    .slick-prev {
+      margin-right: 20px;
+
+      @include width-568 {
+        margin-right: 2px;
+      }
+    }
+
+    .slick-disabled {
+      border-color: $mystic;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin: 0;
+  }
+
+  .slick-slider {
+    .slick-slide {
+      height: 445px;
+    }
+  }
+
+  &__item {
+    margin: 20px 0;
+
+    .product-card {
+      margin: auto;
+      box-shadow: 0 6px 15px 3px rgba(#252525, 0.05);
+
+      @include width-823 {
+        max-width: 270px;
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+.production {
+  padding: 120px 0 40px;
+
+  @include width-1200 {
+    padding: 80px 0 0;
+  }
+
+  @include width-823 {
+    padding-top: 70px;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 87px;
+
+    @include width-823 {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content p,
+  &__form,
+  &__data {
+    padding-left: 5px;
+  }
+
+  &__content {
+    padding-top: 22px;
+
+    @include width-1200 {
+      padding-top: 3px;
+    }
+
+    p {
+      margin-bottom: 25px;
+
+      @include width-1200 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $mineShaft2;
+
+    @include width-1200 {
+      font-size: 30px;
+    }
+
+    @include width-568 {
+      font-size: 26px;
+    }
+  }
+
+  &__rate {
+    padding: 0;
+    margin-bottom: 23px;
+
+    @include width-1200 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 30px;
+    color: $mineShaft2;
+
+    @include width-1200 {
+      margin-bottom: 2px;
+      font-size: 24px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 55px;
+
+    @include width-1200 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    margin-right: 18px;
+  }
+
+  .jq-number {
+    position: relative;
+    padding: 0;
+
+    &__field {
+      width: 145px;
+      border: 1px solid $casper;
+      transform: translateY(1px);
+
+      input {
+        width: 100%;
+        height: 50px;
+        padding: 0 50px;
+        border: none;
+        color: $mineShaft;
+        text-align: center;
+      }
+    }
+
+    li {
+      min-height: 18px;
+      padding: 5px 10px 6px;
+      color: #231F20;
+    }
+
+    li.selected {
+      background-color: $grayChateau;
+      color: $white;
+    }
+
+    &__spin {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-51%);
+      width: 47px;
+      height: 94%;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.1s ease;
+
+      &:hover {
+        background-color: $casper;
+      }
+
+      &:active {
+        background-color: $mystic;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 1px;
+        background-color: $mineShaft;
+      }
+
+      &.minus {
+        left: 0;
+        border-right: 1px solid $casper;
+      }
+
+      &.plus {
+        right: 0;
+        border-left: 1px solid $casper;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 1px;
+          height: 6px;
+          background-color: $mineShaft;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 14px 49px 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 15px;
+
+    &:hover {
+      color: $mineShaft;
+      background-color: $mystic;
+      text-shadow: 0 0 6px rgba($mineShaft, 0.5);
+    }
+
+    &:active {
+      color: $white;
+      background-color: $blueDianne;
+    }
+
+    @include width-1200 {
+      padding: 13px 19px;
+    }
+  }
+
+  &__elem {
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  &__feature {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      border-color: $сodGray;
+      color: $сodGray;
+    }
+  }
+}

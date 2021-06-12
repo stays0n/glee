@@ -1,10 +1,10 @@
 <article class="product-card">
-  <a class="product-card__wrap" href="#">
+  <a class="product-card__wrap" href="product-details.html">
     <img class="product-card__image" alt="Wooden radio" src="@@src">
   </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
-      <a class="product-card__link" href="#">@@name</a>
+      <a class="product-card__link" href="product-details.html">@@name</a>
     </h3>
     @@if(context.isFull) {
     <span class="product-card__rate star" @@rate></span>
@@ -19,7 +19,7 @@
 
     <ul class="product-card__tools">
       <li class="product-card__tool">
-        <a class="product-card__toggle" href="#">
+        <a class="product-card__toggle" href="product-details.html">
           <span class="sr-only">Go to product page</span>
           <svg>
             <use href="images/icons/sprite.svg#tools-search"></use>
